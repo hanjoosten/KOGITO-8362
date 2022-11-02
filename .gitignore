@@ -1,0 +1,8 @@
+target
+
+.vscode
+*.code-workspace
+
+.history
+
+kie-dmn-xls2dmn-*.jar
