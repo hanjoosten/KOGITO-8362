@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_dfc8534e-ed36-4f42-ba91-d71133d6a36c" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" id="dmnid_ChScreening" name="ChScreening" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_dfc8534e-ed36-4f42-ba91-d71133d6a36c">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" id="dmnid_ChScreening" name="ChScreening" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF">
   <dmn:extensionElements/>
-  <dmn:decisionService id="_00DCC795-C97C-4794-A2D4-C05360408E78" name="NhsCHService">
-    <dmn:extensionElements/>
-    <dmn:variable id="_9FBE88B1-EC18-4E51-A417-F117403B4020" name="NhsCHService" typeRef="Any"/>
-    <dmn:outputDecision href="#d_isDubieus"/>
-    <dmn:outputDecision href="#d_isAfwijkend"/>
-    <dmn:outputDecision href="#d_isPrematuur"/>
-    <dmn:inputData href="#id_AfnametermijnPrematuur"/>
-    <dmn:inputData href="#id_Geboortegewicht"/>
-    <dmn:inputData href="#id_T4"/>
-    <dmn:inputData href="#id_T4_47TBG"/>
-    <dmn:inputData href="#id_TBG"/>
-    <dmn:inputData href="#id_TSH"/>
-    <dmn:inputData href="#id_Zwangerschapsduur"/>
-  </dmn:decisionService>
   <dmn:inputData id="id_T4" name="T4">
     <dmn:extensionElements/>
     <dmn:variable id="idvar_T4" name="T4" typeRef="number"/>
@@ -1853,19 +1839,6 @@
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-drg-_00DCC795-C97C-4794-A2D4-C05360408E78" dmnElementRef="_00DCC795-C97C-4794-A2D4-C05360408E78" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="1293" y="8" width="578" height="581"/>
-        <dmndi:DMNLabel/>
-        <dmndi:DMNDecisionServiceDividerLine>
-          <di:waypoint x="1293" y="369"/>
-          <di:waypoint x="1871" y="369"/>
-        </dmndi:DMNDecisionServiceDividerLine>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-id_T4" dmnElementRef="id_T4" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -1908,7 +1881,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="1354.5981308411215" y="733" width="100" height="50"/>
+        <dc:Bounds x="806.2990654205607" y="675" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-id_Zwangerschapsduur" dmnElementRef="id_Zwangerschapsduur" isCollapsed="false">
@@ -1917,7 +1890,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="1529.5981308411215" y="733" width="100" height="50"/>
+        <dc:Bounds x="985.5981308411215" y="675" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-id_Geboortegewicht" dmnElementRef="id_Geboortegewicht" isCollapsed="false">
@@ -1926,7 +1899,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="1707" y="733" width="100" height="50"/>
+        <dc:Bounds x="1161" y="675" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-d_isAfwijkend" dmnElementRef="d_isAfwijkend" isCollapsed="false">
@@ -1935,7 +1908,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="1425" y="122" width="100" height="50"/>
+        <dc:Bounds x="734" y="2" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-d_isDubieus" dmnElementRef="d_isDubieus" isCollapsed="false">
@@ -1944,7 +1917,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="1635" y="51" width="100" height="50"/>
+        <dc:Bounds x="1022" y="53" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-d_isPrematuur" dmnElementRef="d_isPrematuur" isCollapsed="false">
@@ -1953,56 +1926,56 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="1558" y="256" width="100" height="50"/>
+        <dc:Bounds x="987" y="451" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_4CFB0559-39A5-4D95-9900-C9F60A3AA626" dmnElementRef="_4CFB0559-39A5-4D95-9900-C9F60A3AA626">
         <di:waypoint x="466" y="214"/>
-        <di:waypoint x="1475" y="147"/>
+        <di:waypoint x="784" y="27"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_F594CFAD-8D52-45BE-9337-2B39B8CD1326" dmnElementRef="_F594CFAD-8D52-45BE-9337-2B39B8CD1326">
         <di:waypoint x="641" y="214"/>
-        <di:waypoint x="1475" y="147"/>
+        <di:waypoint x="784" y="27"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_44DA875E-865C-4014-B311-ADB470BBE583" dmnElementRef="_44DA875E-865C-4014-B311-ADB470BBE583">
         <di:waypoint x="816" y="214"/>
-        <di:waypoint x="1475" y="147"/>
+        <di:waypoint x="784" y="27"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_732A5F23-4E3B-4BB7-B683-891B1945CA6C" dmnElementRef="_732A5F23-4E3B-4BB7-B683-891B1945CA6C">
-        <di:waypoint x="1608" y="281"/>
-        <di:waypoint x="1475" y="147"/>
+        <di:waypoint x="1037" y="476"/>
+        <di:waypoint x="784" y="27"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_677E81F8-9F79-4161-A59B-5665691383A0" dmnElementRef="_677E81F8-9F79-4161-A59B-5665691383A0">
         <di:waypoint x="466" y="214"/>
-        <di:waypoint x="1685" y="76"/>
+        <di:waypoint x="1072" y="78"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_533863D1-7138-443E-822D-D35D444471FF" dmnElementRef="_533863D1-7138-443E-822D-D35D444471FF">
         <di:waypoint x="641" y="214"/>
-        <di:waypoint x="1685" y="76"/>
+        <di:waypoint x="1072" y="78"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_B5CF6D5B-DFBD-4FD6-BB31-F102BF090EA2" dmnElementRef="_B5CF6D5B-DFBD-4FD6-BB31-F102BF090EA2">
         <di:waypoint x="816" y="214"/>
-        <di:waypoint x="1685" y="76"/>
+        <di:waypoint x="1072" y="78"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_AD73F46E-9C10-43A2-9388-4C27F35D1C58" dmnElementRef="_AD73F46E-9C10-43A2-9388-4C27F35D1C58">
         <di:waypoint x="991" y="214"/>
-        <di:waypoint x="1685" y="76"/>
+        <di:waypoint x="1072" y="78"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_724ACFC9-7635-4653-9931-166AD4CA56D3" dmnElementRef="_724ACFC9-7635-4653-9931-166AD4CA56D3">
-        <di:waypoint x="1608" y="281"/>
-        <di:waypoint x="1685" y="76"/>
+        <di:waypoint x="1037" y="476"/>
+        <di:waypoint x="1072" y="78"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_2049FD0F-270B-424B-8FFA-47F6FA2D0C78" dmnElementRef="_2049FD0F-270B-424B-8FFA-47F6FA2D0C78">
-        <di:waypoint x="1404.5981308411215" y="758"/>
-        <di:waypoint x="1608" y="281"/>
+        <di:waypoint x="856.2990654205607" y="700"/>
+        <di:waypoint x="1037" y="476"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_ABCE3E60-20B6-4101-A394-1A31755583B2" dmnElementRef="_ABCE3E60-20B6-4101-A394-1A31755583B2">
-        <di:waypoint x="1579.5981308411215" y="758"/>
-        <di:waypoint x="1608" y="281"/>
+        <di:waypoint x="1035.5981308411215" y="700"/>
+        <di:waypoint x="1037" y="476"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_A833EBA6-F93C-4638-A684-A32CAF6C3BD4" dmnElementRef="_A833EBA6-F93C-4638-A684-A32CAF6C3BD4">
-        <di:waypoint x="1757" y="758"/>
-        <di:waypoint x="1608" y="281"/>
+        <di:waypoint x="1211" y="700"/>
+        <di:waypoint x="1037" y="476"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
