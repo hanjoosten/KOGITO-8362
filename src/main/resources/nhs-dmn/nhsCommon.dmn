@@ -59,8 +59,19 @@
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
+          <dmn:variable id="_4C57DEA4-E3AD-4AE0-9B45-F388F7A59D80" name="aantalGevonden" typeRef="number"/>
+          <dmn:literalExpression id="_CAEB424F-A298-42E7-9D09-F0CCCB991979">
+            <dmn:text>count(deMerker)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
           <dmn:variable id="_F070BA1D-396F-4551-AC32-AC2881CE225F" name="hetResultaat" typeRef="number"/>
-          <dmn:decisionTable id="_BBC35767-5DB5-4423-B0CD-2DC40E9B7666" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+          <dmn:decisionTable id="_BBC35767-5DB5-4423-B0CD-2DC40E9B7666" hitPolicy="RULE ORDER" preferredOrientation="Rule-as-Row">
+            <dmn:input id="_BA042ED0-DB4C-45B4-ADA5-3A8E913CFE72">
+              <dmn:inputExpression id="_258593D4-5A66-4E0C-90D1-AAD6310BF9FA" typeRef="number">
+                <dmn:text>aantalGevonden</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
             <dmn:input id="_1CEC5E68-FC87-4E53-B931-758A9733CC9A">
               <dmn:inputExpression id="_25C57559-1CF7-4BAD-8156-FC36B8161210" typeRef="number">
                 <dmn:text>deMerker.status</dmn:text>
@@ -69,6 +80,9 @@
             <dmn:output id="_3464E056-FCD8-4D99-AB74-63CEAF5A6F7E"/>
             <dmn:annotation name="annotation-1"/>
             <dmn:rule id="_DD65C962-A124-412F-B905-224D1C45D98E">
+              <dmn:inputEntry id="_BAE1FB91-15C7-46B2-AE72-D5DFE051FB41">
+                <dmn:text>1</dmn:text>
+              </dmn:inputEntry>
               <dmn:inputEntry id="_05591061-C804-4DE8-8898-8C9670B75298">
                 <dmn:text>0</dmn:text>
               </dmn:inputEntry>
@@ -80,21 +94,13 @@
               </dmn:annotationEntry>
             </dmn:rule>
             <dmn:rule id="_5401B252-8BFE-4770-8462-9C336DF2ACAD">
+              <dmn:inputEntry id="_018E2C86-14F8-40EB-BB25-8B5276AA163D">
+                <dmn:text>-</dmn:text>
+              </dmn:inputEntry>
               <dmn:inputEntry id="_FF9F1087-B9DC-4218-B7AD-4C3B2B71192A">
-                <dmn:text>not(0)</dmn:text>
+                <dmn:text>-</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_965C7B28-391A-4916-98E2-3E449F137B94">
-                <dmn:text>null</dmn:text>
-              </dmn:outputEntry>
-              <dmn:annotationEntry>
-                <dmn:text/>
-              </dmn:annotationEntry>
-            </dmn:rule>
-            <dmn:rule id="_A044CA32-F207-40FB-988A-C7909EA8DF2D">
-              <dmn:inputEntry id="_87AEBCFC-0655-4F0A-A215-2C3CFF620D91">
-                <dmn:text>null</dmn:text>
-              </dmn:inputEntry>
-              <dmn:outputEntry id="_3C38AFA9-0FF9-4421-81AB-22BA195C1323">
                 <dmn:text>null</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
@@ -174,23 +180,27 @@
           <kie:ComponentWidths dmnElementRef="_0321B255-B3A0-4D8A-AA6C-24ACBF8FDEC4">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>853</kie:width>
+            <kie:width>953</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_021E382A-1499-4444-AD1B-857C3EDFEF5A">
-            <kie:width>853</kie:width>
+            <kie:width>953</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CAEB424F-A298-42E7-9D09-F0CCCB991979">
+            <kie:width>953</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_BBC35767-5DB5-4423-B0CD-2DC40E9B7666">
             <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>220</kie:width>
             <kie:width>463</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_0A87C957-85EF-4083-A167-C113009F35BD">
-            <kie:width>853</kie:width>
+            <kie:width>953</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_31583912-08CB-4669-A979-532A7003C9A0">
             <kie:width>50</kie:width>
-            <kie:width>1023</kie:width>
+            <kie:width>1123</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_EE152606-1E15-46FD-A459-7890F2166F10">
             <kie:width>300</kie:width>
