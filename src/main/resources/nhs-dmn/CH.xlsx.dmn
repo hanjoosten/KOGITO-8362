@@ -2190,16 +2190,6 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:businessKnowledgeModel id="_0F370D13-479E-40B2-9DEA-3E9F3CCF7E32" name="Waarde van merker">
-    <dmn:extensionElements/>
-    <dmn:variable id="_C6F176A0-D32D-4CE9-ADC9-9033E9183972" name="Waarde van merker"/>
-    <dmn:encapsulatedLogic id="_7B8A609F-8EBD-4E59-89B0-B4541CD2C0E7" kind="FEEL">
-      <dmn:formalParameter id="_84F08FD6-4438-4DFB-84F2-C67EC949AC51" name="merker"/>
-      <dmn:literalExpression id="_5822F86A-17AA-4C8E-B785-845BA44DA94C">
-        <dmn:text/>
-      </dmn:literalExpression>
-    </dmn:encapsulatedLogic>
-  </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_74D49D5A-0747-4EBE-AE82-3B8C476124F9" name="DRG">
       <di:extension>
@@ -2214,13 +2204,6 @@
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_5822F86A-17AA-4C8E-B785-845BA44DA94C">
-            <kie:width>150</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_7B8A609F-8EBD-4E59-89B0-B4541CD2C0E7">
-            <kie:width>50</kie:width>
-            <kie:width>150</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -2285,15 +2268,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="488" y="69" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_0F370D13-479E-40B2-9DEA-3E9F3CCF7E32" dmnElementRef="_0F370D13-479E-40B2-9DEA-3E9F3CCF7E32" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="280" y="377" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_94A8DF9F-9AD1-4BB6-8C4B-9469B91E4482" dmnElementRef="_94A8DF9F-9AD1-4BB6-8C4B-9469B91E4482">
