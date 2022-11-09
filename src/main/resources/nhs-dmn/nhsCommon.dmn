@@ -90,6 +90,17 @@
                 <dmn:text/>
               </dmn:annotationEntry>
             </dmn:rule>
+            <dmn:rule id="_A044CA32-F207-40FB-988A-C7909EA8DF2D">
+              <dmn:inputEntry id="_87AEBCFC-0655-4F0A-A215-2C3CFF620D91">
+                <dmn:text>null</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_3C38AFA9-0FF9-4421-81AB-22BA195C1323">
+                <dmn:text>null</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
           </dmn:decisionTable>
         </dmn:contextEntry>
         <dmn:contextEntry>
