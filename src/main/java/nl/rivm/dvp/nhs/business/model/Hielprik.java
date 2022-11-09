@@ -15,5 +15,6 @@ public class Hielprik {
     Integer afnametermijnPrematuur;
     Integer geboortegewicht;
     Boolean bloedtransfusie;
+    String bloedtransfusieType;
     LocalDateTime bloedtransfusieMoment;
 }
