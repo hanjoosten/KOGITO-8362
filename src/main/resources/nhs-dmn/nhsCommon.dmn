@@ -22,8 +22,8 @@
     <dmn:itemComponent id="_F0ED108D-7FD3-4CED-A115-1E2FFB8CB0FD" name="zwangerschapsduur" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_763944BF-DE00-431D-B06C-26D52EF93C6F" name="uitslagen" isCollection="false">
-      <dmn:typeRef>Any</dmn:typeRef>
+    <dmn:itemComponent id="_763944BF-DE00-431D-B06C-26D52EF93C6F" name="uitslagen" isCollection="true">
+      <dmn:typeRef>Merker</dmn:typeRef>
     </dmn:itemComponent>
     <dmn:itemComponent id="_5244A6D5-8815-465D-93D1-54A75BA688B7" name="geboortegewicht" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
@@ -113,7 +113,7 @@
           </dmn:decisionTable>
         </dmn:contextEntry>
         <dmn:contextEntry>
-          <dmn:literalExpression id="_0A87C957-85EF-4083-A167-C113009F35BD">
+          <dmn:literalExpression id="_69D34CEE-E5C2-4A59-8E5A-0B08B925CB64">
             <dmn:text>hetResultaat</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
@@ -182,7 +182,7 @@
     <dmn:informationRequirement id="_83D4B22B-F0C8-42F3-B887-4F07E4D14813">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_506CCBC5-DD2F-4E96-AB63-BF4CA1141924" hitPolicy="ANY" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_506CCBC5-DD2F-4E96-AB63-BF4CA1141924" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_A33537B9-42C3-4955-B60B-B58410F0AED2">
         <dmn:inputExpression id="_01EFB463-7987-41F9-ADB6-BE6384CF1942" typeRef="boolean">
           <dmn:text>hielprik.bloedtransfusie</dmn:text>
@@ -239,7 +239,7 @@
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_1EF6B1BE-03CE-488F-9189-3785F10B6F34">
-          <dmn:text>not(null)</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_0108A388-777A-4DFF-B134-FAD2A9901C0F">
           <dmn:text>null</dmn:text>
@@ -292,7 +292,7 @@
             <kie:width>220</kie:width>
             <kie:width>463</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_0A87C957-85EF-4083-A167-C113009F35BD">
+          <kie:ComponentWidths dmnElementRef="_69D34CEE-E5C2-4A59-8E5A-0B08B925CB64">
             <kie:width>953</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_31583912-08CB-4669-A979-532A7003C9A0">
