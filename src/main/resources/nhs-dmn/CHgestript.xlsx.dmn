@@ -1,0 +1,2242 @@
+<?xml version="1.0" ?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_33700090-3ae8-4c7d-8ba7-c81f9be273d8" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_CHgestript" name="CHgestript" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_33700090-3ae8-4c7d-8ba7-c81f9be273d8" exporter="kie-dmn-xls2dmn">
+  <dmn:inputData id="id_hielprik_46hielprikType" name="hielprik.hielprikType">
+    <dmn:variable id="idvar_hielprik_46hielprikType" name="hielprik.hielprikType" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_AfnametermijnPrematuur" name="AfnametermijnPrematuur">
+    <dmn:variable id="idvar_AfnametermijnPrematuur" name="AfnametermijnPrematuur" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_Zwangerschapsduur" name="Zwangerschapsduur">
+    <dmn:variable id="idvar_Zwangerschapsduur" name="Zwangerschapsduur" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_Geboortegewicht" name="Geboortegewicht">
+    <dmn:variable id="idvar_Geboortegewicht" name="Geboortegewicht" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_T4" name="T4">
+    <dmn:variable id="idvar_T4" name="T4" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_TBG" name="TBG">
+    <dmn:variable id="idvar_TBG" name="TBG" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_TSH" name="TSH">
+    <dmn:variable id="idvar_TSH" name="TSH" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_T4_47TBG" name="T4/TBG">
+    <dmn:variable id="idvar_T4_47TBG" name="T4/TBG" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_AfnameTijd_32EN_32GeboorteTijd_32bekend_63" name="AfnameTijd EN GeboorteTijd bekend?">
+    <dmn:variable id="idvar_AfnameTijd_32EN_32GeboorteTijd_32bekend_63" name="AfnameTijd EN GeboorteTijd bekend?" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_afname_32_45_32geboorte" name="afname - geboorte">
+    <dmn:variable id="idvar_afname_32_45_32geboorte" name="afname - geboorte" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:decision id="d_THP" name="THP">
+    <dmn:variable id="dvar_THP" name="THP" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_hielprik_46hielprikType"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_THP" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="THP">
+      <dmn:input label="hielprik.hielprikType">
+        <dmn:inputExpression>
+          <dmn:text>hielprik.hielprikType</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="d_isPrematuur" name="isPrematuur">
+    <dmn:variable id="dvar_isPrematuur" name="isPrematuur" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_AfnametermijnPrematuur"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_Zwangerschapsduur"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_Geboortegewicht"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_isPrematuur" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="isPrematuur">
+      <dmn:input label="AfnametermijnPrematuur">
+        <dmn:inputExpression>
+          <dmn:text>AfnametermijnPrematuur</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="Zwangerschapsduur">
+        <dmn:inputExpression>
+          <dmn:text>Zwangerschapsduur</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="Geboortegewicht">
+        <dmn:inputExpression>
+          <dmn:text>Geboortegewicht</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 2500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 2500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 2500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 2500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 2500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 252</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 2500</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="d_MeetResultaat" name="MeetResultaat">
+    <dmn:variable id="dvar_MeetResultaat" name="MeetResultaat" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_T4"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_TBG"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_TSH"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_T4_47TBG"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredDecision href="#d_isPrematuur"></dmn:requiredDecision>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredDecision href="#d_THP"></dmn:requiredDecision>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_MeetResultaat" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="MeetResultaat">
+      <dmn:input label="isPrematuur">
+        <dmn:inputExpression>
+          <dmn:text>isPrematuur</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="THP">
+        <dmn:inputExpression>
+          <dmn:text>THP</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="T4">
+        <dmn:inputExpression>
+          <dmn:text>T4</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="TBG">
+        <dmn:inputExpression>
+          <dmn:text>TBG</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="TSH">
+        <dmn:inputExpression>
+          <dmn:text>TSH</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="T4/TBG">
+        <dmn:inputExpression>
+          <dmn:text>T4/TBG</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-1.6 .. -0.8]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(40 .. 105]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(40 .. 105]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(40 .. 105]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(40 .. 105]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 40</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Dubieus</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 40</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 40</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 40</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 105</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 105</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 105</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 105</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= -3.0</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; -0.8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; -0.8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; -0.8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; -0.8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Negatief</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; -0.8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; -0.8</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(7 .. 22)</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>Afwijkend</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 22</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="d_isTeVroegGeprikt" name="isTeVroegGeprikt">
+    <dmn:variable id="dvar_isTeVroegGeprikt" name="isTeVroegGeprikt" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_AfnameTijd_32EN_32GeboorteTijd_32bekend_63"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_afname_32_45_32geboorte"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_isTeVroegGeprikt" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="isTeVroegGeprikt">
+      <dmn:input label="AfnameTijd EN GeboorteTijd bekend?">
+        <dmn:inputExpression>
+          <dmn:text>AfnameTijd EN GeboorteTijd bekend?</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="afname - geboorte">
+        <dmn:inputExpression>
+          <dmn:text>afname - geboorte</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>Ja</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>ja</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>Nee</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 72</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>Nee</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 72</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+</dmn:definitions>
