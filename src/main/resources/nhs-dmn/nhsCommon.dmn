@@ -19,6 +19,9 @@
     <dmn:typeRef>Merker</dmn:typeRef>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_40167C4C-2EBE-49CC-AF88-A411F2812B7B" name="Hielprik" isCollection="false">
+    <dmn:itemComponent id="_4CC13118-8F72-48C6-B51A-F72A2598DD5A" name="hielprikType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
     <dmn:itemComponent id="_F0ED108D-7FD3-4CED-A115-1E2FFB8CB0FD" name="zwangerschapsduur" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
@@ -342,6 +345,44 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
+  <dmn:decision id="_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3" name="isTweedeHielprik">
+    <dmn:extensionElements/>
+    <dmn:variable id="_8FF5AA3B-C2FD-4658-AFFB-151A110B7409" name="isTweedeHielprik" typeRef="boolean"/>
+    <dmn:informationRequirement id="_276C15D4-3CF1-41FA-A7B6-58325553148C">
+      <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_A510064D-E5A1-4616-86F7-B15F86120F4C" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_561A0F2E-74D1-421E-8AE8-6C22F4F4B75E">
+        <dmn:inputExpression id="_124B77E2-A7A6-4850-8121-8A968D6FCE96" typeRef="string">
+          <dmn:text>hielprik.hielprikType</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_5855C88A-E935-4485-AA1E-1FABEDEAD6AB"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_A479D313-2D4F-4311-8874-17DE14C7128F">
+        <dmn:inputEntry id="_D83C1845-ECAE-4906-BB5C-F0CE60B89A93">
+          <dmn:text>["EH","HH"]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_AE2660B0-F9E9-4A45-852D-31E959C82597">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_907E0056-90DD-4214-AAB3-AB154825AFDF">
+        <dmn:inputEntry id="_E7CD8A63-DBE9-476B-9A75-70EFB5D29A25">
+          <dmn:text>["TH","THH"]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B7528EC7-C6AB-4957-81D7-8D04612DFF4C">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_C04B5FE5-6231-43A4-A1B8-5FAA0D36C228" name="DRG">
       <di:extension>
@@ -415,6 +456,12 @@
           <kie:ComponentWidths dmnElementRef="_4C3603DB-D020-420F-B107-17C946493887">
             <kie:width>50</kie:width>
             <kie:width>1104</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A510064D-E5A1-4616-86F7-B15F86120F4C">
+            <kie:width>50</kie:width>
+            <kie:width>182</kie:width>
+            <kie:width>167</kie:width>
+            <kie:width>100</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -490,6 +537,15 @@
         <dc:Bounds x="123" y="493" width="181" height="58"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3" dmnElementRef="_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="812" y="311" width="129" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_C36AF599-E4E4-4007-AE19-74B55CB75CFA" dmnElementRef="_C36AF599-E4E4-4007-AE19-74B55CB75CFA">
         <di:waypoint x="472.29906542056074" y="410"/>
         <di:waypoint x="185" y="134"/>
@@ -525,6 +581,10 @@
       <dmndi:DMNEdge id="dmnedge-drg-_83D4B22B-F0C8-42F3-B887-4F07E4D14813" dmnElementRef="_83D4B22B-F0C8-42F3-B887-4F07E4D14813">
         <di:waypoint x="472.29906542056074" y="410"/>
         <di:waypoint x="835" y="134"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_276C15D4-3CF1-41FA-A7B6-58325553148C" dmnElementRef="_276C15D4-3CF1-41FA-A7B6-58325553148C">
+        <di:waypoint x="472.29906542056074" y="410"/>
+        <di:waypoint x="876.5" y="336"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

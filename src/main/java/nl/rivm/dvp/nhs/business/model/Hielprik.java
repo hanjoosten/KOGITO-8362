@@ -17,4 +17,5 @@ public class Hielprik {
     Boolean bloedtransfusie;
     String bloedtransfusieType;
     LocalDateTime bloedtransfusieMoment;
+    String hielprikType;
 }
