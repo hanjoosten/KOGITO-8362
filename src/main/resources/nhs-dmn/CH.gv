@@ -16,45 +16,38 @@ graph [charset="UTF-8"
   edge [fontname="Helvetica,Arial,sans-serif"]
   
 
-  Actiecode [shape=box]
-  isAfwijkend -> Actiecode
-  isDubieus -> Actiecode
-  isTevroegGeprikt -> Actiecode
-  BTNavraagNodig -> Actiecode
+  // Actiecode [shape=box]
+  // isAfwijkend -> Actiecode
+  // isDubieus -> Actiecode
+  // isTevroegGeprikt -> Actiecode
+  // BTNavraagNodig -> Actiecode
 
   isPrematuur [shape=box]
   "Afnametermijn\nPrematuur" -> isPrematuur
   Zwangerschapsduur -> isPrematuur
   Geboortegewicht -> isPrematuur
 
-  isAfwijkend [shape=box]
-  isPrematuur -> isAfwijkend
-  isDubieus -> isAfwijkend
-  T4 -> isAfwijkend
-  TSH -> isAfwijkend
-  TBG -> isAfwijkend
-  "T4/TBG" -> isAfwijkend
 
-
-  isDubieus [shape=box]
-  isPrematuur -> isDubieus
-  T4 -> isDubieus
-  TSH -> isDubieus
-  TBG -> isDubieus
-  "T4/TBG" -> isDubieus
+  MeetResultaat [shape=box]
+  isPrematuur -> MeetResultaat
+  isTweedeHielprik -> MeetResultaat
+  T4 -> MeetResultaat
+  TSH -> MeetResultaat
+  TBG -> MeetResultaat
+  "T4/TBG" -> MeetResultaat
   
-  BTNavraagNodig [shape=box]
-  ErWasEenBT -> BTNavraagNodig
-  VoldoendeTijdBT -> BTNavraagNodig
-  TypeBT -> BTNavraagNodig
+  // BTNavraagNodig [shape=box]
+  // ErWasEenBT -> BTNavraagNodig
+  // VoldoendeTijdBT -> BTNavraagNodig
+  // TypeBT -> BTNavraagNodig
 
-  VoldoendeTijdBT [shape=box]
-  "BTDatum(Tijd)" -> VoldoendeTijdBT
-  "AfnameDatum(Tijd)" -> VoldoendeTijdBT
+  // VoldoendeTijdBT [shape=box]
+  // "BTDatum(Tijd)" -> VoldoendeTijdBT
+  // "AfnameDatum(Tijd)" -> VoldoendeTijdBT
 
-  isTevroegGeprikt [shape=box]
-  "GeboorteDatum(Tijd)" -> isTevroegGeprikt
-  "AfnameDatum(Tijd)" -> isTevroegGeprikt
+  // isTevroegGeprikt [shape=box]
+  // "GeboorteDatum(Tijd)" -> isTevroegGeprikt
+  // "AfnameDatum(Tijd)" -> isTevroegGeprikt
 
 
   T4 [shape=box]
@@ -68,6 +61,10 @@ graph [charset="UTF-8"
   TBG [shape=box]
   statusTBG -> TBG
   waardeTBG -> TBG
+
+  "T4/TBG" [shape=box]
+  "statusT4/TBG" -> "T4/TBG"
+  "waardeT4/TBG" -> "T4/TBG"
 
 
 
