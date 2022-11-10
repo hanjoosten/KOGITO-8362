@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_33700090-3ae8-4c7d-8ba7-c81f9be273d8" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_CHgestript" name="CHgestript" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_33700090-3ae8-4c7d-8ba7-c81f9be273d8" exporter="kie-dmn-xls2dmn">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_5963ad62-10d2-4c61-9d02-26f4cff82808" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_CHgestript" name="CHgestript" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_5963ad62-10d2-4c61-9d02-26f4cff82808" exporter="kie-dmn-xls2dmn">
   <dmn:inputData id="id_hielprik_46hielprikType" name="hielprik.hielprikType">
     <dmn:variable id="idvar_hielprik_46hielprikType" name="hielprik.hielprikType" typeRef="Any"></dmn:variable>
   </dmn:inputData>
@@ -328,7 +328,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -351,7 +351,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -374,7 +374,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -397,7 +397,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -420,7 +420,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -443,7 +443,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -466,7 +466,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -489,7 +489,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -512,7 +512,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -535,7 +535,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -558,7 +558,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -581,7 +581,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -604,7 +604,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -627,7 +627,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -650,7 +650,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -673,7 +673,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -696,7 +696,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -719,7 +719,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -742,7 +742,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -765,7 +765,7 @@
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -788,7 +788,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -811,7 +811,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -834,7 +834,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -857,12 +857,58 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
         <dmn:inputEntry>
           <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Negatief"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>(-3.0 .. -1.6]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt;= 7</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt; 17</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Negatief"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry>
           <dmn:text>false</dmn:text>
@@ -880,53 +926,7 @@
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>true</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>(-3.0 .. -1.6]</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>&lt;= 7</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>&gt; 17</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>true</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>(-3.0 .. -1.6]</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>&lt;= 7</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>&gt; 17</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -949,7 +949,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4/TBG")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -972,7 +972,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4/TBG")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -995,7 +995,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1018,7 +1018,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1041,7 +1041,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1064,7 +1064,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1087,7 +1087,7 @@
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1110,7 +1110,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1133,7 +1133,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1156,7 +1156,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1179,7 +1179,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1202,7 +1202,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1225,7 +1225,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1248,7 +1248,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1271,7 +1271,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1294,7 +1294,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4/TBG")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1317,7 +1317,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1340,7 +1340,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1363,7 +1363,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1386,7 +1386,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1409,7 +1409,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1432,7 +1432,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1455,7 +1455,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1478,7 +1478,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1501,7 +1501,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1524,7 +1524,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1547,7 +1547,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1570,7 +1570,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1593,7 +1593,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1616,7 +1616,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1639,7 +1639,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Dubieus</dmn:text>
+          <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1662,7 +1662,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1685,7 +1685,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1708,7 +1708,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1731,7 +1731,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1754,7 +1754,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1777,7 +1777,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1800,7 +1800,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1823,7 +1823,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1846,7 +1846,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1869,7 +1869,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1892,7 +1892,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1915,7 +1915,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1938,7 +1938,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1961,7 +1961,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -1984,7 +1984,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Negatief</dmn:text>
+          <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2007,7 +2007,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2030,7 +2030,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2053,7 +2053,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2076,7 +2076,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2099,7 +2099,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2122,7 +2122,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>Afwijkend</dmn:text>
+          <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2145,7 +2145,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule>
@@ -2168,7 +2168,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry>
-          <dmn:text>null</dmn:text>
+          <dmn:text>onbekend(hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
     </dmn:decisionTable>
@@ -2195,7 +2195,7 @@
       <dmn:output></dmn:output>
       <dmn:rule>
         <dmn:inputEntry>
-          <dmn:text>Ja</dmn:text>
+          <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry>
           <dmn:text>&lt; 48</dmn:text>
@@ -2206,7 +2206,7 @@
       </dmn:rule>
       <dmn:rule>
         <dmn:inputEntry>
-          <dmn:text>ja</dmn:text>
+          <dmn:text>true</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry>
           <dmn:text>&gt;= 48</dmn:text>
@@ -2217,7 +2217,7 @@
       </dmn:rule>
       <dmn:rule>
         <dmn:inputEntry>
-          <dmn:text>Nee</dmn:text>
+          <dmn:text>false</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry>
           <dmn:text>&lt; 72</dmn:text>
@@ -2228,7 +2228,7 @@
       </dmn:rule>
       <dmn:rule>
         <dmn:inputEntry>
-          <dmn:text>Nee</dmn:text>
+          <dmn:text>false</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry>
           <dmn:text>&gt;= 72</dmn:text>
