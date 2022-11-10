@@ -5,4 +5,4 @@ target
 
 .history
 
-kie-dmn-xls2dmn-*.jar
+**/kie-dmn-xls2dmn-*.jar
