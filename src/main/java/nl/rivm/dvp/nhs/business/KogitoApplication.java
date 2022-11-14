@@ -18,7 +18,7 @@ package nl.rivm.dvp.nhs.business;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages={"nl.rivm.dvp.nhs.business.**", "org.kie.kogito.**", "http**"})
+@SpringBootApplication(scanBasePackages = { "nl.rivm.dvp.nhs.business.**", "org.kie.kogito.**", "http**", "xls2dmn_" })
 public class KogitoApplication {
 
     public static void main(String[] args) {
