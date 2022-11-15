@@ -9,12 +9,35 @@ graph [charset="UTF-8"
        layout="dot"
        splines=true 
        overlap=false 
-       rankdir = "BT"];
+       rankdir = "BT"]
 
   node [fontname="Helvetica,Arial,sans-serif"
-        shape=Mrecord]
+        shape=Mrecord
+        fontsize=12]
   edge [fontname="Helvetica,Arial,sans-serif"]
-  
+  subgraph cluster_0 {
+    label = "HPS";
+    node [fontsize=8];
+    labelloc="t"
+    labeljust=l
+
+  T4 [shape=box]
+  statusT4 -> T4
+  waardeT4 -> T4
+
+  TSH [shape=box]
+  statusTSH -> TSH
+  waardeTSH -> TSH
+
+  TBG [shape=box]
+  statusTBG -> TBG
+  waardeTBG -> TBG
+
+  "T4/TBG" [shape=box]
+  "statusT4/TBG" -> "T4/TBG"
+  "waardeT4/TBG" -> "T4/TBG"
+
+  }
 
   // Actiecode [shape=box]
   // isAfwijkend -> Actiecode
@@ -50,21 +73,6 @@ graph [charset="UTF-8"
   // "AfnameDatum(Tijd)" -> isTevroegGeprikt
 
 
-  T4 [shape=box]
-  statusT4 -> T4
-  waardeT4 -> T4
-
-  TSH [shape=box]
-  statusTSH -> TSH
-  waardeTSH -> TSH
-
-  TBG [shape=box]
-  statusTBG -> TBG
-  waardeTBG -> TBG
-
-  "T4/TBG" [shape=box]
-  "statusT4/TBG" -> "T4/TBG"
-  "waardeT4/TBG" -> "T4/TBG"
 
 
 
