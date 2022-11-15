@@ -390,9 +390,9 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
-  <dmn:businessKnowledgeModel id="_3B647852-B133-48FB-8325-21F3F85813C4" name="bruikbaarheid">
+  <dmn:businessKnowledgeModel id="_3B647852-B133-48FB-8325-21F3F85813C4" name="classificatie">
     <dmn:extensionElements/>
-    <dmn:variable id="_D17417B5-8E05-4526-88D0-962996C71984" name="bruikbaarheid" typeRef="string"/>
+    <dmn:variable id="_D17417B5-8E05-4526-88D0-962996C71984" name="classificatie" typeRef="string"/>
     <dmn:encapsulatedLogic id="_3F249730-BF76-4EBA-8F3F-B3D2DB27068B" kind="FEEL">
       <dmn:formalParameter id="_1B60F4D5-1CA6-45A8-B51F-6308FE1D3428" name="hielprik" typeRef="Hielprik"/>
       <dmn:formalParameter id="_374E4B79-7EB3-48DF-BAA3-5F7F83DE04A2" name="merkernaam" typeRef="string"/>
@@ -534,9 +534,9 @@
       <dmn:text>hielprik.afnametermijnPrematuur</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_182EE18A-4962-4FBB-80DF-15C155540E25" name="bruikbaarheid T4">
+  <dmn:decision id="_182EE18A-4962-4FBB-80DF-15C155540E25" name="classificatie T4">
     <dmn:extensionElements/>
-    <dmn:variable id="_B70285CF-EB6E-432F-8880-DEAF02DB3299" name="bruikbaarheid T4" typeRef="string"/>
+    <dmn:variable id="_B70285CF-EB6E-432F-8880-DEAF02DB3299" name="classificatie T4" typeRef="string"/>
     <dmn:informationRequirement id="_C7C53565-CC7E-42AF-A05B-B5E081B14298">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -544,12 +544,12 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_F69A15DC-C4A6-41EF-AED5-4B284359C966">
-      <dmn:text>bruikbaarheid(hielprik,"T4")</dmn:text>
+      <dmn:text>classificatie(hielprik,"T4")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_3E5B8E64-7B70-4E20-802E-2F67350EAE25" name="bruikbaarheid TBG">
+  <dmn:decision id="_3E5B8E64-7B70-4E20-802E-2F67350EAE25" name="classificatie TBG">
     <dmn:extensionElements/>
-    <dmn:variable id="_2170334E-2A2F-4DAA-B630-13B7513C3F08" name="bruikbaarheid TBG" typeRef="string"/>
+    <dmn:variable id="_2170334E-2A2F-4DAA-B630-13B7513C3F08" name="classificatie TBG" typeRef="string"/>
     <dmn:informationRequirement id="_BEF2B9FF-1C19-44EA-B84C-1894A4B3EF49">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -557,12 +557,12 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_371DA2A1-5135-46E5-85D1-359A1A5FE9D4">
-      <dmn:text>bruikbaarheid(hielprik,"TBG")</dmn:text>
+      <dmn:text>classificatie(hielprik,"TBG")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_0D5D4A3A-85A1-453A-9A1A-1D0D8CA70AC5" name="bruikbaarheid TSH">
+  <dmn:decision id="_0D5D4A3A-85A1-453A-9A1A-1D0D8CA70AC5" name="classificatie TSH">
     <dmn:extensionElements/>
-    <dmn:variable id="_5E9EA278-4F5C-4B60-83C3-2F9C1B10EF92" name="bruikbaarheid TSH" typeRef="string"/>
+    <dmn:variable id="_5E9EA278-4F5C-4B60-83C3-2F9C1B10EF92" name="classificatie TSH" typeRef="string"/>
     <dmn:informationRequirement id="_AE20F6F4-7AB0-44A4-B2EC-8B4EAD6A9099">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -570,12 +570,12 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_B0DAD3E3-96DA-4906-A891-BB68B3027014">
-      <dmn:text>bruikbaarheid(hielprik,"TSH")</dmn:text>
+      <dmn:text>classificatie(hielprik,"TSH")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_02481914-30CB-45B2-9F7C-A783CEC93809" name="bruikbaarheid T4/TBG">
+  <dmn:decision id="_02481914-30CB-45B2-9F7C-A783CEC93809" name="classificatie T4/TBG">
     <dmn:extensionElements/>
-    <dmn:variable id="_0205BF40-F833-4B0A-94E7-6E7284862C29" name="bruikbaarheid T4/TBG" typeRef="string"/>
+    <dmn:variable id="_0205BF40-F833-4B0A-94E7-6E7284862C29" name="classificatie T4/TBG" typeRef="string"/>
     <dmn:informationRequirement id="_E5282894-645F-4BDF-88E5-BCA165A30532">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -583,7 +583,7 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_6E14C4B7-36C8-4B8B-A87E-223D5B838BB2">
-      <dmn:text>bruikbaarheid(hielprik,"T4/TBG")</dmn:text>
+      <dmn:text>classificatie(hielprik,"T4/TBG")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>

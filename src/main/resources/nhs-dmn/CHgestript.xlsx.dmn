@@ -452,7 +452,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_F3DEBD3B-98D6-43F2-9BED-8D64B62B1F82">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -712,7 +712,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_BFB59689-DCED-4782-B70A-E5295F2C3B0D">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -738,7 +738,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_E0AB1067-FEED-40CB-9791-A3DE1CA5EF36">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -764,7 +764,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_2DB8FBDF-9018-4E0C-B1D0-647C03171E4E">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1076,7 +1076,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_99532A40-754C-4ABE-B52E-2526F9202DBF">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4/TBG")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4/TBG")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1102,7 +1102,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_17E70E07-0732-4A9F-904F-A6F9494E4895">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4/TBG")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4/TBG")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1284,7 +1284,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_B0243BDD-D1A0-4786-9621-B1925F619B57">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1336,7 +1336,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_A49686BD-8CAF-42B7-995A-8BDC2AB5CCB0">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1362,7 +1362,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AB2EDB07-6F03-4110-8954-3FDC7D1A8D4E">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1388,7 +1388,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_F2981CE7-3636-4696-A34E-280B1FF48765">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1414,7 +1414,7 @@
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_2746906F-2630-4BF2-B587-107E41DE34E8">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1440,7 +1440,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_819A3388-F1B0-4F16-8A49-CAC8C64CD50B">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1466,7 +1466,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_E1B579C6-FBE3-4FB7-A310-6A0CB14E441B">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4/TBG")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4/TBG")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1492,7 +1492,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_B61A0DCB-5FE5-4CC4-969D-6C6627DF2A32">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1726,7 +1726,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_ADA2F301-D30A-4D5C-AC1A-951DC25DC8D6">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1934,7 +1934,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_4D76CE29-66FE-4951-9B19-DA3F618BB38E">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2298,7 +2298,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_61838892-F489-426F-941D-4C41C3753D20">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"TSH")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2324,7 +2324,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_9FDB3517-15AE-4C4F-8157-D540A53A48C2">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2350,7 +2350,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_208AD492-38AC-408C-AC01-698B26A8D464">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2376,7 +2376,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_8BF64DBC-9FBE-41C0-8F61-E8B4B0F6AB2F">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2428,7 +2428,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_C2CF250C-6B75-4A80-929D-7E4E3579D0D6">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2454,7 +2454,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_D73698DE-4BFC-44E9-973D-0EB92D8C649E">
-          <dmn:text>HPS.bruikbaarheid(HPS.hielprik,"T4")</dmn:text>
+          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
