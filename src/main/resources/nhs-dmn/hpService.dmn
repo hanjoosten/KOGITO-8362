@@ -56,7 +56,6 @@
     <dmn:outputDecision href="#_2DD5ACA2-4A69-4484-93CC-CEFFF9E7FABC"/>
     <dmn:outputDecision href="#_467EB19F-181D-46B7-A96A-59582AE186D5"/>
     <dmn:outputDecision href="#_DE738101-7146-4C48-B6A6-34C12F04C191"/>
-    <dmn:outputDecision href="#_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3"/>
     <dmn:outputDecision href="#_FAF33CC3-DB95-4523-8B8C-1DA3B59A44A1"/>
     <dmn:outputDecision href="#_D8D5FDAE-3216-4CA1-A2FF-A35C334D8C35"/>
     <dmn:outputDecision href="#_09638E4C-B01F-442B-8DD6-A87D6113627E"/>
@@ -212,9 +211,9 @@
       <dmn:text>bruikbareWaarde(hielprik,"TSH")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_D8D5FDAE-3216-4CA1-A2FF-A35C334D8C35" name="T4/TBG">
+  <dmn:decision id="_D8D5FDAE-3216-4CA1-A2FF-A35C334D8C35" name="T4_TBG">
     <dmn:extensionElements/>
-    <dmn:variable id="_14977D24-B59E-4F11-9F5B-80B4333B6F80" name="T4/TBG" typeRef="number"/>
+    <dmn:variable id="_14977D24-B59E-4F11-9F5B-80B4333B6F80" name="T4_TBG" typeRef="number"/>
     <dmn:informationRequirement id="_3D8A2E23-FD67-4FD2-8B00-587D48D395DE">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -391,47 +390,9 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
-  <dmn:decision id="_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3" name="isTweedeHielprik">
+  <dmn:businessKnowledgeModel id="_3B647852-B133-48FB-8325-21F3F85813C4" name="bruikbaarheid">
     <dmn:extensionElements/>
-    <dmn:variable id="_8FF5AA3B-C2FD-4658-AFFB-151A110B7409" name="isTweedeHielprik" typeRef="boolean"/>
-    <dmn:informationRequirement id="_276C15D4-3CF1-41FA-A7B6-58325553148C">
-      <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
-    </dmn:informationRequirement>
-    <dmn:decisionTable id="_A510064D-E5A1-4616-86F7-B15F86120F4C" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
-      <dmn:input id="_561A0F2E-74D1-421E-8AE8-6C22F4F4B75E">
-        <dmn:inputExpression id="_124B77E2-A7A6-4850-8121-8A968D6FCE96" typeRef="string">
-          <dmn:text>hielprik.hielprikType</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:output id="_5855C88A-E935-4485-AA1E-1FABEDEAD6AB"/>
-      <dmn:annotation name="annotation-1"/>
-      <dmn:rule id="_A479D313-2D4F-4311-8874-17DE14C7128F">
-        <dmn:inputEntry id="_D83C1845-ECAE-4906-BB5C-F0CE60B89A93">
-          <dmn:text>["EH","HH"]</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_AE2660B0-F9E9-4A45-852D-31E959C82597">
-          <dmn:text>false</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_907E0056-90DD-4214-AAB3-AB154825AFDF">
-        <dmn:inputEntry id="_E7CD8A63-DBE9-476B-9A75-70EFB5D29A25">
-          <dmn:text>["TH","THH"]</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_B7528EC7-C6AB-4957-81D7-8D04612DFF4C">
-          <dmn:text>true</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-    </dmn:decisionTable>
-  </dmn:decision>
-  <dmn:businessKnowledgeModel id="_3B647852-B133-48FB-8325-21F3F85813C4" name="redenOnbekend">
-    <dmn:extensionElements/>
-    <dmn:variable id="_D17417B5-8E05-4526-88D0-962996C71984" name="redenOnbekend" typeRef="string"/>
+    <dmn:variable id="_D17417B5-8E05-4526-88D0-962996C71984" name="bruikbaarheid" typeRef="string"/>
     <dmn:encapsulatedLogic id="_3F249730-BF76-4EBA-8F3F-B3D2DB27068B" kind="FEEL">
       <dmn:formalParameter id="_1B60F4D5-1CA6-45A8-B51F-6308FE1D3428" name="hielprik" typeRef="Hielprik"/>
       <dmn:formalParameter id="_374E4B79-7EB3-48DF-BAA3-5F7F83DE04A2" name="merkernaam" typeRef="string"/>
@@ -496,13 +457,27 @@
                 <dmn:text>1</dmn:text>
               </dmn:inputEntry>
               <dmn:inputEntry id="_7C8E2042-4FC8-4B16-B021-19F48759FC94">
-                <dmn:text>not ([1,2,3,4,5,9])</dmn:text>
+                <dmn:text>[0]</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_8E45EEF9-8A28-46BE-A95C-F4F8C6EEC767">
-                <dmn:text>null</dmn:text>
+                <dmn:text>"BRUIKBAAR"</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
                 <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+            <dmn:rule id="_602072B7-F361-4313-808A-83E49D5CEB68">
+              <dmn:inputEntry id="_47BB5603-D9F9-494C-A3DE-6BCAE242EF13">
+                <dmn:text>1</dmn:text>
+              </dmn:inputEntry>
+              <dmn:inputEntry id="_73BA25A4-4B03-491C-959C-2758EBA9F196">
+                <dmn:text>not([0,1,2,3,4,5,9])</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_2AABBFF8-FC83-4678-B083-F2A220156989">
+                <dmn:text>null</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text>Onbekende statuscode</dmn:text>
               </dmn:annotationEntry>
             </dmn:rule>
             <dmn:rule id="_090EAC7A-CD38-469D-8D8C-C1FFD301A65A">
@@ -516,7 +491,7 @@
                 <dmn:text>null</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
-                <dmn:text/>
+                <dmn:text>Géén of meerdere uitslagen met dezelfde merker</dmn:text>
               </dmn:annotationEntry>
             </dmn:rule>
           </dmn:decisionTable>
@@ -559,9 +534,9 @@
       <dmn:text>hielprik.afnametermijnPrematuur</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_182EE18A-4962-4FBB-80DF-15C155540E25" name="redenOnbekend T4">
+  <dmn:decision id="_182EE18A-4962-4FBB-80DF-15C155540E25" name="bruikbaarheid T4">
     <dmn:extensionElements/>
-    <dmn:variable id="_B70285CF-EB6E-432F-8880-DEAF02DB3299" name="redenOnbekend T4" typeRef="string"/>
+    <dmn:variable id="_B70285CF-EB6E-432F-8880-DEAF02DB3299" name="bruikbaarheid T4" typeRef="string"/>
     <dmn:informationRequirement id="_C7C53565-CC7E-42AF-A05B-B5E081B14298">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -569,12 +544,12 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_F69A15DC-C4A6-41EF-AED5-4B284359C966">
-      <dmn:text>redenOnbekend(hielprik,"T4")</dmn:text>
+      <dmn:text>bruikbaarheid(hielprik,"T4")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_3E5B8E64-7B70-4E20-802E-2F67350EAE25" name="redenOnbekend TBG">
+  <dmn:decision id="_3E5B8E64-7B70-4E20-802E-2F67350EAE25" name="bruikbaarheid TBG">
     <dmn:extensionElements/>
-    <dmn:variable id="_2170334E-2A2F-4DAA-B630-13B7513C3F08" name="redenOnbekend TBG" typeRef="string"/>
+    <dmn:variable id="_2170334E-2A2F-4DAA-B630-13B7513C3F08" name="bruikbaarheid TBG" typeRef="string"/>
     <dmn:informationRequirement id="_BEF2B9FF-1C19-44EA-B84C-1894A4B3EF49">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -582,12 +557,12 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_371DA2A1-5135-46E5-85D1-359A1A5FE9D4">
-      <dmn:text>redenOnbekend(hielprik,"TBG")</dmn:text>
+      <dmn:text>bruikbaarheid(hielprik,"TBG")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_0D5D4A3A-85A1-453A-9A1A-1D0D8CA70AC5" name="redenOnbekend TSH">
+  <dmn:decision id="_0D5D4A3A-85A1-453A-9A1A-1D0D8CA70AC5" name="bruikbaarheid TSH">
     <dmn:extensionElements/>
-    <dmn:variable id="_5E9EA278-4F5C-4B60-83C3-2F9C1B10EF92" name="redenOnbekend TSH" typeRef="string"/>
+    <dmn:variable id="_5E9EA278-4F5C-4B60-83C3-2F9C1B10EF92" name="bruikbaarheid TSH" typeRef="string"/>
     <dmn:informationRequirement id="_AE20F6F4-7AB0-44A4-B2EC-8B4EAD6A9099">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -595,12 +570,12 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_B0DAD3E3-96DA-4906-A891-BB68B3027014">
-      <dmn:text>redenOnbekend(hielprik,"TSH")</dmn:text>
+      <dmn:text>bruikbaarheid(hielprik,"TSH")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_02481914-30CB-45B2-9F7C-A783CEC93809" name="redenOnbekend T4/TBG">
+  <dmn:decision id="_02481914-30CB-45B2-9F7C-A783CEC93809" name="bruikbaarheid T4/TBG">
     <dmn:extensionElements/>
-    <dmn:variable id="_0205BF40-F833-4B0A-94E7-6E7284862C29" name="redenOnbekend T4/TBG" typeRef="string"/>
+    <dmn:variable id="_0205BF40-F833-4B0A-94E7-6E7284862C29" name="bruikbaarheid T4/TBG" typeRef="string"/>
     <dmn:informationRequirement id="_E5282894-645F-4BDF-88E5-BCA165A30532">
       <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
     </dmn:informationRequirement>
@@ -608,7 +583,7 @@
       <dmn:requiredKnowledge href="#_3B647852-B133-48FB-8325-21F3F85813C4"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_6E14C4B7-36C8-4B8B-A87E-223D5B838BB2">
-      <dmn:text>redenOnbekend(hielprik,"T4/TBG")</dmn:text>
+      <dmn:text>bruikbaarheid(hielprik,"T4/TBG")</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>
@@ -694,36 +669,30 @@
             <kie:width>50</kie:width>
             <kie:width>1104</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_A510064D-E5A1-4616-86F7-B15F86120F4C">
-            <kie:width>50</kie:width>
-            <kie:width>182</kie:width>
-            <kie:width>167</kie:width>
-            <kie:width>100</kie:width>
-          </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_E739C517-AE81-4EC9-AB10-CFF68AEAD827">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>740</kie:width>
+            <kie:width>944</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_A17BBFEA-2B62-4427-A4FC-6979DC171DCD">
-            <kie:width>740</kie:width>
+            <kie:width>944</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_4AA3111C-C477-43D7-BA22-E41D8FB6CA92">
-            <kie:width>740</kie:width>
+            <kie:width>944</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_FBBE9902-4F6A-4C4A-8168-08C2592C2542">
             <kie:width>50</kie:width>
             <kie:width>129</kie:width>
             <kie:width>181</kie:width>
             <kie:width>206</kie:width>
-            <kie:width>154</kie:width>
+            <kie:width>358</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_70B7652E-7585-4790-908B-3E6ECB2CDDCA">
-            <kie:width>740</kie:width>
+            <kie:width>944</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_3F249730-BF76-4EBA-8F3F-B3D2DB27068B">
             <kie:width>50</kie:width>
-            <kie:width>910</kie:width>
+            <kie:width>1114</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_234B6BE1-C517-4295-9D5F-C27A667FFC6A">
             <kie:width>300</kie:width>
@@ -767,7 +736,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="527" y="200.57894736842104" width="122" height="54"/>
+        <dc:Bounds x="527" y="201.57894736842104" width="122" height="54"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_A203AEBB-5849-416B-ABDE-47AD0C121A39" dmnElementRef="_A203AEBB-5849-416B-ABDE-47AD0C121A39" isCollapsed="false">
@@ -831,15 +800,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="202" y="460.2368421052631" width="181" height="58"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3" dmnElementRef="_5581E07A-B82C-4320-AFF7-E9CFE9CE93B3" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="1929" y="340" width="129" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_3B647852-B133-48FB-8325-21F3F85813C4" dmnElementRef="_3B647852-B133-48FB-8325-21F3F85813C4" isCollapsed="false">
@@ -919,7 +879,7 @@
         <di:waypoint x="1008" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_54A39875-1439-4DF1-BAC6-C6AF553CF9EA" dmnElementRef="_54A39875-1439-4DF1-BAC6-C6AF553CF9EA">
-        <di:waypoint x="588" y="227.57894736842104"/>
+        <di:waypoint x="588" y="228.57894736842104"/>
         <di:waypoint x="1008" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_248473F5-8477-45C0-B84D-8EF6A41FBC67" dmnElementRef="_248473F5-8477-45C0-B84D-8EF6A41FBC67">
@@ -927,7 +887,7 @@
         <di:waypoint x="1189" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_18A24FBF-D053-4A96-8791-E96D154C5F17" dmnElementRef="_18A24FBF-D053-4A96-8791-E96D154C5F17">
-        <di:waypoint x="588" y="227.57894736842104"/>
+        <di:waypoint x="588" y="228.57894736842104"/>
         <di:waypoint x="1189" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_ED49B271-576F-4CDE-9E07-A2A44F064C72" dmnElementRef="_ED49B271-576F-4CDE-9E07-A2A44F064C72">
@@ -935,7 +895,7 @@
         <di:waypoint x="1378" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_2EA8E06B-105F-4D90-B30B-C470CF68AC5A" dmnElementRef="_2EA8E06B-105F-4D90-B30B-C470CF68AC5A">
-        <di:waypoint x="588" y="227.57894736842104"/>
+        <di:waypoint x="588" y="228.57894736842104"/>
         <di:waypoint x="1378" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_3D8A2E23-FD67-4FD2-8B00-587D48D395DE" dmnElementRef="_3D8A2E23-FD67-4FD2-8B00-587D48D395DE">
@@ -943,16 +903,12 @@
         <di:waypoint x="1563" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_0F981E37-4AC1-416D-AC8D-E818FED2E65D" dmnElementRef="_0F981E37-4AC1-416D-AC8D-E818FED2E65D">
-        <di:waypoint x="588" y="227.57894736842104"/>
+        <di:waypoint x="588" y="228.57894736842104"/>
         <di:waypoint x="1563" y="198"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_83D4B22B-F0C8-42F3-B887-4F07E4D14813" dmnElementRef="_83D4B22B-F0C8-42F3-B887-4F07E4D14813">
         <di:waypoint x="619.2990654205607" y="748"/>
         <di:waypoint x="1831" y="149"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_276C15D4-3CF1-41FA-A7B6-58325553148C" dmnElementRef="_276C15D4-3CF1-41FA-A7B6-58325553148C">
-        <di:waypoint x="619.2990654205607" y="748"/>
-        <di:waypoint x="1993.5" y="365"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_A92793A2-EE72-49FC-A310-B2CF043AB8D6" dmnElementRef="_A92793A2-EE72-49FC-A310-B2CF043AB8D6">
         <di:waypoint x="619.2990654205607" y="748"/>
