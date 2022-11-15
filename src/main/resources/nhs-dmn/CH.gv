@@ -51,13 +51,13 @@ graph [charset="UTF-8"
   Geboortegewicht -> isPrematuur
 
 
-  MeetResultaat [shape=box]
-  isPrematuur -> MeetResultaat
-  isTweedeHielprik -> MeetResultaat
-  T4 -> MeetResultaat
-  TSH -> MeetResultaat
-  TBG -> MeetResultaat
-  "T4/TBG" -> MeetResultaat
+  Interpretatie [shape=box]
+  isPrematuur -> Interpretatie
+  isTweedeHielprik -> Interpretatie
+  T4 -> Interpretatie
+  TSH -> Interpretatie
+  TBG -> Interpretatie
+  "T4/TBG" -> Interpretatie
   
   // BTNavraagNodig [shape=box]
   // ErWasEenBT -> BTNavraagNodig

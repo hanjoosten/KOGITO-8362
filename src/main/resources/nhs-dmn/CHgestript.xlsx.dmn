@@ -309,9 +309,9 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:decision id="d_MeetResultaat" name="MeetResultaat">
+  <dmn:decision id="d_MeetResultaat" name="Interpretatie">
     <dmn:extensionElements/>
-    <dmn:variable id="dvar_MeetResultaat" name="MeetResultaat" typeRef="string"/>
+    <dmn:variable id="dvar_MeetResultaat" name="Interpretatie" typeRef="string"/>
     <dmn:informationRequirement id="_A866E2A9-9CFE-4C29-9831-1567B601C8DA">
       <dmn:requiredDecision href="#d_isPrematuur"/>
     </dmn:informationRequirement>
@@ -321,7 +321,7 @@
     <dmn:informationRequirement id="_0D40D745-3AC6-48AE-AE9B-DC2A70C13742">
       <dmn:requiredDecision href="#_7DC3C5B7-FACE-4C65-837A-EA4F2F3EE71B"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_MeetResultaat" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="MeetResultaat">
+    <dmn:decisionTable id="ddt_MeetResultaat" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="Interpretatie">
       <dmn:input id="_4FFABC6C-2F58-487A-83E4-EE242EC26BB7">
         <dmn:inputExpression id="_B9EF128B-001E-4075-967B-641A9DEE901A" typeRef="boolean">
           <dmn:text>isPrematuur</dmn:text>
