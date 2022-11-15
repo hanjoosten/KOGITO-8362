@@ -53,10 +53,7 @@
   <dmn:decisionService id="_93C5B449-E0A8-4435-A71F-3A86A68FF7B9" name="hielprik Service">
     <dmn:extensionElements/>
     <dmn:variable id="_F0BB7CA2-32EE-449B-95DB-1C4EBB74B793" name="hielprik Service" typeRef="Any"/>
-    <dmn:outputDecision href="#_2DD5ACA2-4A69-4484-93CC-CEFFF9E7FABC"/>
-    <dmn:outputDecision href="#_467EB19F-181D-46B7-A96A-59582AE186D5"/>
     <dmn:outputDecision href="#_DE738101-7146-4C48-B6A6-34C12F04C191"/>
-    <dmn:outputDecision href="#_FAF33CC3-DB95-4523-8B8C-1DA3B59A44A1"/>
     <dmn:outputDecision href="#_D8D5FDAE-3216-4CA1-A2FF-A35C334D8C35"/>
     <dmn:outputDecision href="#_09638E4C-B01F-442B-8DD6-A87D6113627E"/>
     <dmn:outputDecision href="#_025492D0-209B-424C-A0B2-7DDCC602641D"/>
@@ -504,36 +501,6 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
-  <dmn:decision id="_FAF33CC3-DB95-4523-8B8C-1DA3B59A44A1" name="Geboortegewicht">
-    <dmn:extensionElements/>
-    <dmn:variable id="_1F141750-90F4-4226-8698-0CB725488CE0" name="Geboortegewicht" typeRef="number"/>
-    <dmn:informationRequirement id="_A92793A2-EE72-49FC-A310-B2CF043AB8D6">
-      <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression id="_234B6BE1-C517-4295-9D5F-C27A667FFC6A">
-      <dmn:text>hielprik.geboortegewicht</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_2DD5ACA2-4A69-4484-93CC-CEFFF9E7FABC" name="Zwangerschapsduur">
-    <dmn:extensionElements/>
-    <dmn:variable id="_6CB8218C-7544-48B7-8143-46DA9B23BAB9" name="Zwangerschapsduur" typeRef="number"/>
-    <dmn:informationRequirement id="_64357734-935D-40E5-8419-C3B98324EAFA">
-      <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression id="_62F45710-0E12-4BBE-AA77-01F8F0E996B9">
-      <dmn:text>hielprik.zwangerschapsduur</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
-  <dmn:decision id="_467EB19F-181D-46B7-A96A-59582AE186D5" name="AfnametermijnPrematuur">
-    <dmn:extensionElements/>
-    <dmn:variable id="_87BA66AE-E48B-40CB-B4D4-7F36266B270B" name="AfnametermijnPrematuur" typeRef="number"/>
-    <dmn:informationRequirement id="_9827263B-2A66-4ABF-81B6-EB830A7A1C21">
-      <dmn:requiredInput href="#_0BD57850-BE94-4154-BF95-DBF4B6167E4C"/>
-    </dmn:informationRequirement>
-    <dmn:literalExpression id="_3156B36C-F0CE-472A-92FB-8314BA900817">
-      <dmn:text>hielprik.afnametermijnPrematuur</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
   <dmn:decision id="_182EE18A-4962-4FBB-80DF-15C155540E25" name="classificatie T4">
     <dmn:extensionElements/>
     <dmn:variable id="_B70285CF-EB6E-432F-8880-DEAF02DB3299" name="classificatie T4" typeRef="string"/>
@@ -694,15 +661,6 @@
             <kie:width>50</kie:width>
             <kie:width>1114</kie:width>
           </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_234B6BE1-C517-4295-9D5F-C27A667FFC6A">
-            <kie:width>300</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_62F45710-0E12-4BBE-AA77-01F8F0E996B9">
-            <kie:width>300</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_3156B36C-F0CE-472A-92FB-8314BA900817">
-            <kie:width>300</kie:width>
-          </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_F69A15DC-C4A6-41EF-AED5-4B284359C966">
             <kie:width>300</kie:width>
           </kie:ComponentWidths>
@@ -811,33 +769,6 @@
         <dc:Bounds x="522.2990654205607" y="308.3421052631579" width="127" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_FAF33CC3-DB95-4523-8B8C-1DA3B59A44A1" dmnElementRef="_FAF33CC3-DB95-4523-8B8C-1DA3B59A44A1" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="1927" y="123.62012616325825" width="131" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_2DD5ACA2-4A69-4484-93CC-CEFFF9E7FABC" dmnElementRef="_2DD5ACA2-4A69-4484-93CC-CEFFF9E7FABC" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="1909.8524393663906" y="199.5" width="148" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_467EB19F-181D-46B7-A96A-59582AE186D5" dmnElementRef="_467EB19F-181D-46B7-A96A-59582AE186D5" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="1861.8524393663906" y="267" width="196" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_182EE18A-4962-4FBB-80DF-15C155540E25" dmnElementRef="_182EE18A-4962-4FBB-80DF-15C155540E25" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -909,18 +840,6 @@
       <dmndi:DMNEdge id="dmnedge-drg-_83D4B22B-F0C8-42F3-B887-4F07E4D14813" dmnElementRef="_83D4B22B-F0C8-42F3-B887-4F07E4D14813">
         <di:waypoint x="619.2990654205607" y="748"/>
         <di:waypoint x="1831" y="149"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_A92793A2-EE72-49FC-A310-B2CF043AB8D6" dmnElementRef="_A92793A2-EE72-49FC-A310-B2CF043AB8D6">
-        <di:waypoint x="619.2990654205607" y="748"/>
-        <di:waypoint x="1992.5" y="148.62012616325825"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_64357734-935D-40E5-8419-C3B98324EAFA" dmnElementRef="_64357734-935D-40E5-8419-C3B98324EAFA">
-        <di:waypoint x="619.2990654205607" y="748"/>
-        <di:waypoint x="1983.8524393663906" y="224.5"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_9827263B-2A66-4ABF-81B6-EB830A7A1C21" dmnElementRef="_9827263B-2A66-4ABF-81B6-EB830A7A1C21">
-        <di:waypoint x="619.2990654205607" y="748"/>
-        <di:waypoint x="1959.8524393663906" y="292"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_C7C53565-CC7E-42AF-A05B-B5E081B14298" dmnElementRef="_C7C53565-CC7E-42AF-A05B-B5E081B14298">
         <di:waypoint x="619.2990654205607" y="748"/>
