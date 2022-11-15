@@ -6,3 +6,5 @@ target
 .history
 
 **/kie-dmn-xls2dmn-*.jar
+
+**/\~$*.xlsx
