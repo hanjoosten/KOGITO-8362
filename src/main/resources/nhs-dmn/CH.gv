@@ -46,9 +46,9 @@ graph [charset="UTF-8"
   // BTNavraagNodig -> Actiecode
 
   isPrematuur [shape=box]
-  "Afnametermijn\nPrematuur" -> isPrematuur
-  Zwangerschapsduur -> isPrematuur
-  Geboortegewicht -> isPrematuur
+  "afnametermijn\nPrematuur" -> isPrematuur
+  zwangerschapsduur -> isPrematuur
+  geboortegewicht -> isPrematuur
 
 
   Interpretatie [shape=box]
@@ -59,6 +59,8 @@ graph [charset="UTF-8"
   TBG -> Interpretatie
   "T4/TBG" -> Interpretatie
   
+  isTweedeHielprik [shape=box]
+  hielprikType -> isTweedeHielprik
   // BTNavraagNodig [shape=box]
   // ErWasEenBT -> BTNavraagNodig
   // VoldoendeTijdBT -> BTNavraagNodig
