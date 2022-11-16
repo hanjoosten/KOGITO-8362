@@ -1,0 +1,39 @@
+{
+    "hielprik": {
+        "hielprikType": "EH",
+        "zwangerschapsduur": 260,
+        "testresultaten": [
+            {
+                "waarde": -2.5,
+                "status": 0,
+                "naam": "T4",
+                "eenheid": "string"
+            },
+            {
+                "waarde": -1,
+                "status": 30,
+                "naam": "TBG",
+                "eenheid": "string"
+            },
+            {
+                "waarde": 5,
+                "status": 0,
+                "naam": "TSH",
+                "eenheid": "string"
+            },
+            {
+                "waarde": 20,
+                "status": 0,
+                "naam": "T4/TBG",
+                "eenheid": "string"
+            }
+        ],
+        "geboortegewicht": 3000,
+        "geboorteMoment": "2022-11-10T17:59",
+        "bloedtransfusieType": "string",
+        "bloedtransfusieMoment": null,
+        "bloedtransfusie": false,
+        "afnametermijnPrematuur": null,
+        "afnameMoment": "2022-11-16"
+    }
+}
