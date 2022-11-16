@@ -8,7 +8,7 @@ import lombok.Value;
 @Value
 public class Hielprik {
     // List<Screening> screening;
-    List<Merker> uitslagen;
+    List<Merker> testresultaten;
     LocalDateTime geboorteMoment;
     LocalDateTime afnameMoment;
     Integer zwangerschapsduur;

@@ -25,7 +25,7 @@
     <dmn:itemComponent id="_F0ED108D-7FD3-4CED-A115-1E2FFB8CB0FD" name="zwangerschapsduur" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_763944BF-DE00-431D-B06C-26D52EF93C6F" name="uitslagen" isCollection="true">
+    <dmn:itemComponent id="_763944BF-DE00-431D-B06C-26D52EF93C6F" name="testresultaten" isCollection="true">
       <dmn:typeRef>Merker</dmn:typeRef>
     </dmn:itemComponent>
     <dmn:itemComponent id="_5244A6D5-8815-465D-93D1-54A75BA688B7" name="geboortegewicht" isCollection="false">
@@ -75,7 +75,7 @@
         <dmn:contextEntry>
           <dmn:variable id="_81F559F0-B8B8-4ED6-A75C-5F5587901F1B" name="deMerker" typeRef="Merker"/>
           <dmn:literalExpression id="_021E382A-1499-4444-AD1B-857C3EDFEF5A">
-            <dmn:text>hielprik.uitslagen[naam=merkernaam]</dmn:text>
+            <dmn:text>hielprik.testresultaten[naam=merkernaam]</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
@@ -325,7 +325,7 @@
         <dmn:contextEntry>
           <dmn:variable id="_2239AD36-9956-4B20-9709-79C525A6A4D1" name="deMerker" typeRef="Merker"/>
           <dmn:literalExpression id="_2F3BE326-A4F8-4362-8570-8C6165B1D19F">
-            <dmn:text>hielprik.uitslagen[naam=merkerNaam]</dmn:text>
+            <dmn:text>hielprik.testresultaten[naam=merkerNaam]</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
@@ -397,7 +397,7 @@
         <dmn:contextEntry>
           <dmn:variable id="_49619F4A-0C24-45F7-A133-874D3C4BD072" name="deMerker" typeRef="Merker"/>
           <dmn:literalExpression id="_A17BBFEA-2B62-4427-A4FC-6979DC171DCD">
-            <dmn:text>hielprik.uitslagen[naam=merkernaam]</dmn:text>
+            <dmn:text>hielprik.testresultaten[naam=merkernaam]</dmn:text>
           </dmn:literalExpression>
         </dmn:contextEntry>
         <dmn:contextEntry>
@@ -488,7 +488,7 @@
                 <dmn:text>null</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
-                <dmn:text>Géén of meerdere uitslagen met dezelfde merker</dmn:text>
+                <dmn:text>Géén of meerdere testresultaten met dezelfde merker</dmn:text>
               </dmn:annotationEntry>
             </dmn:rule>
           </dmn:decisionTable>
