@@ -8,11 +8,14 @@
     <dmn:informationRequirement id="_6C009538-F70D-4DAF-A917-47E77898053C">
       <dmn:requiredInput href="#_13F09F2A-549E-4186-B867-F1313FB2B63E"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_isTweedeHielprik" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="isTweedeHielprik">
+    <dmn:decisionTable id="ddt_isTweedeHielprik" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="isTweedeHielprik">
       <dmn:input id="_59BC80DD-7A47-492A-AACB-0FCDF032ED25">
         <dmn:inputExpression id="_0F69F32B-A48B-4B40-BA45-0AFE33B18B78" typeRef="string">
           <dmn:text>hielprik.hielprikType</dmn:text>
         </dmn:inputExpression>
+        <dmn:inputValues kie:constraintType="enumeration" id="_378A886A-2361-4124-B3D3-49723CF847C8">
+          <dmn:text>["EH","HH","TH","THH"]</dmn:text>
+        </dmn:inputValues>
       </dmn:input>
       <dmn:output id="_0D51A195-2972-4967-87B1-3F3D03DBCAAA"/>
       <dmn:annotation name=""/>
@@ -68,7 +71,7 @@
     <dmn:informationRequirement id="_626E416C-D077-44C0-AB31-0CC88A3EE401">
       <dmn:requiredInput href="#_13F09F2A-549E-4186-B867-F1313FB2B63E"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_isPrematuur" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="isPrematuur">
+    <dmn:decisionTable id="ddt_isPrematuur" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="isPrematuur">
       <dmn:input id="_E184D419-F0A7-48BB-A06C-2A38CC342C09">
         <dmn:inputExpression id="_1E337214-1DC1-4A9F-96E2-514BF7F31864" typeRef="number">
           <dmn:text>hielprik.afnametermijnPrematuur</dmn:text>
@@ -321,7 +324,7 @@
     <dmn:informationRequirement id="_0D40D745-3AC6-48AE-AE9B-DC2A70C13742">
       <dmn:requiredDecision href="#_7DC3C5B7-FACE-4C65-837A-EA4F2F3EE71B"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_MeetResultaat" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="Interpretatie">
+    <dmn:decisionTable id="ddt_MeetResultaat" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="Interpretatie">
       <dmn:input id="_4FFABC6C-2F58-487A-83E4-EE242EC26BB7">
         <dmn:inputExpression id="_B9EF128B-001E-4075-967B-641A9DEE901A" typeRef="boolean">
           <dmn:text>isPrematuur</dmn:text>

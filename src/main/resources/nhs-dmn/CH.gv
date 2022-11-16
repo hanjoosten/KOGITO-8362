@@ -50,6 +50,8 @@ graph [charset="UTF-8"
   zwangerschapsduur -> isPrematuur
   geboortegewicht -> isPrematuur
 
+  Actiecode [shape=box]
+  Interpretatie -> Actiecode
 
   Interpretatie [shape=box]
   isPrematuur -> Interpretatie
