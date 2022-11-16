@@ -30,7 +30,8 @@ import static org.hamcrest.Matchers.notNullValue;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = KogitoApplication.class)
-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD) // reset spring context after each test method
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD) // reset spring context after each test
+                                                                             // method
 public class GreetingsTest {
 
     @LocalServerPort
@@ -43,9 +44,9 @@ public class GreetingsTest {
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body("{}")
-            .when()
-                .post("/greetings")
-            .then()
+                .when()
+                .post("/myProcess")
+                .then()
                 .statusCode(201)
                 .header("Location", notNullValue())
                 .body("id", notNullValue());

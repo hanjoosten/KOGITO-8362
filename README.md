@@ -13,7 +13,7 @@
 Generated application comes with sample test process that allows you to verify if the application is working as expected. Simply execute following command to try it out
 
 ```sh
-curl -d '{}' -H "Content-Type: application/json" -X POST http://localhost:8080/greetings
+curl -d '{}' -H "Content-Type: application/json" -X POST http://localhost:8080/myProcess
                                                              
 ```
 
