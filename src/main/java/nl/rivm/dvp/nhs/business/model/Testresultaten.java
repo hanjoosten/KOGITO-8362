@@ -3,7 +3,7 @@ package nl.rivm.dvp.nhs.business.model;
 import lombok.Value;
 
 @Value
-public class Uitslag {
+public class Testresultaten {
    String merker;
    Float waarde;
    String eenheid;
