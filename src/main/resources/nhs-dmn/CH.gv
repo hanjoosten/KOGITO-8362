@@ -21,21 +21,27 @@ graph [charset="UTF-8"
     labelloc="t"
     labeljust=l
 
-  T4 [shape=box]
-  statusT4 -> T4
-  waardeT4 -> T4
 
-  TSH [shape=box]
-  statusTSH -> TSH
-  waardeTSH -> TSH
+          BTnavraagNodig [shape=box]
+          bloedtransfusie -> BTnavraagNodig
+          bloedtransfusieMoment -> BTnavraagNodig
+          bloedtransfusieType -> BTnavraagNodig
 
-  TBG [shape=box]
-  statusTBG -> TBG
-  waardeTBG -> TBG
+          T4 [shape=box]
+          statusT4 -> T4
+          waardeT4 -> T4
 
-  "T4/TBG" [shape=box]
-  "statusT4/TBG" -> "T4/TBG"
-  "waardeT4/TBG" -> "T4/TBG"
+          TSH [shape=box]
+          statusTSH -> TSH
+          waardeTSH -> TSH
+
+          TBG [shape=box]
+          statusTBG -> TBG
+          waardeTBG -> TBG
+
+          "T4/TBG" [shape=box]
+          "statusT4/TBG" -> "T4/TBG"
+          "waardeT4/TBG" -> "T4/TBG"
 
   }
 
@@ -52,6 +58,9 @@ graph [charset="UTF-8"
 
   Actiecode [shape=box]
   Interpretatie -> Actiecode
+  isTevroegGeprikt -> Actiecode
+  BTnavraagNodig -> Actiecode
+
 
   Interpretatie [shape=box]
   isPrematuur -> Interpretatie
