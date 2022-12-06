@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_C36FB0F6-C50B-4DA8-8381-4E6118C3BE6F" name="dt_datatypes" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_CF91AA48-543C-42DC-8307-2D1247DA88B7" name="Hielprik" isCollection="false">
+    <dmn:itemComponent id="_240258BD-A883-43A2-B1E4-7563408AD9BA" name="zwangerschapsduur" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_1EEB15D6-D403-45F5-8D8E-4D2615B348E2" name="hielprikType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_01AB9534-582E-4852-B581-A4AF618EE7D4" name="geboortegewicht" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_DAFE4570-89D0-408F-AB67-BB09D63EA86F" name="geboorteMoment" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_00F35951-2302-4210-989D-D5B868EB3743" name="bloedtransfusieType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_CFD1DE32-9FB5-4B31-8BA7-ECB6A1D7AE34" name="bloedtransfusieMoment" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_2FA39D74-9287-45D8-8E3C-ADC4896D7D04" name="bloedtransfusie" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F8A9586F-5675-4BDC-9F16-1A0F3119DB6B" name="afnametermijnPrematuur" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_DD00A6D3-274A-4E50-8D28-6F5D2550797E" name="afnameMoment" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_23FBF9FB-6603-42CD-8FBC-30B86EDB9696" name="Interpretatie" isCollection="false">
+    <dmn:itemComponent id="_586533F7-D73F-4432-9466-2ACF885C0DF7" name="conclusieEA" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5F0B6A1C-4E3E-43AA-B872-AC8438018D71" name="actiecode" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E5A1798B-1589-4936-8F96-69C903212DDB" name="aandoening" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_2D2044CF-E4DE-4364-A509-550CA5ACEAA6" name="Testresultaat" isCollection="false">
+    <dmn:itemComponent id="_9447AEAB-E4AA-42B6-AB3B-BA735998DCA6" name="waarde" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6923322E-19F6-4803-850A-79029DF166DA" name="status" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C08A2BE0-11C3-415A-B5B2-EDB405DE8D85" name="merker" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_E8BC9F1B-C661-4874-BEAF-2EA16F5C5B2E" name="eenheid" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_B504BEAC-9C74-4A1F-B775-82DC5026CA0C" name="Testresultaten" isCollection="true">
+    <dmn:typeRef>Testresultaat</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_0CC20082-4029-4192-A489-785DD28232E5" name="Interpretaties" isCollection="true">
+    <dmn:typeRef>Interpretatie</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_0468F90F-C23A-401D-8879-F8C6109DB887" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension/>
+      </di:extension>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
