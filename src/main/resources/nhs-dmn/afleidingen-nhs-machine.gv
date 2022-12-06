@@ -25,10 +25,6 @@ graph [charset="UTF-8"
   isTweedeHielprik [shape=box]
     hielprikType -> isTweedeHielprik
 
-  isTevroegGeprikt [shape=box]
-  geboorteMoment -> isTevroegGeprikt
-  afnameMoment -> isTevroegGeprikt
-
   isPrematuur [shape=box]
     "afnametermijn\nPrematuur" -> isPrematuur
     zwangerschapsduur -> isPrematuur
@@ -42,36 +38,23 @@ graph [charset="UTF-8"
   }
 
   ConclusieEA [shape=box label= "ConclusieEA\n (specifiek per aandoening)"]
-  Actiecode -> ConclusieEA
+    Actiecode -> ConclusieEA
 
   Actiecode [shape=box label= "Actiecode\n (specifiek per aandoening)"]
-  Interpretatie -> Actiecode
-  "Status BT" -> Actiecode
-  isTevroegGeprikt -> Actiecode
-  isTweedeHielprik -> Actiecode
+    Interpretatie -> Actiecode
+    "Status BT" -> Actiecode
+    isTevroegGeprikt -> Actiecode
+    isTweedeHielprik -> Actiecode
+
+  isTevroegGeprikt [shape=box]
+    geboorteMoment -> isTevroegGeprikt
+    afnameMoment -> isTevroegGeprikt
 
 
   Interpretatie [shape=box, label= "Interpretatie\n (specifiek per aandoening)"]
    isPrematuur -> Interpretatie [style=dashed arrowhead=open]
    isTweedeHielprik -> Interpretatie [style=dashed arrowhead=open]
-  // T4 -> Interpretatie
-  // TSH -> Interpretatie
-  // TBG -> Interpretatie
-  // "T4/TBG" -> Interpretatie
   
-  // BTNavraagNodig [shape=box]
-  // ErWasEenBT -> BTNavraagNodig
-  // VoldoendeTijdBT -> BTNavraagNodig
-  // TypeBT -> BTNavraagNodig
-
-  // VoldoendeTijdBT [shape=box]
-  // "BTDatum(Tijd)" -> VoldoendeTijdBT
-  // "AfnameDatum(Tijd)" -> VoldoendeTijdBT
-
-  // isTevroegGeprikt [shape=box]
-  // "GeboorteDatum(Tijd)" -> isTevroegGeprikt
-  // "AfnameDatum(Tijd)" -> isTevroegGeprikt
-
 
 
 
