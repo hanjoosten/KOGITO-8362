@@ -61,6 +61,20 @@
       <dmn:typeRef>date and time</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
+  <dmn:itemDefinition id="_8C7E48FB-6303-4770-A0BC-855E701D11DB" name="Merker" isCollection="false">
+    <dmn:itemComponent id="_51EE15DD-5C6C-4BAB-8CFE-BECEEB26C8B2" name="waardeString" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A829766F-C1F3-4FA3-A0A5-9BC92C566232" name="waardeFloat" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_000471C8-6CBA-47C4-B032-C99F8E25F44F" name="naam" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_A86D2A5B-A5ED-4E93-9285-C54F161671B8" name="classificatie" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_0468F90F-C23A-401D-8879-F8C6109DB887" name="DRG">
       <di:extension>
