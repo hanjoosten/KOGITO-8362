@@ -105,7 +105,7 @@
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_45E790D7-4EE1-4706-ADFA-22C47FA2F30C">
-        <dmn:inputExpression id="_DA5AE054-9E54-484D-AB8B-BE9BF3DE0A36">
+        <dmn:inputExpression id="_DA5AE054-9E54-484D-AB8B-BE9BF3DE0A36" typeRef="string">
           <dmn:text>hielprik.bloedtransfusieType</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
@@ -723,7 +723,7 @@
   </dmn:inputData>
   <dmn:decisionService id="_2FCC92E1-9A68-4851-AE91-752B7316DCE1" name="hpa Hielprik Algemeen">
     <dmn:extensionElements/>
-    <dmn:variable id="_F2D56EA4-481D-4BBD-899E-5B0B391B1B82" name="hpa Hielprik Algemeen"/>
+    <dmn:variable id="_F2D56EA4-481D-4BBD-899E-5B0B391B1B82" name="hpa Hielprik Algemeen" typeRef="Any"/>
     <dmn:outputDecision href="#d_voldoendeTijdVerstrekenBT"/>
     <dmn:outputDecision href="#d_status_32BT"/>
     <dmn:outputDecision href="#d_isTweedeHielprik"/>
