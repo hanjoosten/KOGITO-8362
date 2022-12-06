@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_C36FB0F6-C50B-4DA8-8381-4E6118C3BE6F" name="dt_datatypes" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7">
   <dmn:extensionElements/>
-  <dmn:itemDefinition id="_CF91AA48-543C-42DC-8307-2D1247DA88B7" name="Hielprik" isCollection="false">
-    <dmn:itemComponent id="_240258BD-A883-43A2-B1E4-7563408AD9BA" name="zwangerschapsduur" isCollection="false">
-      <dmn:typeRef>number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_1EEB15D6-D403-45F5-8D8E-4D2615B348E2" name="hielprikType" isCollection="false">
-      <dmn:typeRef>string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_01AB9534-582E-4852-B581-A4AF618EE7D4" name="geboortegewicht" isCollection="false">
-      <dmn:typeRef>number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_DAFE4570-89D0-408F-AB67-BB09D63EA86F" name="geboorteMoment" isCollection="false">
-      <dmn:typeRef>date and time</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_00F35951-2302-4210-989D-D5B868EB3743" name="bloedtransfusieType" isCollection="false">
-      <dmn:typeRef>string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_CFD1DE32-9FB5-4B31-8BA7-ECB6A1D7AE34" name="bloedtransfusieMoment" isCollection="false">
-      <dmn:typeRef>date and time</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_2FA39D74-9287-45D8-8E3C-ADC4896D7D04" name="bloedtransfusie" isCollection="false">
-      <dmn:typeRef>boolean</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_F8A9586F-5675-4BDC-9F16-1A0F3119DB6B" name="afnametermijnPrematuur" isCollection="false">
-      <dmn:typeRef>number</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_DD00A6D3-274A-4E50-8D28-6F5D2550797E" name="afnameMoment" isCollection="false">
-      <dmn:typeRef>date and time</dmn:typeRef>
-    </dmn:itemComponent>
-  </dmn:itemDefinition>
   <dmn:itemDefinition id="_23FBF9FB-6603-42CD-8FBC-30B86EDB9696" name="Interpretatie" isCollection="false">
     <dmn:itemComponent id="_586533F7-D73F-4432-9466-2ACF885C0DF7" name="conclusieEA" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
@@ -60,6 +31,35 @@
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_0CC20082-4029-4192-A489-785DD28232E5" name="Interpretaties" isCollection="true">
     <dmn:typeRef>Interpretatie</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_DCC70F16-3FBC-4F96-9A93-C1796AA8D353" name="Hielprik" isCollection="false">
+    <dmn:itemComponent id="_82CEB309-37FC-4F2B-A788-1C29FE9D1D64" name="zwangerschapsduur" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_7DE424F2-FFEE-4F38-90A1-F4B8519782E4" name="hielprikType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F69276A3-CFA1-4A91-BC79-F437CCB4CDD5" name="geboortegewicht" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_7A59E9C8-E3F1-4B9D-A4C0-E36AEA4432D4" name="geboorteMoment" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_C3D59DC0-9063-472C-92D3-73039561A301" name="bloedtransfusieType" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_CD571CE7-4B72-4AB2-BEE0-2BA7300F525A" name="bloedtransfusieMoment" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F2554900-8952-4FF0-950E-F8A80F35489E" name="bloedtransfusie" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5C9E34F1-91AF-4015-8D19-2E8CAEE9F191" name="afnametermijnPrematuur" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9B4A0D28-9278-4F27-B4F3-CB7F0CB3F306" name="afnameMoment" isCollection="false">
+      <dmn:typeRef>date and time</dmn:typeRef>
+    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_0468F90F-C23A-401D-8879-F8C6109DB887" name="DRG">
