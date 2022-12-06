@@ -1,13 +1,16 @@
 <?xml version="1.0" ?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_0f17b1f3-5232-431b-8bfe-4335b89d0910" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_hpa_HielprikAlgemeenGestript" name="hpa_HielprikAlgemeenGestript" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_0f17b1f3-5232-431b-8bfe-4335b89d0910" exporter="kie-dmn-xls2dmn">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_fd92a3ba-4643-4b4e-adf9-0e659ddb687d" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_hpa_HielprikAlgemeen" name="hpa_HielprikAlgemeen" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_fd92a3ba-4643-4b4e-adf9-0e659ddb687d" exporter="kie-dmn-xls2dmn">
+  <dmn:inputData id="id____40time_40hielprik_46afnameMoment_41_32_61_32time_400_440_440_41_41_32and_32_40time_40hielprik_46bloedtransfusieMoment_41_32_61_32time_400_440_440_41_41" name="(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.bloedtransfusieMoment) = time(0,0,0))">
+    <dmn:variable id="idvar____40time_40hielprik_46afnameMoment_41_32_61_32time_400_440_440_41_41_32and_32_40time_40hielprik_46bloedtransfusieMoment_41_32_61_32time_400_440_440_41_41" name="(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.bloedtransfusieMoment) = time(0,0,0))" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id____40hielprik_46afnameMoment_32_45_32hielprik_46bloedtransfusieMoment_41_46hours" name="(hielprik.afnameMoment - hielprik.bloedtransfusieMoment).hours">
+    <dmn:variable id="idvar____40hielprik_46afnameMoment_32_45_32hielprik_46bloedtransfusieMoment_41_46hours" name="(hielprik.afnameMoment - hielprik.bloedtransfusieMoment).hours" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
   <dmn:inputData id="id_hielprik_46bloedtransfusie" name="hielprik.bloedtransfusie">
     <dmn:variable id="idvar_hielprik_46bloedtransfusie" name="hielprik.bloedtransfusie" typeRef="Any"></dmn:variable>
   </dmn:inputData>
   <dmn:inputData id="id_hielprik_46bloedtransfusieMoment" name="hielprik.bloedtransfusieMoment">
     <dmn:variable id="idvar_hielprik_46bloedtransfusieMoment" name="hielprik.bloedtransfusieMoment" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_VoldoendeTijdVerstrekenBT" name="VoldoendeTijdVerstrekenBT">
-    <dmn:variable id="idvar_VoldoendeTijdVerstrekenBT" name="VoldoendeTijdVerstrekenBT" typeRef="Any"></dmn:variable>
   </dmn:inputData>
   <dmn:inputData id="id_hielprik_46bloedtransfusieType" name="hielprik.bloedtransfusieType">
     <dmn:variable id="idvar_hielprik_46bloedtransfusieType" name="hielprik.bloedtransfusieType" typeRef="Any"></dmn:variable>
@@ -24,8 +27,80 @@
   <dmn:inputData id="id_hielprik_46geboortegewicht" name="hielprik.geboortegewicht">
     <dmn:variable id="idvar_hielprik_46geboortegewicht" name="hielprik.geboortegewicht" typeRef="Any"></dmn:variable>
   </dmn:inputData>
-  <dmn:decision id="d_Status_32BT" name="Status BT">
-    <dmn:variable id="dvar_Status_32BT" name="Status BT" typeRef="Any"></dmn:variable>
+  <dmn:inputData id="id____40time_40hielprik_46afnameMoment_41_32_61_32time_400_440_440_41_41_32and_32_40time_40hielprik_46geboorteMoment_41_32_61_32time_400_440_440_41_41" name="(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.geboorteMoment) = time(0,0,0))">
+    <dmn:variable id="idvar____40time_40hielprik_46afnameMoment_41_32_61_32time_400_440_440_41_41_32and_32_40time_40hielprik_46geboorteMoment_41_32_61_32time_400_440_440_41_41" name="(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.geboorteMoment) = time(0,0,0))" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id____40hielprik_46afnameMoment_32_45_32hielprik_46geboorteMoment_41_46hours" name="(hielprik.afnameMoment - hielprik.geboorteMoment).hours">
+    <dmn:variable id="idvar____40hielprik_46afnameMoment_32_45_32hielprik_46geboorteMoment_41_46hours" name="(hielprik.afnameMoment - hielprik.geboorteMoment).hours" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:decision id="d_voldoendeTijdVerstrekenBT" name="voldoendeTijdVerstrekenBT">
+    <dmn:variable id="dvar_voldoendeTijdVerstrekenBT" name="voldoendeTijdVerstrekenBT" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id____40time_40hielprik_46afnameMoment_41_32_61_32time_400_440_440_41_41_32and_32_40time_40hielprik_46bloedtransfusieMoment_41_32_61_32time_400_440_440_41_41"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id____40hielprik_46afnameMoment_32_45_32hielprik_46bloedtransfusieMoment_41_46hours"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_voldoendeTijdVerstrekenBT" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="voldoendeTijdVerstrekenBT">
+      <dmn:input label="(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.bloedtransfusieMoment) = time(0,0,0))">
+        <dmn:inputExpression>
+          <dmn:text>(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.bloedtransfusieMoment) = time(0,0,0))</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="(hielprik.afnameMoment - hielprik.bloedtransfusieMoment).hours">
+        <dmn:inputExpression>
+          <dmn:text>(hielprik.afnameMoment - hielprik.bloedtransfusieMoment).hours</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 72</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 72</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="d_status_32BT" name="status BT">
+    <dmn:variable id="dvar_status_32BT" name="status BT" typeRef="Any"></dmn:variable>
     <dmn:informationRequirement>
       <dmn:requiredInput href="#id_hielprik_46bloedtransfusie"></dmn:requiredInput>
     </dmn:informationRequirement>
@@ -33,12 +108,12 @@
       <dmn:requiredInput href="#id_hielprik_46bloedtransfusieMoment"></dmn:requiredInput>
     </dmn:informationRequirement>
     <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_VoldoendeTijdVerstrekenBT"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
       <dmn:requiredInput href="#id_hielprik_46bloedtransfusieType"></dmn:requiredInput>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_Status_32BT" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="Status BT">
+    <dmn:informationRequirement>
+      <dmn:requiredDecision href="#d_voldoendeTijdVerstrekenBT"></dmn:requiredDecision>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_status_32BT" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="status BT">
       <dmn:input label="hielprik.bloedtransfusie">
         <dmn:inputExpression>
           <dmn:text>hielprik.bloedtransfusie</dmn:text>
@@ -49,9 +124,9 @@
           <dmn:text>hielprik.bloedtransfusieMoment</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input label="VoldoendeTijdVerstrekenBT">
+      <dmn:input label="voldoendeTijdVerstrekenBT">
         <dmn:inputExpression>
-          <dmn:text>VoldoendeTijdVerstrekenBT</dmn:text>
+          <dmn:text>voldoendeTijdVerstrekenBT</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input label="hielprik.bloedtransfusieType">
@@ -503,6 +578,72 @@
         </dmn:inputEntry>
         <dmn:outputEntry>
           <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="d_isTeVroegGeprikt" name="isTeVroegGeprikt">
+    <dmn:variable id="dvar_isTeVroegGeprikt" name="isTeVroegGeprikt" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id____40time_40hielprik_46afnameMoment_41_32_61_32time_400_440_440_41_41_32and_32_40time_40hielprik_46geboorteMoment_41_32_61_32time_400_440_440_41_41"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id____40hielprik_46afnameMoment_32_45_32hielprik_46geboorteMoment_41_46hours"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_isTeVroegGeprikt" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="isTeVroegGeprikt">
+      <dmn:input label="(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.geboorteMoment) = time(0,0,0))">
+        <dmn:inputExpression>
+          <dmn:text>(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.geboorteMoment) = time(0,0,0))</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="(hielprik.afnameMoment - hielprik.geboorteMoment).hours">
+        <dmn:inputExpression>
+          <dmn:text>(hielprik.afnameMoment - hielprik.geboorteMoment).hours</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 48</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&lt; 72</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>&gt;= 72</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>false</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
     </dmn:decisionTable>

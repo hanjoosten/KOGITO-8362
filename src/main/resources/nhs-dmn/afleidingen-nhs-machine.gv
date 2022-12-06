@@ -30,11 +30,19 @@ graph [charset="UTF-8"
     zwangerschapsduur -> isPrematuur
     geboortegewicht -> isPrematuur
 
-  "Status BT"[shape=box]
-    bloedtransfusie -> "Status BT"
-    bloedtransfusieMoment -> "Status BT"
-    VoldoendeTijdVerstrekenBT -> "Status BT"
-    bloedtransfusieType -> "Status BT"
+  "status BT"[shape=box]
+    bloedtransfusie -> "status BT"
+    bloedtransfusieMoment -> "status BT"
+    voldoendeTijdVerstrekenBT -> "status BT"
+    bloedtransfusieType -> "status BT"
+
+  isTevroegGeprikt [shape=box]
+    geboorteMoment -> isTevroegGeprikt
+    afnameMoment -> isTevroegGeprikt
+
+  voldoendeTijdVerstrekenBT [shape=box]
+    afnameMoment -> voldoendeTijdVerstrekenBT
+    bloedtransfusieMoment -> voldoendeTijdVerstrekenBT
   }
 
   ConclusieEA [shape=box label= "ConclusieEA\n (specifiek per aandoening)"]
@@ -42,13 +50,9 @@ graph [charset="UTF-8"
 
   Actiecode [shape=box label= "Actiecode\n (specifiek per aandoening)"]
     Interpretatie -> Actiecode
-    "Status BT" -> Actiecode
+    "status BT" -> Actiecode
     isTevroegGeprikt -> Actiecode
     isTweedeHielprik -> Actiecode
-
-  isTevroegGeprikt [shape=box]
-    geboorteMoment -> isTevroegGeprikt
-    afnameMoment -> isTevroegGeprikt
 
 
   Interpretatie [shape=box, label= "Interpretatie\n (specifiek per aandoening)"]
