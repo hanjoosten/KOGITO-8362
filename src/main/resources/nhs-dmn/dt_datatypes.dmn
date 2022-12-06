@@ -75,6 +75,9 @@
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
+  <dmn:itemDefinition id="_BC6BBCE5-70E2-4DEE-BB98-CF4486664C47" name="Merkers" isCollection="true">
+    <dmn:typeRef>Merker</dmn:typeRef>
+  </dmn:itemDefinition>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_0468F90F-C23A-401D-8879-F8C6109DB887" name="DRG">
       <di:extension>
