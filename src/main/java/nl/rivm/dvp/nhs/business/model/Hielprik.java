@@ -1,7 +1,7 @@
 package nl.rivm.dvp.nhs.business.model;
 
 import java.time.LocalDateTime;
-import java.util.List;
+//import java.util.List;
 
 import lombok.Value;
 
