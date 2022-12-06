@@ -1,0 +1,79 @@
+digraph mygraph {
+  rankdir="BT"
+  fontname="Helvetica,Arial,sans-serif"
+  concentrate=true
+graph [charset="UTF-8"
+       fontsize=30
+       labelloc="t" 
+       label="Afleidingen nhs machine" 
+       layout="dot"
+       splines=true 
+       overlap=false 
+       rankdir = "BT"]
+
+  node [fontname="Helvetica,Arial,sans-serif"
+        shape=Mrecord
+        fontsize=12]
+  edge [fontname="Helvetica,Arial,sans-serif"]
+
+  subgraph cluster_0 {
+    label = "hpa (hielprik algemeen)"; // hielprik algemeen 
+    node [fontsize=8];
+    labelloc="t"
+    labeljust=l
+
+  isTweedeHielprik [shape=box]
+    hielprikType -> isTweedeHielprik
+
+  isTevroegGeprikt [shape=box]
+  geboorteMoment -> isTevroegGeprikt
+  afnameMoment -> isTevroegGeprikt
+
+  isPrematuur [shape=box]
+    "afnametermijn\nPrematuur" -> isPrematuur
+    zwangerschapsduur -> isPrematuur
+    geboortegewicht -> isPrematuur
+
+  "Status BT"[shape=box]
+    bloedtransfusie -> "Status BT"
+    bloedtransfusieMoment -> "Status BT"
+    VoldoendeTijdVerstrekenBT -> "Status BT"
+    bloedtransfusieType -> "Status BT"
+  }
+
+  ConclusieEA [shape=box label= "ConclusieEA\n (specifiek per aandoening)"]
+  Actiecode -> ConclusieEA
+
+  Actiecode [shape=box label= "Actiecode\n (specifiek per aandoening)"]
+  Interpretatie -> Actiecode
+  "Status BT" -> Actiecode
+  isTevroegGeprikt -> Actiecode
+  isTweedeHielprik -> Actiecode
+
+
+  Interpretatie [shape=box, label= "Interpretatie\n (specifiek per aandoening)"]
+   isPrematuur -> Interpretatie [style=dashed arrowhead=open]
+   isTweedeHielprik -> Interpretatie [style=dashed arrowhead=open]
+  // T4 -> Interpretatie
+  // TSH -> Interpretatie
+  // TBG -> Interpretatie
+  // "T4/TBG" -> Interpretatie
+  
+  // BTNavraagNodig [shape=box]
+  // ErWasEenBT -> BTNavraagNodig
+  // VoldoendeTijdBT -> BTNavraagNodig
+  // TypeBT -> BTNavraagNodig
+
+  // VoldoendeTijdBT [shape=box]
+  // "BTDatum(Tijd)" -> VoldoendeTijdBT
+  // "AfnameDatum(Tijd)" -> VoldoendeTijdBT
+
+  // isTevroegGeprikt [shape=box]
+  // "GeboorteDatum(Tijd)" -> isTevroegGeprikt
+  // "AfnameDatum(Tijd)" -> isTevroegGeprikt
+
+
+
+
+
+ }
