@@ -6,6 +6,12 @@
   <dmn:itemDefinition id="_01149350-954B-4033-937C-1876BFA4C342" name="Insert a name" isCollection="false">
     <dmn:typeRef>Any</dmn:typeRef>
   </dmn:itemDefinition>
+  <dmn:decisionService id="_D4F2D08E-A716-4850-88F3-99238F415879" name="hpm HielprikMerkers">
+    <dmn:extensionElements/>
+    <dmn:variable id="_804865C9-24EB-4646-A559-9D241622BC73" name="hpm HielprikMerkers" typeRef="dt.Merkers"/>
+    <dmn:outputDecision href="#_CE22FD06-9635-471A-9762-EA6F104DCCC4"/>
+    <dmn:inputData href="#_B27C12A7-D261-4259-B9FA-61DCB72F2412"/>
+  </dmn:decisionService>
   <dmn:inputData id="_B27C12A7-D261-4259-B9FA-61DCB72F2412" name="testresultaten">
     <dmn:extensionElements/>
     <dmn:variable id="_23B6F222-DDF8-479C-BD76-B814445FBBCF" name="testresultaten" typeRef="dt.Testresultaten"/>
@@ -166,12 +172,128 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
-  <dmn:decisionService id="_D4F2D08E-A716-4850-88F3-99238F415879" name="hpm HielprikMerkers">
+  <dmn:businessKnowledgeModel id="_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" name="waarde">
     <dmn:extensionElements/>
-    <dmn:variable id="_804865C9-24EB-4646-A559-9D241622BC73" name="hpm HielprikMerkers"/>
-    <dmn:outputDecision href="#_CE22FD06-9635-471A-9762-EA6F104DCCC4"/>
-    <dmn:inputData href="#_B27C12A7-D261-4259-B9FA-61DCB72F2412"/>
-  </dmn:decisionService>
+    <dmn:variable id="_D90C6B49-9ACF-4E7E-9DC7-4D86EAC19BAD" name="waarde" typeRef="number"/>
+    <dmn:encapsulatedLogic id="_9705A98E-DD80-4553-98BC-F4D60850F5B0" kind="FEEL">
+      <dmn:formalParameter id="_153FA7B6-111C-407F-B45F-CFC248519F65" name="merkernaam" typeRef="string"/>
+      <dmn:formalParameter id="_FFDE7286-163E-4021-92C1-B555D7935644" name="merkers" typeRef="dt.Merkers"/>
+      <dmn:context id="_1EF8537F-4D7C-4F62-96AA-ACF767B5A162">
+        <dmn:contextEntry>
+          <dmn:variable id="_E2BB434A-DBD3-4D5E-B306-93E61C4A2F90" name="deMerker" typeRef="dt.Merker"/>
+          <dmn:literalExpression id="_E41FB7B0-F53C-4C79-8125-8AB23A2859D2">
+            <dmn:text>merkers[naam=merkernaam]    </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_44F16CBB-4874-457F-845B-E8E6EF3E6329" name="aantalGevonden" typeRef="number"/>
+          <dmn:literalExpression id="_1F8683F9-4B93-4954-A3BB-AAC2E72CE156">
+            <dmn:text>count(deMerker)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_622FE99C-0CAF-4762-9DA0-C6024CD5FD12" name="resultaat" typeRef="number"/>
+          <dmn:decisionTable id="_970CC9EF-D9F2-4F3D-B87B-C16F341F628E" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+            <dmn:input id="_399F3190-9722-4EA9-AFBE-700F23F299FC">
+              <dmn:inputExpression id="_3C5AFDC2-2900-423C-8BF2-190C488DB03E" typeRef="number">
+                <dmn:text>aantalGevonden</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
+            <dmn:output id="_744C73BB-897A-4F4E-AA4B-5D0D5D4BDC51"/>
+            <dmn:annotation name="annotation-1"/>
+            <dmn:rule id="_ACB40552-499B-4215-A34A-8CAC658D908B">
+              <dmn:inputEntry id="_66BC3E93-6FB3-4568-8A0D-7ED9CB64506D">
+                <dmn:text>1</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_E89B6FC0-814A-4934-B067-9749E10B893A">
+                <dmn:text>deMerker.waardeFloat</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+            <dmn:rule id="_65D8EDF2-4056-4FC9-9BDD-1773320E5261">
+              <dmn:inputEntry id="_D0182938-8589-4E4F-A6A5-014493FF6460">
+                <dmn:text>not(1)</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_1D75CBAB-CD58-4F04-BDA1-8356610A342E">
+                <dmn:text>null</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+          </dmn:decisionTable>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_4255D67B-F7EB-4E2E-B3E2-17E1CE830475">
+            <dmn:text>resultaat</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:businessKnowledgeModel id="_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE" name="classificatie">
+    <dmn:extensionElements/>
+    <dmn:variable id="_E3834906-1E6B-4127-840C-4363677BA5A8" name="classificatie" typeRef="string"/>
+    <dmn:encapsulatedLogic id="_08750B25-3492-4C1D-B8C2-E8F86E36EDE9" kind="FEEL">
+      <dmn:formalParameter id="_9BC75804-9672-4168-A5DD-C2388F1F14E9" name="merkernaam" typeRef="string"/>
+      <dmn:formalParameter id="_58952912-6F44-48DE-92C5-37C0B6CFD628" name="merkers" typeRef="dt.Merkers"/>
+      <dmn:context id="_915F0799-80EC-4490-BCEC-A5545B63DB31">
+        <dmn:contextEntry>
+          <dmn:variable id="_978E869E-80D6-4242-8BBF-24067737BAAC" name="deMerker" typeRef="dt.Merker"/>
+          <dmn:literalExpression id="_A2A6847A-E648-40A2-9ED5-9C9A73AD1F4B">
+            <dmn:text>    merkers[naam=merkernaam]    </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_33E59227-7225-4033-8CB9-393BAE5FD93B" name="aantalGevonden" typeRef="number"/>
+          <dmn:literalExpression id="_710DEE1D-9542-49D4-B473-B28434BBF33B">
+            <dmn:text>count(deMerker) </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_DDA37825-5C38-4D38-AE46-7BF6F3DE01A0" name="resultaat" typeRef="string"/>
+          <dmn:decisionTable id="_DE34214B-DB52-4595-B910-4C9D8D0F4A13" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+            <dmn:input id="_F79655D1-17C0-4E60-BC1A-5C669F453D87">
+              <dmn:inputExpression id="_E6CADA9C-D43E-4E1A-BCB3-05F149037B6B" typeRef="number">
+                <dmn:text>aantalGevonden</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
+            <dmn:output id="_3BADF79E-4642-480D-9268-FA50E0E0B9B6"/>
+            <dmn:annotation name="annotation-1"/>
+            <dmn:rule id="_85E992DD-0349-47E3-8951-7DC7CDB76AB4">
+              <dmn:inputEntry id="_C074295D-FD6E-410A-BB16-31EE2C55D571">
+                <dmn:text>1</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_4A90AB35-D010-4806-ACE0-6A6010996923">
+                <dmn:text>deMerker.classificatie</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+            <dmn:rule id="_A57420BA-BD58-41E6-96E6-5CE658F321A8">
+              <dmn:inputEntry id="_A810A64F-0684-474D-A569-76E840E06184">
+                <dmn:text>not(1)</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_43E3D207-97AF-4BE0-8FE3-0C6F2E8D6D09">
+                <dmn:text>null</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+          </dmn:decisionTable>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_85EE7F88-A431-4C53-A1B5-467655C8AEDE">
+            <dmn:text>resultaat   </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_ADBF9B3A-DFF7-445A-B40E-FB8698C60DA9" name="DRG">
       <di:extension>
@@ -228,8 +350,69 @@
             <kie:width>50</kie:width>
             <kie:width>876</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_1EF8537F-4D7C-4F62-96AA-ACF767B5A162">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>563</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_E41FB7B0-F53C-4C79-8125-8AB23A2859D2">
+            <kie:width>563</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_1F8683F9-4B93-4954-A3BB-AAC2E72CE156">
+            <kie:width>563</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_970CC9EF-D9F2-4F3D-B87B-C16F341F628E">
+            <kie:width>50</kie:width>
+            <kie:width>149</kie:width>
+            <kie:width>191</kie:width>
+            <kie:width>153</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_4255D67B-F7EB-4E2E-B3E2-17E1CE830475">
+            <kie:width>563</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9705A98E-DD80-4553-98BC-F4D60850F5B0">
+            <kie:width>50</kie:width>
+            <kie:width>733</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_915F0799-80EC-4490-BCEC-A5545B63DB31">
+            <kie:width>50</kie:width>
+            <kie:width>169</kie:width>
+            <kie:width>639</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A2A6847A-E648-40A2-9ED5-9C9A73AD1F4B">
+            <kie:width>639</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_710DEE1D-9542-49D4-B473-B28434BBF33B">
+            <kie:width>639</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_DE34214B-DB52-4595-B910-4C9D8D0F4A13">
+            <kie:width>50</kie:width>
+            <kie:width>145</kie:width>
+            <kie:width>217</kie:width>
+            <kie:width>207</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_85EE7F88-A431-4C53-A1B5-467655C8AEDE">
+            <kie:width>639</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_08750B25-3492-4C1D-B8C2-E8F86E36EDE9">
+            <kie:width>50</kie:width>
+            <kie:width>878</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_D4F2D08E-A716-4850-88F3-99238F415879" dmnElementRef="_D4F2D08E-A716-4850-88F3-99238F415879" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="300" y="90" width="476" height="302"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="300" y="254"/>
+          <di:waypoint x="776" y="254"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_B27C12A7-D261-4259-B9FA-61DCB72F2412" dmnElementRef="_B27C12A7-D261-4259-B9FA-61DCB72F2412" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -257,25 +440,30 @@
         <dc:Bounds x="135" y="144" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_D4F2D08E-A716-4850-88F3-99238F415879" dmnElementRef="_D4F2D08E-A716-4850-88F3-99238F415879" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-drg-_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" dmnElementRef="_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="300" y="90" width="476" height="302"/>
+        <dc:Bounds x="871" y="151" width="100" height="50"/>
         <dmndi:DMNLabel/>
-        <dmndi:DMNDecisionServiceDividerLine>
-          <di:waypoint x="300" y="254"/>
-          <di:waypoint x="776" y="254"/>
-        </dmndi:DMNDecisionServiceDividerLine>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-drg-_D8AF8AFD-7DCA-43F2-A304-89854014EBCF" dmnElementRef="_D8AF8AFD-7DCA-43F2-A304-89854014EBCF">
-        <di:waypoint x="185" y="169"/>
-        <di:waypoint x="449" y="169"/>
-      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="dmnshape-drg-_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE" dmnElementRef="_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="871" y="295" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_687126FA-04F2-49B7-8C9C-E49D9C5EA9A7" dmnElementRef="_687126FA-04F2-49B7-8C9C-E49D9C5EA9A7">
         <di:waypoint x="185" y="420"/>
+        <di:waypoint x="449" y="169"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_D8AF8AFD-7DCA-43F2-A304-89854014EBCF" dmnElementRef="_D8AF8AFD-7DCA-43F2-A304-89854014EBCF">
+        <di:waypoint x="185" y="169"/>
         <di:waypoint x="449" y="169"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>

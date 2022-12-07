@@ -1,1823 +1,2272 @@
-<?xml version="1.0" ?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_ich_Interpretatie_CH" name="ich_Interpretatie_CH" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75" exporter="kie-dmn-xls2dmn">
-  <dmn:inputData id="id_hpa_46isPrematuur" name="hpa.isPrematuur">
-    <dmn:variable id="idvar_hpa_46isPrematuur" name="hpa.isPrematuur" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_hpa_46isTweedeHielprik" name="hpa.isTweedeHielprik">
-    <dmn:variable id="idvar_hpa_46isTweedeHielprik" name="hpa.isTweedeHielprik" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_waarde_40_34T4_34_41" name="waarde(&quot;T4&quot;)">
-    <dmn:variable id="idvar_waarde_40_34T4_34_41" name="waarde(&quot;T4&quot;)" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_waarde_40_34TBG_34_41" name="waarde(&quot;TBG&quot;)">
-    <dmn:variable id="idvar_waarde_40_34TBG_34_41" name="waarde(&quot;TBG&quot;)" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_waarde_40_34TSH_34_41" name="waarde(&quot;TSH&quot;)">
-    <dmn:variable id="idvar_waarde_40_34TSH_34_41" name="waarde(&quot;TSH&quot;)" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_waarde_40_34T4_47TBG_34_41" name="waarde(&quot;T4/TBG&quot;)">
-    <dmn:variable id="idvar_waarde_40_34T4_47TBG_34_41" name="waarde(&quot;T4/TBG&quot;)" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:included1="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" xmlns:included2="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a" xmlns:included3="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309" id="dmnid_ich_Interpretatie_CH" name="ich_Interpretatie_CH" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75">
+  <dmn:extensionElements/>
+  <dmn:import id="_64E052A4-7D33-4D00-BC72-153B58836848" name="dt" namespace="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" locationURI="dt_datatypes.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_38FDAE5F-8041-4D97-A196-0F21C0AB1287" name="hpa" namespace="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a" locationURI="hpa_HielprikAlgemeen.xlsx.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_0E58C68C-0DC1-4566-A092-0E1310691D8E" name="hpm" namespace="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309" locationURI="hpm_HielprikMerkers.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
   <dmn:decision id="d_InterpretatieCH" name="InterpretatieCH">
-    <dmn:variable id="dvar_InterpretatieCH" name="InterpretatieCH" typeRef="Any"></dmn:variable>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_hpa_46isPrematuur"></dmn:requiredInput>
+    <dmn:extensionElements/>
+    <dmn:variable id="dvar_InterpretatieCH" name="InterpretatieCH" typeRef="string"/>
+    <dmn:informationRequirement id="_DD74D5F4-91BA-4974-88FF-ADCD954C2A4E">
+      <dmn:requiredDecision href="#_D00DA151-BDBD-4933-9BE9-725B673047EB"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_hpa_46isTweedeHielprik"></dmn:requiredInput>
+    <dmn:informationRequirement id="_7F85AF4B-2175-4729-8AE5-73939FDF762D">
+      <dmn:requiredDecision href="#_F2A07876-6FBC-424F-B26A-8A1D62F52C8F"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_waarde_40_34T4_34_41"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_waarde_40_34TBG_34_41"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_waarde_40_34TSH_34_41"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_waarde_40_34T4_47TBG_34_41"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_InterpretatieCH" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="InterpretatieCH">
-      <dmn:input label="hpa.isPrematuur">
-        <dmn:inputExpression>
-          <dmn:text>hpa.isPrematuur</dmn:text>
+    <dmn:decisionTable id="ddt_InterpretatieCH" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="InterpretatieCH">
+      <dmn:input id="_8F8B769B-BA0E-436B-8377-3CCA9F3C656D">
+        <dmn:inputExpression id="_3F09454B-8A93-4140-8601-BA6DDC74AF92" typeRef="boolean">
+          <dmn:text>HPA.isPrematuur</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input label="hpa.isTweedeHielprik">
-        <dmn:inputExpression>
-          <dmn:text>hpa.isTweedeHielprik</dmn:text>
+      <dmn:input id="_BCD92561-E802-416D-9339-D5200B8509AA">
+        <dmn:inputExpression id="_9C445B33-431B-4CF2-9ED1-812B3FC45646" typeRef="boolean">
+          <dmn:text>HPA.isTweedeHielprik</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input label="waarde(&quot;T4&quot;)">
-        <dmn:inputExpression>
-          <dmn:text>waarde("T4")</dmn:text>
+      <dmn:input id="_E118C866-15DF-41D3-B00E-71EEAEBF6684">
+        <dmn:inputExpression id="_B6BA9BFD-14C6-43FF-A022-416B0A7625CE" typeRef="number">
+          <dmn:text>HPM.waarde("T4")</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input label="waarde(&quot;TBG&quot;)">
-        <dmn:inputExpression>
-          <dmn:text>waarde("TBG")</dmn:text>
+      <dmn:input id="_AD83F989-7103-40C5-9C5E-E02BBF736E80">
+        <dmn:inputExpression id="_96905BFE-ABA7-405C-A147-B1BE152AAAE8" typeRef="number">
+          <dmn:text>HPM.waarde("TBG")</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input label="waarde(&quot;TSH&quot;)">
-        <dmn:inputExpression>
-          <dmn:text>waarde("TSH")</dmn:text>
+      <dmn:input id="_03CFAE7A-E098-4EB4-BF36-586C00B127CE">
+        <dmn:inputExpression id="_5A99543A-2D44-452D-9B0A-66B5459AD5FC" typeRef="number">
+          <dmn:text>HPM.waarde("TSH")</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:input label="waarde(&quot;T4/TBG&quot;)">
-        <dmn:inputExpression>
-          <dmn:text>waarde("T4/TBG")</dmn:text>
+      <dmn:input id="_F83D7114-9658-4A12-8F6B-A2818C5A657B">
+        <dmn:inputExpression id="_BD8CC168-650C-4E8F-A66C-441F03456907" typeRef="number">
+          <dmn:text>HPM.waarde("T4/TBG")</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output></dmn:output>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:output id="_91EACBCB-AFB6-4A9E-8D0B-8F300E2A7F97"/>
+      <dmn:annotation name=""/>
+      <dmn:rule id="_51342B7A-5241-46FD-8EE9-70CC10827348">
+        <dmn:inputEntry id="_A2A762B7-3EA6-4769-A947-9AAF4DF7B621">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1781E57D-A580-4975-A9B1-0DC7DD7FD38C">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5B5D8E4B-A49E-481D-8159-9CFE360DADAC">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A17559A8-9253-4148-B90D-5CDFCC62F5B1">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5268001F-444B-4EE8-A43C-E1B97481B0FD">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A5BF9525-B675-48DD-A56D-128040B5A0FD">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_63D76103-BA8A-40DD-9477-F8F4BB1163A2">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_E387A986-9839-40E2-923C-9BA0E491DA0E">
+        <dmn:inputEntry id="_D5AA220B-66F2-42FC-8A37-30D5553AD4D7">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1F8411BD-E2A1-43D0-9A4F-BA0AD7ACFEA2">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1D988FCB-02DF-45FC-930C-3BC8EEE00FAD">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8D103306-523F-4718-A37E-7AA1CD836816">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E4D461EA-F9A3-49B3-B072-0EF11E00505E">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DD1E954B-F58C-466A-9ADB-695A70DC21C6">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_3E57019F-74B8-45A8-9458-25F05FC0664D">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_3167CCDE-3461-4A59-9D30-74E982E5DC40">
+        <dmn:inputEntry id="_B6BF2CB2-173D-4009-895E-0A2D3734828D">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_6EC12E81-4952-4B35-A1F2-F7ED5DA8BED9">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8F787E72-B73C-4E28-847C-2CCC1207AA0C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E4BC6298-0643-4506-9735-CAB2F20A5AD6">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2D67C388-DA38-485E-B0D4-4B6D18C748F6">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8F7DDD4C-596C-45A1-A1C8-3B1282687C86">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_7B80EE3B-4EE6-494D-8689-F59DB737B61D">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_2C4F752A-1FD2-4DDF-AB2E-77D57FB6D158">
+        <dmn:inputEntry id="_249E256D-D31C-47BC-8612-69DBDC704835">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_940BE625-4F4D-471C-821B-DC6A7759AEED">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_ACCAF288-E136-4B09-BC91-5E42E9FCC64F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8A5794B8-DB73-41FF-837D-3D08D4EEFBFB">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E6758992-600E-4ADE-812C-C30188F2462F">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A68FB384-8399-4101-8DEF-845179C874DB">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_24D2662E-9B33-4504-91DF-0BC3D2E0B2A6">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_45A0B1FA-FDB5-4026-ACD0-04E23C92301D">
+        <dmn:inputEntry id="_537A8511-7A18-4364-963E-EE76E7D5F654">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_37ACEC04-FC22-4D46-AA87-1BF12B2D8311">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B88C12FE-37BE-4917-BB31-1C9282EF6F0B">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_04438E6C-5D8D-4A78-A115-A8F3E1E2ECB7">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_22911623-DB7E-4A31-91F3-20657F48E123">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_02CCBFF4-C653-41E6-9455-188A271C3A33">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_70BC5E4F-56EB-4C1B-9F5B-389EE428546E">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_B4D93214-D95B-4B4D-801D-EC1A3D137D2E">
+        <dmn:inputEntry id="_E385D6AC-80FE-40F3-B25C-8D42DAD4506E">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D9BF5A27-D9FA-4C1D-90EF-155CF98DD5C4">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3850D5B1-A5D4-421E-A601-C20985319679">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B40E6C82-C06B-4954-B19B-1B0C8D874408">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D72DA223-4EEA-4C95-B3D1-37F311861766">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_057E1AA0-3DEC-4CD4-A7CB-7458F7DD7FFE">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_1672AD7D-4039-4800-9877-1A1E17541D4B">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_509078EA-23EC-4EC7-8B14-ED6A59270124">
+        <dmn:inputEntry id="_75EE69C5-1910-4D99-B111-376D6F246446">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_089C6D1E-26AF-4F7A-AF41-D97AAA190DD1">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E276E402-3E1B-4D23-A99F-AF35160EC2D3">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D650ACF5-F0B6-4E35-9CEC-DA0B994B1478">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DE78793A-8519-41A8-8AC8-43640B5633BB">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C489F561-5A07-465D-B4B4-5EACF357BF06">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_C6228F77-7C91-42DC-AF32-7F8B08116A1E">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_172673F3-862D-4913-943F-1E0AA53B8AFE">
+        <dmn:inputEntry id="_E0321603-06B0-457F-A59F-27909CF249B2">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B27F7EC1-2998-4A5A-BB34-337489E7C84B">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5BC39F9B-54C7-40A6-BC73-7C8DD99046AE">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_701B25E3-E65D-4676-9DC6-21CC8278C9B9">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_71C0AE7B-8EAF-48C3-B658-72694ECFD37A">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CC79E9C7-BF2E-4EAF-ABCC-438F614BF9C7">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_5AA5298D-CD4D-4D10-9D90-2F8571E94755">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_8FAC8260-21FF-4601-8BC6-01B03A107442">
+        <dmn:inputEntry id="_1D24B180-204E-4F80-965A-AB70B1757228">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_561CA256-B27F-4C2F-8804-38684740D4A5">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_90384007-5A9E-4E5D-AA5A-D389A4C76BC6">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DBB93B72-174B-476C-9D16-216BBE7B125E">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FDB1287C-E81A-4699-A97F-D4AD30C5D29E">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C78B084F-48FB-4C5A-9F36-8470F112CBAA">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_D6CBCE5E-69F6-4488-8CCB-EDFAB506CE5A">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_56875194-DEC2-4346-875D-B1DD90AC8B37">
+        <dmn:inputEntry id="_DE4E6D88-AE88-4703-8B81-8503F96D80E5">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DB4F0E57-CFF0-4B61-8D83-40FE0941C283">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_09CA698A-7CCB-4C51-801D-2FAD0F983A71">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8D728406-C4F8-4811-85B2-4D096D1B1AA1">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_757B5771-90F2-445C-B7F4-F5DE9A9FA6AF">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_19F2C2A0-908A-412C-A6EF-5D8928C30DE6">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_4F31FA07-5B46-40E2-B547-02F9770A3E3A">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_879E8478-A389-4097-9EF8-656E766F7127">
+        <dmn:inputEntry id="_9C142F36-44A5-44AC-B285-2DEF1EB08E8D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C7348BA7-275A-45E8-8BC9-A828E3EB4F04">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D9DC374C-E84C-4110-ACC2-D58E220638F5">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A03DAB87-554A-44A7-9726-D409F53F3416">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DE5DA820-4FFC-48BA-A1C5-C224FFA90250">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C5535BF6-B9AC-43E4-84A8-345FB3D11A8C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_05E70C19-9CC1-4AFF-AC86-6F8AD2C19586">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_F56E3B73-570D-4366-8BBC-FD7EED63700C">
+        <dmn:inputEntry id="_44088689-A1D1-4CCB-9F9F-A852D5E7D9BE">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5EFD49F7-2169-4294-9508-AC5F64E556C7">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_444AD87B-8F7B-4B27-9C50-19DD9ADA06C3">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_41B299E1-3322-4139-AD84-E2933F71FAF4">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E90E4192-CAD7-4158-B88B-8281B7FA38DC">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_632E16F9-80A1-470B-9723-05BD606A5A2C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_A561F582-0BD4-4ED5-98FA-73B7968DB5CD">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_1C8972E9-2CAF-4E5B-938C-97832F757F65">
+        <dmn:inputEntry id="_CF9D4E43-1D77-428A-A107-B338220D4FCA">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E05D18A8-C39B-497A-9742-DB2C09F38E19">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7A15CFE4-EE5C-4145-B698-8E2E03F0263A">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FAF67C54-F5CF-4B19-AB94-FFFCBD4E8423">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_852C3441-C03F-49EC-84F6-E461BCE57692">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AFBC263D-2BE7-4F09-83F3-5587B5BEE761">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_54008CF0-AA4A-46B0-9A15-DCD8B69F0F49">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_E6CEF9ED-1948-40C0-944E-DBB4A2C46001">
+        <dmn:inputEntry id="_5AEB6334-86F8-4507-B6B5-FC4DB6021418">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_47F07FF9-303E-41E1-9713-7F4DA2076FF3">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_794EBFD9-FC1D-40A2-B79D-8E7C80DF0C7D">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8E2CE097-D989-4BCA-A749-0D01547FDB7F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_21FE98CC-4334-4F07-B580-45FB3A649486">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CCE81958-FE1A-48E7-806D-6D5A4FED88BE">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_1F1E23A5-E49C-4418-AB8D-4299CC7D56CE">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_16FFB96A-6332-4D74-9FF3-78D9D490B749">
+        <dmn:inputEntry id="_748C391C-6FFA-4D15-B478-0EF1696E6D73">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A7B565A8-7F38-4055-82BA-0F1EED2EC93B">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_76A71C28-FD0F-46D6-A04D-2C7189C2DE3B">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_618E6907-A96B-4240-A274-69CE702EB747">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_15305434-F88A-41C1-891A-FF26A7947C1F">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8C06B803-179A-4265-8D2F-B9A2AEB28EEB">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_4657631E-23C6-4AFC-A436-EA7F0DA2E536">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_66A60BAE-B5A7-4F76-B413-523A4AF87A9E">
+        <dmn:inputEntry id="_72BCE25F-C827-4261-8B30-B4ED0E65FB4A">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5C3ED641-BE2D-4EE6-8034-220889C4C0E4">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_17D6C302-2BF0-48A7-A1DE-BB86BE545410">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3374B952-CA63-4730-88E4-C4E02F94C5A6">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0266D86B-2E42-4518-89B4-B54A18548363">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A20A92C1-725E-489F-956C-428C19709FAB">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_798CD6D7-F4D6-480C-83F1-3BD6BDEA1B44">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_2E65AB4B-9584-4252-ACE3-CDBE39FC4F34">
+        <dmn:inputEntry id="_1809CD4D-DDA8-460C-A26F-84D7A210A3FF">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C11ABF0B-401E-4292-AC97-6027A396C4D9">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_11EB3F4F-A99F-48FB-9DFA-EEE5BE729139">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E0E2D030-4EF2-49BE-AAF8-8BCD40E49FFD">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1513FB8F-9843-4233-828B-95F3D4694C85">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F37BD4DA-CC3E-4DFC-80E3-0EE8D9C69B7D">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_E992D45C-3C73-4D5E-B76D-DAE42B8D88F1">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_F64D974F-DA15-4669-9AD9-00C952E4A136">
+        <dmn:inputEntry id="_7D52EFFB-7343-4CDD-840D-A70464F7F32D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D7506B74-F47E-4536-9562-A8D5DFB8CF61">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C359C7DC-80C9-432F-A2D8-16DE6BB89F82">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_24E4C346-9DF5-4610-B91C-98FD86E9F690">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E7E7CDC8-7020-462F-9955-4560D02E2527">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0F92B3BF-4114-4C61-A926-15B6CC72418F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_0BF07277-E7CC-4D99-95BA-F5CD56575ADC">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_3CBF87C2-11E7-4A32-BAF6-2536427DD8B3">
+        <dmn:inputEntry id="_2A357E40-6610-4FDF-80B1-B8BA7CF306B8">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0721E55C-E042-46ED-8B91-E52E4161E45D">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_262BD1F4-6E7F-46EB-B472-57C8254BB533">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_693CC983-5000-40C2-BC6E-DA5A229C3161">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D5CACCE0-8565-47EB-A4CA-AA1CE8FBCEFB">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3157B8F9-CC72-4635-8B83-B14B5076FA4E">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_A23FDEFE-B2C4-4853-AF37-9EC6ACE095E9">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_5D5568CF-4A45-4D5B-A7DF-B3F3004BE636">
+        <dmn:inputEntry id="_A39CFF8D-DD0A-434D-B985-3D0E3EDF23C4">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CCFB4744-A612-4A3B-A104-8E829BBCA3AC">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B2DDA178-AEEB-48E0-AA8D-15523434EBD4">
           <dmn:text>(-1.6 .. -0.8]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C0FF1525-6BB3-4D49-A84A-B2ADE91ED479">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CCEF7F72-FA7F-4710-B24A-4B19780F0FB4">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_61EDCD49-FACC-4729-9FD5-28A09932592D">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_D190AEBD-EFE0-491B-BEA0-9A69D5786C9F">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_E759F4AD-133B-497B-9BDC-227D6A6B20D3">
+        <dmn:inputEntry id="_A6884E8F-39C6-4F51-B10F-AEF2FF5FAC70">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7E3C64D8-35CC-44F7-A873-3F86097A4FB5">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_16866B3E-E95F-4427-B5B5-09642C5E8CAF">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B2A0EC48-F5D0-4FE8-B09E-24DE2F72254A">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_80822699-30AD-498B-9C57-B994F3091B9E">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AD964BF2-35EA-4DF2-A59C-560BB5A6B8AF">
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_29199580-125A-463E-A3E8-22D15149D805">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_ED0CD911-01BC-48CF-8CCB-2B97C5AF3CB1">
+        <dmn:inputEntry id="_CE7EDB04-2EDF-4FAA-BD27-9CCA7390EC3D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3181B298-5FA3-4FF9-B96F-41FF148484F1">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0C2248D1-925C-461F-BB99-EAA048E283E2">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8735717F-004D-4D06-A0D6-7CF9F8D21162">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_9B15156C-4DB7-4B4F-A7AD-1A0520F29697">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CD17F59E-BDBB-44A4-A5F2-6F0224AE99BE">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_FB5F8AE2-2E9A-4EE1-9624-793A2D5935BA">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_118BDC2E-050D-405D-8D29-D7E2C75529FC">
+        <dmn:inputEntry id="_9F3F5BE1-3343-4A78-97B2-73BE0DA44548">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_27492BCD-FACC-45D1-82BF-84EA5672CC97">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F69C6080-6A95-4154-B97E-2F4A55E1A687">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_49D982C7-C1B2-4C14-98D3-BDC018A63A9A">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_76B44304-1671-43C0-B113-10F9D97219AA">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1BD4BF31-D30E-4D7C-A4E9-CA711A9C52D0">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_2F842FAF-98B8-453D-B771-A05C3B380B9D">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_5D8B3985-3002-44D6-B42F-D51E2A9F4B9B">
+        <dmn:inputEntry id="_F56980DF-EAE2-4913-9600-8DC9E1A0E336">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FBA24D75-1A97-4861-8FFE-4441F6D0AE81">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A9F0964D-94E9-4BA3-BA45-1A6F5C0B072A">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7587995E-715D-4FC5-934E-49957C7BE65B">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4ECC5290-1815-45A2-ADCA-BD1CF9E15C92">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_11E3397D-5596-435D-A72B-7EF0C301F160">
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_E54C623D-4828-4D45-93B3-69F8D3425966">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_384F9E0E-B058-418B-8835-FCC18B663862">
+        <dmn:inputEntry id="_9F28D9F7-2F5A-41FF-B829-483E9FF9BC44">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_065A48B7-1432-443B-86C8-94EB96CC512E">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D2328CBB-7B49-4454-8AAC-6E54BE57CED3">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_50658091-0C3D-420F-9C18-0CC24640A8C9">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_44BAE502-D0FB-4CF1-AC40-D5307ABBB1BC">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D9C587B9-14DE-4450-AC89-34E28C5F57F2">
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_0A365A10-CE8A-453F-847C-C2DD8C94C1F5">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_634197EF-A77C-4B75-8FC2-80CCFA612503">
+        <dmn:inputEntry id="_A32C0D66-4F1E-41FD-A744-D6D06E72281B">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E93B40C5-8DA9-4C73-97DC-D81FD273F006">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A8842848-4619-4B50-A426-57965A62E77F">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_21E7749D-61C6-4F8D-94BD-125C89B64CB3">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_70A417D8-DC61-40CC-930F-9324BAB7AAE0">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A1406714-E4A2-4E6E-A58B-B571370738F2">
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_59B4954D-E377-424B-B81A-EF77FC8764E2">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_9CDAD672-8596-44CC-A9D4-746AE8DE87B3">
+        <dmn:inputEntry id="_A3F7B61E-4BFD-411C-A5FC-5D4781DCFE00">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F6745EC5-C303-4EB9-83C3-BF13920355D7">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5B4F6277-A7B8-476F-B18F-06DC801C0B5B">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2E45CC24-611F-4147-9FCC-970EE91CDF9C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_100ED096-2153-4BC6-B847-338706CF6909">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C27B252A-D3C8-4239-AD9A-82BBA7F0440D">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_1A0F95B7-CCB3-4C88-A86B-03186906D283">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_4BA6E897-1162-494B-ADEC-DFE135A920F6">
+        <dmn:inputEntry id="_D43BE66D-42E3-4CF9-B184-BD0125659AC2">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4F2A9B75-5984-4A74-96BE-275138A9624D">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FF4D2708-7FCA-4D6F-9847-7C3F618E555B">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_844EF942-F10C-4F9F-BC4C-6E74A22BBE3E">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3DAEBEF3-6E56-4BBF-A9E6-58F09A341911">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DA20023B-907A-4EBE-B9BA-2CF2FA366E83">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_7C7DDF4A-A483-47A0-8984-A7EC35CBD003">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_59381B85-E863-4872-8FF7-F63CEE6295AC">
+        <dmn:inputEntry id="_5F6ACECA-757C-4C23-A151-FF14E3039B74">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3D0DF6D8-48FD-4985-8463-8746D4B3EF8B">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_9E731635-7C5D-4DDC-954D-AFD59CE70988">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F6FEAB79-22F4-484F-9FA8-63523C0B8F67">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_23C38502-533E-4C0F-82CA-C22D07729C9A">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_BF980950-5DDC-4FB3-BA0D-05B2C40FE88C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_B5178DCB-C173-417D-AE2D-909D5BA7B164">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_AC25CBBC-9DA8-48FE-9BA4-6E9CCD6C9D5E">
+        <dmn:inputEntry id="_C1BDC833-4FCF-4371-9613-8DA9EBBA6407">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_BA0F10A8-19B1-42AF-B5E2-554FD924E5EB">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_BE714176-EE77-4FA5-938E-2D078B0B3F32">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E6FBBF97-DCD7-4077-83CA-390B947744F0">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7147C382-55A3-4C65-89A8-79A38F48B97E">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_73C40A9C-55B5-4D76-BBF8-3EB7A355C61E">
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_C40AC032-2206-4BB3-8811-0A4E37A599BA">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_C3778794-E42B-4C56-9823-1E8DD06AFEF0">
+        <dmn:inputEntry id="_8CCBD52C-046F-482D-867D-B5932FE5A230">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_37C004B8-69B2-4CDB-ABC5-51EA5439F3F4">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_77003B06-F414-42FF-9D03-FAFA322AFD09">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_151C5D44-39E2-47E1-A43E-155747B537B8">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_977D9CA3-A74E-4A84-A55F-04C38B006771">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_986D9592-8DE6-43AA-8AEB-048995E4BFBA">
           <dmn:text>&lt;= 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_5BE30494-CDFF-4E4A-982D-072A273F3E90">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_68147C03-3BA4-4061-BDE9-31195E85DC7D">
+        <dmn:inputEntry id="_F7B9BEA9-7D20-4340-99EF-3197B7891851">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F3DF2896-DECF-45B7-93B1-6D227C4AB9E2">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7B46C32B-DE99-4F04-829B-907EF3A48B7C">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7010F9BB-CA87-4549-BE06-51C6A98D99CF">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_84C8B858-F1A2-45EB-A60E-0629CF597C4F">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0951B7B0-CFB6-4F47-8803-919672105460">
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_2DF214FF-8ECC-4748-BAED-0ADEB5D2FE0A">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_72B88C7A-5043-4B52-86E8-788DA619A3A7">
+        <dmn:inputEntry id="_9E13279D-42CA-427C-90BD-FDC55EBFA6A0">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_83181BEA-BA5C-4250-B275-367AF24BE57F">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FFA98677-376D-4DBC-BB6F-9ED31A9E4979">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_61409229-9896-454F-B2E8-72B2A4033021">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_ED0F8E9F-B0EC-4954-8BFD-242AA15FFEA2">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E2E82641-4473-409D-883A-22C9C4ADD8FE">
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_FED7855B-EB6D-46FA-A6DD-D939B616717E">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_9DB2A165-848E-4FBB-BCDD-80B29A85CC84">
+        <dmn:inputEntry id="_791DD2DB-AC79-472E-AA7F-2A50623536BD">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AEBB9AAF-453E-4487-8538-833BF9D7A747">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_869BE280-C6F4-4D6B-9E48-5F84AB4736BB">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_69A40609-D1B9-424F-862C-1005DD613104">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_87405EB9-669F-4935-A219-2C7AFBB58F60">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8FE3B4DB-BD77-41AD-9826-A7900D92BF5F">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4/TBG")</dmn:text>
+        <dmn:outputEntry id="_50F4A4DA-45B2-4E3A-B726-065252989704">
+          <dmn:text>HPM.classificatie("T4/TBG")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_8049F5F8-B6DF-4582-B491-23B85D176755">
+        <dmn:inputEntry id="_34C23EC1-23A8-465E-9356-27F7D52B4B2A">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2C7365CC-E3AD-4DA4-86C5-4345B7B1E437">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DFDB7700-0E72-4D7C-A970-BDD2171BBEB9">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A4AAC3D3-2A72-474C-A7BC-8D76D23B608F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B3F70F68-2EA9-4A34-877D-78476D5DC476">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_98BF340C-81FD-4591-9C10-34EE84083D1F">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4/TBG")</dmn:text>
+        <dmn:outputEntry id="_5EC7A248-ADA1-4909-9199-451D927DD396">
+          <dmn:text>HPM.classificatie("T4/TBG")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_C4F89856-0009-4ADF-9D1D-CBA8A99060F1">
+        <dmn:inputEntry id="_68B0D2B8-91A8-43A9-85CF-F52CD1618641">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_23A69756-99CF-457D-A9E6-2EF5CD5C0D7A">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C96052C4-53B7-4125-8039-A955682E53B4">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CE4D5523-BA55-4D93-BBAA-ADFE48E86BC1">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_70A70A74-FCA8-4852-BD48-B84317E15603">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8890B44E-2921-4749-BE0C-1697E8643985">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_92ED5994-9E75-4118-97B8-202AB0EE5894">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_5A66C9EE-E7B7-40F8-9686-EB7E889A78B8">
+        <dmn:inputEntry id="_D335E407-4456-4843-A808-61CBA5B9C9E8">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_91B7BA77-CD76-4BAF-AD98-6633F7C99B9F">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_16083723-9387-4EA4-8F50-796D5685A960">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0DB352FC-84C1-4C30-93D5-F2525ECE844C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C67C5A12-8852-4BE6-AD0A-CD2CBF242C39">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_60D54932-EED0-45A5-B5B5-7DDAD7C24E52">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_BA87F07A-CA37-4AC5-973B-D2B1311D19AA">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_DDE539D8-3CB5-473F-A8CF-EDDB5E2D9CDE">
+        <dmn:inputEntry id="_5C6AB6CA-6E43-4933-A68B-5953715F8660">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C2CB2390-2FE7-4549-B4DC-E4400324D165">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AAFEFA39-DF59-4629-9665-851D0EF03C05">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1A76E0F2-D299-4D89-BE42-70BA612A01EF">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FE8832B0-19AA-432D-A698-CBE63F89C133">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FF69D5ED-336E-4096-BE2B-310529A76318">
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_64F48086-20C7-4FBD-A97F-BE386998EAA7">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_2B8CEB3E-F198-4C5C-9673-49319325502E">
+        <dmn:inputEntry id="_ADC1270B-AC3E-4E4B-8086-3F8708CDA96C">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2560F554-05D1-4006-87B8-7257F0D3D983">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_94D6A065-9273-44DF-B41A-7E9D6DF987E9">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_FEFC4E2F-5BBC-411C-A0C0-FFBB113F12E4">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_9C01DF78-5B0A-4988-B5B6-A9783F115630">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F54F6A4D-55EF-4CF7-B558-A1A6CE83C687">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_4F653FE4-907E-425D-8AE8-48BA054A19DA">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_4B833BC6-B707-4981-97E2-A4139E2CFE14">
+        <dmn:inputEntry id="_EF329332-EA74-49BD-BE82-EF7FDEC4581C">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_43D2F77E-0E8C-411F-A7C0-ED13BBCF0990">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B9EF881D-DA91-4796-AFD2-6B768DEE6846">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E9204611-5685-4793-92C2-32CB08DC668A">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_10640DFB-4196-4D42-8570-9BDDC2F490BE">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4463034E-8B7F-4ED7-A34B-C30299A1D489">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_41EF8B8C-8E7A-4B5C-8CB7-D784025B721E">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_D6D3CFD3-1B3A-4991-9742-B859A9A1CA6A">
+        <dmn:inputEntry id="_5240DD5F-1B02-4CE7-AEFF-C2B5C5E9F52F">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2A01B4CC-91F8-4030-8F73-3C813DC9E42C">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C4F831F8-B7AC-4A00-A117-5AE371CE4455">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F847F845-CE25-48DA-B20F-E465D1F50AB9">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A642BCBE-80D8-42A4-B1E7-9EADC3296FDA">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_084FF503-A57B-4801-B40C-FC8BE62145E8">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_22AEB3EB-3857-491F-ABE3-C2BF04D55E2B">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_010C86C6-C75F-4711-A2A5-21D642ECA27A">
+        <dmn:inputEntry id="_6F35A0E5-381E-4241-A14F-3B3C21CA7668">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E9219BEF-AFC7-4BB7-9EAE-BD6BA1B13541">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C0112A04-7FE3-47CF-B7BC-3B61E1030736">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C221AD06-E8BC-4EFB-98E0-D1811661EF70">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_72689FC5-7927-4B12-B42F-FD4DE82FD349">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C1A2484E-1F24-453D-B3F4-6D90C30C4B34">
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_528CAE86-DED7-4CFF-9A80-807F9C462B8E">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_C8506B9C-BF51-417C-BCD3-D5A5280BCD59">
+        <dmn:inputEntry id="_B37DB026-D57F-4D21-9910-4390DB25BF10">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_39D55AF8-9DB6-4297-87E4-F919E34FA517">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_42747810-2A1E-4237-B12F-E0E26020B9E4">
           <dmn:text>(-3.0 .. -1.6]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F0DBDCEA-B0E8-40D8-AAFD-FF3A03DAFAD3">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CE80B9F4-E233-4603-B6F3-4F268F2BB6DF">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5434E4D8-4B23-4B06-B49A-52DC36637505">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4/TBG")</dmn:text>
+        <dmn:outputEntry id="_7EE16348-2BEE-4616-90ED-8216B71F9E4E">
+          <dmn:text>HPM.classificatie("T4/TBG")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_B6A2C494-78B7-464F-ADFF-A6D6830D7368">
+        <dmn:inputEntry id="_27B1D72B-7ADC-4AA3-85A2-FD9833B6E3BD">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2F5C2E80-DC72-4772-9564-B568456504C6">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_9A901849-5AC1-4E2C-BE0A-62A21D1E3B12">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D6EE4B9E-3C33-421D-801B-D1DF8D5A75A8">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_141449A0-AF6C-4A14-BAC3-AB922DD80344">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_169B28C3-A84B-4995-95D8-69BBCF33B407">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_28832340-C2FB-4B4C-BCDC-6D37460F30C4">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_B8935E1D-F816-4605-9AE9-0AE4C154B85B">
+        <dmn:inputEntry id="_0BC131DE-3A73-4567-AF07-0DCBA4241720">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_650AA656-798D-4BCD-A120-110B675C1C7D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_6D598426-FC41-4075-8C2E-2DBF148F464A">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_68834169-9DDF-493C-8340-B3104BF1B99F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_348A9BA9-1816-4814-BBBC-D26275166DBB">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3C1CA57D-E417-4DF0-B2B4-E73265158941">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_477B93E1-3848-413E-8ABD-EB4DDE0B7ED1">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_6ED2F05D-D88F-4DAE-A637-C08B963317A3">
+        <dmn:inputEntry id="_0359F623-D7CA-4EF3-875A-1AD633F4ED92">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_89AE2998-CFA5-4FC8-BFB5-453D164EAD29">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_EEE03D3C-8CA9-4A2E-AE28-6C0E81B14EBC">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7E073CB8-72BD-44E7-8F5A-2C59ED25E8F5">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1C2095DA-1378-4E1E-BD6C-1E0119B7610C">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_15C5C5A5-A264-46BF-905E-31357D598E98">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_8858096D-D600-4BF1-B9E5-3A01EF0CEEA9">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_5A113E6E-514F-482D-9120-B20A5CF6A43C">
+        <dmn:inputEntry id="_4A7DAD7B-9B45-4025-BF72-014795B389AD">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_89D821CD-09BA-433A-A0BC-81D4819A7F6A">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_09CEF51E-1C05-4746-AD39-226B8CFB1043">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D47F5D0A-98F4-474A-AEAC-BA6740C984B8">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8EE0F263-9244-4B0C-A8F2-5352D1169BE4">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F2F7B40A-55A5-41B1-BF76-FA647F78C363">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_AF71B082-8930-463D-AC67-75964F316BEE">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_2A12134D-1879-41D3-99C8-A8D009044CA3">
+        <dmn:inputEntry id="_812F4FBD-C30A-4B7F-ADF2-0D01323C92FA">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A2B095F2-176D-46D9-ACC1-E8EC5982B77A">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F2FA460E-7079-44BD-93DF-417DB698F04A">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_9FB96097-9324-49CC-AEA8-2E74DB84FC2A">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_EA9707E2-BDF6-4AB3-BF6A-1D2F5D508687">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DB165B8A-23FF-4B51-8173-7234C917F5F7">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_2CD9F522-B8D9-461F-9A79-52F05D295EB8">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_3F1F6665-D0C2-4234-927B-E083A02E8CB6">
+        <dmn:inputEntry id="_B27E8D36-66C6-4886-8B99-C57F67705621">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8ED8F7EA-69F8-4ED1-90A8-1BDD1613BD9D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E248C142-F983-455D-8CAF-35FB3B1CE118">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A7479632-E624-494D-90F1-F0496052C606">
           <dmn:text>(40 .. 105]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B9F4B891-12EC-4CC8-8F27-72CFCE9B545B">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_103CCD87-ACB5-4AB8-B63F-5FBE6D597C1F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_3C59D286-DAED-442D-8129-5AD0991E78D7">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_E0B2311A-5D6D-44F0-8BC4-48F88EAA0736">
+        <dmn:inputEntry id="_51A38156-8874-4C96-9069-28AE8AD1EE3F">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_274F3343-532B-4D65-93F4-E1BBD54C4109">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_CDEEC94A-BF18-4073-9214-1C1F510D389E">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0A9530C1-8848-4E9E-B59C-0FF9A8D75F82">
           <dmn:text>(40 .. 105]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8E1AD43D-BA91-4430-A5B8-67DD24E4682A">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7CF548CB-C8AD-438E-A751-0CBC5A9B3B75">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_8D07B8C2-62D0-4E5F-B37D-3BBF2768D30A">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_31F8A581-D974-4349-80FE-FDDCDC4A9449">
+        <dmn:inputEntry id="_F6BE3B13-9F9D-47AE-988F-A02C40EAFF13">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_25126EE0-5B9E-49E9-9DC1-441506B6B459">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_96B380FC-ED13-40F3-A5F9-2E9ACC9DBF75">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A67BE3FC-95E0-42AB-A0B6-8C7C59F1F7C5">
           <dmn:text>(40 .. 105]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3EAFC429-5AF6-48E3-9194-46860DCA2CA0">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_32478819-E243-47A3-98A6-B4AD3B2C29A9">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_29DA041B-1708-4E7D-8417-92B7ECD7465F">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_F9D2A049-3AA7-4B76-BAA2-C6CBED3B6B92">
+        <dmn:inputEntry id="_63DDF314-09F4-4CA6-A493-96975739C588">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_99879FA8-4C5A-47A8-9395-07AECD3E154C">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A2FEAF55-49B6-44DC-80BC-EB5F87371165">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_6593A507-6C8B-4891-8280-B3376C0846C3">
           <dmn:text>(40 .. 105]</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_237B9A26-9DD5-459F-B419-D27932B339A6">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0B9F231B-6386-4388-9028-E63B2F3B04AF">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_87BB4CE1-2DFC-4944-AA93-F2D1DF40367D">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_A0019866-A38D-4504-AAF2-D8F138A40B04">
+        <dmn:inputEntry id="_1B146BA7-3DBC-4BAF-9FA5-DCAE84857664">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_614CB108-0D07-4A5C-ACC1-3F6E00376DE6">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_6300728B-AC9D-41D9-8A6B-1EDDB8DD7DEC">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_322E8ECD-C55E-4218-B330-B52DD564C5BB">
           <dmn:text>&lt;= 40</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_51E3FB8C-768F-408D-96B3-DB1230911D45">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_129B6B75-6DE8-41F4-A7D6-F26C5BF31F93">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_EEA4D2F3-85C9-4C67-ACDD-48BAA5EA4052">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_895B792A-0C12-46AA-B814-75F6B130967B">
+        <dmn:inputEntry id="_996DD69B-9710-4255-955F-4BB3E3DA916C">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_82E639BB-4AD0-47FF-9201-D8605EB3C71F">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_17E1245C-32E5-42CF-A428-131DDF987051">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4DF364B2-C2C1-43E4-AA0B-DB45C6F151B9">
           <dmn:text>&lt;= 40</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_557B14D8-0021-4A2B-B9E7-323AA5B78C25">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DBF8A459-1E90-4EA2-B45B-9338227DAAFE">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_3336ECAB-BAA2-45C3-BF25-FC575EDD6FE3">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_58411039-D3C9-4C92-AC18-1663090DA017">
+        <dmn:inputEntry id="_094D32E0-3C47-47DF-83AB-588B88272DE4">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0B37D3C5-E2BC-4610-9DF9-6C483CAA65E3">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F8C7267C-D776-4684-87C0-186AD6145D5C">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3DD71E4B-9AEC-42A7-BF60-7CE7004EC0AD">
           <dmn:text>&lt;= 40</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E4FDD095-08DF-42F7-ABB3-9B97A1C45C69">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5CE45BDC-1187-4118-B512-05BA1AECC9CD">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_05694064-EAB8-4BC2-9564-43A25ECCCBD3">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_ADF69E30-7051-45B6-BC43-8218E565EEBE">
+        <dmn:inputEntry id="_FF095CCA-552E-476D-8124-2D45D41D9111">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_346C938E-6B88-42F3-B4BA-11B353BF08DA">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_627DE20E-E18C-4193-BBD8-899F2FC8D72B">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_02E293A8-569E-44A1-AE49-CADE7B0C0316">
           <dmn:text>&lt;= 40</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1BBBF72B-4853-480C-8BC9-4E713D7340ED">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F23E11B5-24ED-40EA-9EFA-B0E5F42FA82F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_525FAC1A-8A2A-40D7-A865-7855FF21F308">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_3F56EF4F-3BFA-4D16-891F-CC3ED28BC0F2">
+        <dmn:inputEntry id="_34697DB1-FE0D-448C-8AA4-66A7EECF8235">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_82642791-5F0B-424C-9821-28F7057F3BF4">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_196FCE67-2D93-4543-8886-7F8DEC3EDC06">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5972CE85-9E3F-4685-8681-AD2DEA2E7B2F">
           <dmn:text>&gt; 105</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_28CDFBD5-0DAE-4A72-8A98-4F11C1321F9F">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5D34DFC1-3F60-4D4A-A83D-D0C87B3A0D5E">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_1C0C2128-6A0E-45AA-B543-E824B47060D5">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_21A75845-4C53-4C03-9DE4-5A82F1560441">
+        <dmn:inputEntry id="_1C27400F-1627-445B-8BA8-1FAF84F9951F">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E22D3E23-0E95-4347-BB74-76A8C3333566">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_57588653-A307-4758-853B-FF783CBAF93E">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A3198817-F65A-4114-8341-9044154B36B3">
           <dmn:text>&gt; 105</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_99D28E6F-31A8-4486-AE6A-9E23E70EC742">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_297C6812-DD9A-4AD7-B4CE-7688B6ECEDCE">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_AB5DE916-8EBD-4E0D-B76A-3C3FAAB0943D">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_4F6C9B09-D38D-48F9-BEEC-530BB7E9D713">
+        <dmn:inputEntry id="_A77DFDA0-5714-400A-B322-AD184633AAA3">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_152CE5D1-E048-42C1-A278-19DCC4B4D05D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4B794A17-8C4D-4943-8071-75AAF428B7B6">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_61F58D6C-A21C-48F8-908D-08E5317BC113">
           <dmn:text>&gt; 105</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B590F341-C2CF-4990-B53B-42DE4A2CA720">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2C1990D1-C744-4C38-AB48-19627DB4326F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_99F56654-F553-43E6-8A64-FFE4F21AD52D">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_F87AD750-5E66-4F98-A31A-C7FF6B7C9A0A">
+        <dmn:inputEntry id="_01870F70-0CAD-4DC9-8ADC-9F5909794F37">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8CF9F4B2-69BE-4512-8729-5F66C796FABC">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C39A43FE-AE4F-421C-8831-A697A6EA75F7">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_87BD4820-E893-47B2-9F98-8356549939A1">
           <dmn:text>&gt; 105</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4945CE57-D3CD-4855-A38A-687A1AF7CFBE">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0E9C661D-C298-4A73-ABAE-192EA9EF3481">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_31AAD2FA-D891-42EB-AC56-DD02D41E3545">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_2C835F41-1133-40EE-B094-D30EDBBFFC36">
+        <dmn:inputEntry id="_B2FFECB3-F279-4F1A-B804-EC987C1112FE">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F22F583D-F9CD-443F-9210-B363A53B5AC9">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3DA977A7-9FDF-4F12-8FC9-6E1BBE9D2AA2">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F8771EE2-E08E-4DC7-8FA9-1FDB20AEC3CA">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E2EA519E-EB97-4339-9BB7-B485DA70B09F">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_545429AC-0A68-4EC9-9290-07F49CDA9C45">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_278A7CF2-88BC-4706-9996-725BAD8B38BB">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_7680F83F-36DF-40F0-A084-2FAA18096483">
+        <dmn:inputEntry id="_EDE375E0-2AC5-4E07-9BC0-DE3BF8111D09">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_9265A2B3-3B58-4E98-9A1E-9D202A160844">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DD1A036A-775A-4F65-B92E-314A3C6A1435">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_01BED022-96FF-46F7-8E0D-85E18D2BA73C">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_EAC4D78D-FB54-4458-AE36-FE3A9EFFCE10">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_61F38E2F-9A36-4B64-9DCF-3204663CB4E3">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_525CA897-FE9B-4C6C-8C36-292AE2871C79">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_6286F863-8CFE-4D55-AB70-C92C473BEE1B">
+        <dmn:inputEntry id="_079D93F0-A55D-423B-A49A-CF67FE054890">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F5AB4497-AB47-4E32-B3D4-977D74368428">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_5A77F922-AEC4-42CF-ABBA-4527973DDAE5">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_314AAD1F-429E-4816-A5DD-3D08D6C0AB97">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_96C67900-0E3A-4642-B54A-978BD66693FC">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_B701DE49-62FF-415F-9533-F5EAA7333A6B">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_E950F320-50CE-464B-9E1C-E8A857166FB8">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_755F2581-51FD-4A94-A56E-3C434F295A3E">
+        <dmn:inputEntry id="_F8557A62-AB9C-418B-820A-80B69859B07D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_841AB35F-E0AB-4F9B-8AB4-73502746E54C">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4EDA4F13-3B74-4E5E-AFBF-0D85AEE2A56D">
           <dmn:text>&lt;= -3.0</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E3075E4F-C667-49E8-8221-E69CBB005942">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_80651BC3-BE9A-4EE9-AA6A-1847DDD118B3">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DF1E0B1A-7A87-4768-A6DA-7DB7C47C3C3C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_9E6A6BCD-285A-487F-A60F-7DB71E355ED3">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_A822E288-B49E-406F-8D70-B51E5C0CE695">
+        <dmn:inputEntry id="_95EA4A29-E5BE-4A20-AEB1-9ACC34BBD23B">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_69814DF0-E4AB-4390-B2A4-6026D2ACEBB2">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D92CD8F9-B2EC-42A5-B61A-5891650F9978">
           <dmn:text>&gt; -0.8</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A7F5B5FA-2E35-40E7-B551-1621D71CDB48">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_48B6F14B-F632-4351-8241-D6B1580ED799">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_BD1606CA-3622-4E7C-8BA8-409170BF7E00">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_52D269CC-E96D-45B6-8ACF-632FF73F2D7B">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_62BD8076-57FA-4CAE-9A8D-DA8F43E42B10">
+        <dmn:inputEntry id="_BC805229-A6EF-4733-8A06-365ADFC82790">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C30C78C6-677E-46F5-B3EB-E7814E39A5BB">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4EC215DC-7E72-4E20-8DB2-8D8469F6F70C">
           <dmn:text>&gt; -0.8</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4642A3AE-D9A1-44EA-9EE6-674BEB5FAAB3">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F16196BD-A885-4657-98F3-FE2D0D5A4C74">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_74BB30FB-E8F1-4EC7-AC3B-1111EF6E8C5C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_0CADD10D-079E-46B6-BD4A-F0B562FA8FEC">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_EB525B79-026B-4D18-88DE-B4190010829A">
+        <dmn:inputEntry id="_DA012326-40C1-4858-BF5A-CED3ADD1DC0E">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D0BDF54E-F747-41B2-B32F-2EEEC7EE5D91">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_02EE6B12-B8D9-4AD5-9C5F-6160AC4DF74C">
           <dmn:text>&gt; -0.8</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_44E437D4-6A93-4CDC-9B34-BB50813C1A74">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_6EFBE588-1820-43C3-813B-0DED2C7455F2">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_780BE9F4-FFBB-4043-A740-586CC16D5EF5">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_73D73477-60E4-4E23-AB79-EA33A0425F7D">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_20591725-88C9-4629-8882-E0980022C515">
+        <dmn:inputEntry id="_DCA2A799-5DFE-4518-AF04-E59D6DA14270">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A998C5C0-38FE-4F37-AF41-15BF1706D4D3">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_996669A0-C00E-4CFE-9B44-A5493EF616C6">
           <dmn:text>&gt; -0.8</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_ECF10E03-A851-4DA2-9B17-0AEE65D0D4F8">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4E3AA51C-0615-4F7D-85E6-C958B48E6F0B">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_38EC8CCC-1A3B-4D09-86DF-188B67C2D433">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_3BCCF80C-04DE-4301-92A3-1DF2635C191B">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_50DD7954-3B29-42A7-9EE1-74D4F1EDC13F">
+        <dmn:inputEntry id="_63FA4245-42EE-48B0-824B-F00BFE17AF94">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_6A76BC35-22A1-47A7-B77E-767D740370B4">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A41628C3-F1BA-4631-B310-B5B0D9F7366B">
           <dmn:text>&gt; -0.8</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A06B9010-3191-4AA5-9E76-22F55234768F">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_EB0C45B5-9E2D-4ACA-9B37-D811EAFC4CAB">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7DC035AA-81B4-4918-8737-354C1DDDFD33">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_5CFE2366-E186-406A-8458-A0249F25AE36">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_FDF2EEED-1D79-4F7A-B7C5-1C9822751D5D">
+        <dmn:inputEntry id="_18809EB7-F1DE-4A3B-ACD3-4B83BF052C93">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_83824138-75C8-42FA-812F-24B49A700A0F">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_BD565911-C5EB-4A26-8874-90318F456994">
           <dmn:text>&gt; -0.8</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2EA13790-D457-40A7-9ECF-78AD5CE4F676">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_647E8AC9-58FF-4E92-B81D-0978AA4D3C36">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_F8874C6D-AE04-4FA1-A1B7-A230AB6934A3">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"TSH")</dmn:text>
+        <dmn:outputEntry id="_AA0F5E43-5856-4A35-A8FF-7274CE9E9DE4">
+          <dmn:text>HPM.classificatie("TSH")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_91905780-8D90-4694-B84D-7B113C7D6E06">
+        <dmn:inputEntry id="_0503D677-C45C-4548-839D-A16C8AF6BF26">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_BA5C5E3E-84EC-45A9-A052-9C50205EFF0D">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_544240EF-B321-43B0-977E-90DF334A14EE">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1506DF4B-7397-4B19-98E2-C91D0CCF73F7">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7C88C2DA-E67C-43B2-8D35-CDBC752D44B8">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0730EDF0-32DC-48E3-9C35-9D21AB4C7D86">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
+        <dmn:outputEntry id="_A63570DF-CDFD-4F3F-B7F6-67E447D6AFA9">
+          <dmn:text>HPM.classificatie("T4")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_B5CB8CB0-F2FD-4F00-B161-F363DA0C9ADA">
+        <dmn:inputEntry id="_BE1E906B-7BE5-4569-A676-FE2AE3FDEF17">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_E2185D58-9A63-4C46-BDE0-13EEC9D71919">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_EC7065BF-6E59-434A-9C43-A8A5DC72639D">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AB5487C3-2A96-4F17-8363-80CAB1B61AF0">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_C9733BB5-C6DC-4A40-8988-73E164E815FF">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AC3CF67F-48A9-44AD-86B0-37C8FB550332">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
+        <dmn:outputEntry id="_0A8B9EF9-86C9-4BA1-BFE9-7552B505FBC8">
+          <dmn:text>HPM.classificatie("T4")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_BBA4600C-865B-4150-B67D-ACA159C79B94">
+        <dmn:inputEntry id="_05FB2FEC-DE50-4987-A70D-23CFD16B9E31">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_AFD79A87-9568-4223-BA40-663B71DFB625">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_70551178-D924-4462-BA93-5645445E6BA7">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_44CD047B-06E7-4B23-B2D1-E69E2A9C489D">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_D4518769-8E4C-4FB1-B8D5-1334A07229AC">
           <dmn:text>(7 .. 22)</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7C36CA57-E769-4677-A635-8CB3A9684D84">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
+        <dmn:outputEntry id="_DC4583AD-3288-444C-B5B9-86ABB13EA84A">
+          <dmn:text>HPM.classificatie("T4")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_2225BED4-D18F-4728-AEAF-C6DDEEF08AB3">
+        <dmn:inputEntry id="_68872090-2DD4-4EA7-BC71-93DB0AEC9F61">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8BB8C786-9922-47DA-A41E-F0177461AA03">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_7CDCEACA-68A3-45FB-94C7-E1774E518A6B">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_8E5E2442-08BD-4DF7-A8BD-FCFDB356388E">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DDB430B5-C49C-4F73-8164-B5AFD9DA283E">
           <dmn:text>&lt;= 7</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_99511062-AB1F-4CA8-9C26-A46FB24752E2">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_9347B7EE-A763-4B23-81D5-29D420465738">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_E6E3C1E8-9590-4006-9116-40507DB2E9EE">
+        <dmn:inputEntry id="_AB52B3ED-4ABD-403E-9809-9F498CE10BCB">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_0878DD1F-95C3-42BC-A8F1-6E5B76E9261F">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_1E673B91-5774-4570-98F1-819F6A2FDF79">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_A7B96B67-1377-42AC-B934-3B1F11E067E4">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DED2B113-E38F-4DA5-BE3A-39C308E17D44">
           <dmn:text>&gt;= 22</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_DAE27778-C225-45DA-9198-A7742BE3C88C">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
+        <dmn:outputEntry id="_C1C9DEFD-D96B-4E1D-B767-22E4FEF6C53D">
+          <dmn:text>HPM.classificatie("T4")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_E8E9C41D-F0C3-4F38-980A-8E021851731F">
+        <dmn:inputEntry id="_F117E2CA-74F9-401A-AC61-6013C770EB72">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_2C09CBC1-F9ED-4BDD-AB2B-394660EF3FC1">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_70C21E41-6A5D-464E-A92B-78D71EF17A4A">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_61AE04A2-5A95-4646-817D-FCBB2E4674D6">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_3B569B81-18EC-49A2-9ECE-E92C4DB682F7">
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry>
+        <dmn:inputEntry id="_4035E989-1B7F-4BE8-A1B8-79EF29C1DED0">
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>HPS.classificatie(HPS.hielprik,"T4")</dmn:text>
+        <dmn:outputEntry id="_90F7D79F-71C8-4008-8B71-8B85027DE6C3">
+          <dmn:text>HPM.classificatie("T4")</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:decision id="_D00DA151-BDBD-4933-9BE9-725B673047EB" name="HPA">
+    <dmn:extensionElements/>
+    <dmn:variable id="_89C50182-83BA-411F-922C-33F68C488B38" name="HPA"/>
+    <dmn:informationRequirement id="_DAB135D8-798A-4128-9369-9497B7B77FBC">
+      <dmn:requiredInput href="#_4A426B2E-600E-4A1B-B46B-E091815D7457"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_F270DA27-848A-4F86-9516-A7E1E5584A6D">
+      <dmn:requiredKnowledge href="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a#_2FCC92E1-9A68-4851-AE91-752B7316DCE1"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_58D3EFAB-2077-4FB8-B046-7C9E0F41F43C">
+      <dmn:text>hpa.hpa Hielprik Algemeen</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:inputData id="_4A426B2E-600E-4A1B-B46B-E091815D7457" name="hielprik">
+    <dmn:extensionElements/>
+    <dmn:variable id="_75B2C08C-CD2C-466F-AA27-713DC4061A35" name="hielprik" typeRef="dt.Hielprik"/>
+  </dmn:inputData>
+  <dmn:decision id="_F2A07876-6FBC-424F-B26A-8A1D62F52C8F" name="HPM">
+    <dmn:extensionElements/>
+    <dmn:variable id="_6F94FBA4-C940-47EB-8A95-664627C8CC5F" name="HPM" typeRef="Any"/>
+    <dmn:informationRequirement id="_98909890-35FF-4362-B92E-9962964BB383">
+      <dmn:requiredDecision href="#_D0B44840-42AB-41A4-8837-2D00AB48A8EC"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_424FE5A6-2A03-4AED-A13C-967AB91DD05D">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_4D99EFDA-A351-47CF-8469-E6B096C83BE4">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_34ED4FA6-ED52-4CDD-B961-86871A64DDC5"/>
+    </dmn:knowledgeRequirement>
+    <dmn:context id="_38E67D60-A947-48F6-B6DB-E944CA4E42EF">
+      <dmn:contextEntry>
+        <dmn:variable id="_803B38FF-7B75-41BD-91D6-995E3D2224D2" name="waarde" typeRef="number"/>
+        <dmn:functionDefinition id="_CE83AECF-C21B-4AD0-9707-39980D1E76AD" kind="FEEL">
+          <dmn:formalParameter id="_4F6875EA-E886-4A52-9DED-B67273AAB694" name="merkernaam" typeRef="string"/>
+          <dmn:literalExpression id="_9574ADA5-519F-4B49-BB59-365E3A0E5737">
+            <dmn:text>hpm.waarde(merkers,merkernaam)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:functionDefinition>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_80AF5C67-906B-4A3C-96A0-2DDF5F17DAEF" name="classificatie" typeRef="string"/>
+        <dmn:functionDefinition id="_BB6DE6AA-C338-40F1-B7F1-E01A1F4F30B5" kind="FEEL">
+          <dmn:formalParameter id="_38BA08C2-56BC-4A55-A741-EFB8C93344D5" name="merkernaam" typeRef="string"/>
+          <dmn:literalExpression id="_2B30587E-769D-47BA-BCC5-21DF43531D11">
+            <dmn:text>hpm.classificatie(merkers.merkernaam)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:functionDefinition>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmn:inputData id="_21C12CAC-F411-48BD-A4FE-8959A96D1A15" name="testresultaten">
+    <dmn:extensionElements/>
+    <dmn:variable id="_FF757E3F-A534-4713-985D-A9E2BDDEFDBE" name="testresultaten" typeRef="dt.Testresultaten"/>
+  </dmn:inputData>
+  <dmn:decision id="_D0B44840-42AB-41A4-8837-2D00AB48A8EC" name="merkers">
+    <dmn:extensionElements/>
+    <dmn:variable id="_43CC44AF-B79C-44DD-8A8E-FA8219D75A5F" name="merkers" typeRef="dt.Merkers"/>
+    <dmn:informationRequirement id="_1B956A88-4003-485E-8909-C887FD419709">
+      <dmn:requiredInput href="#_21C12CAC-F411-48BD-A4FE-8959A96D1A15"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_EB08E70A-6E17-40E4-9F79-46A70D8B36B3">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_D4F2D08E-A716-4850-88F3-99238F415879"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_5B8B266C-EE2C-4941-8106-1B24EC2A522C">
+      <dmn:text>hpm.hpm HielprikMerkers</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_2BDF6996-6F7B-472F-BAA0-EAED90590067" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="ddt_InterpretatieCH">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>137</kie:width>
+            <kie:width>165</kie:width>
+            <kie:width>165</kie:width>
+            <kie:width>213</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_58D3EFAB-2077-4FB8-B046-7C9E0F41F43C">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_38E67D60-A947-48F6-B6DB-E944CA4E42EF">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>448</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CE83AECF-C21B-4AD0-9707-39980D1E76AD">
+            <kie:width>50</kie:width>
+            <kie:width>378</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9574ADA5-519F-4B49-BB59-365E3A0E5737">
+            <kie:width>378</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_BB6DE6AA-C338-40F1-B7F1-E01A1F4F30B5">
+            <kie:width>50</kie:width>
+            <kie:width>378</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2B30587E-769D-47BA-BCC5-21DF43531D11">
+            <kie:width>378</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5B8B266C-EE2C-4941-8106-1B24EC2A522C">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_2FCC92E1-9A68-4851-AE91-752B7316DCE1" dmnElementRef="included2:_2FCC92E1-9A68-4851-AE91-752B7316DCE1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="240" y="491" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="240" y="591"/>
+          <di:waypoint x="440" y="591"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-d_InterpretatieCH" dmnElementRef="d_InterpretatieCH" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="487" y="50" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" dmnElementRef="included3:_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="812.2990654205607" y="270.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_D00DA151-BDBD-4933-9BE9-725B673047EB" dmnElementRef="_D00DA151-BDBD-4933-9BE9-725B673047EB" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="126" y="386" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_4A426B2E-600E-4A1B-B46B-E091815D7457" dmnElementRef="_4A426B2E-600E-4A1B-B46B-E091815D7457" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="126" y="556" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE" dmnElementRef="included3:_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="812" y="195.68421052631578" width="121" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_F2A07876-6FBC-424F-B26A-8A1D62F52C8F" dmnElementRef="_F2A07876-6FBC-424F-B26A-8A1D62F52C8F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="556" y="218" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_D4F2D08E-A716-4850-88F3-99238F415879" dmnElementRef="included3:_D4F2D08E-A716-4850-88F3-99238F415879" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="691" y="491" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="691" y="591"/>
+          <di:waypoint x="891" y="591"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_21C12CAC-F411-48BD-A4FE-8959A96D1A15" dmnElementRef="_21C12CAC-F411-48BD-A4FE-8959A96D1A15" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="556" y="607" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_D0B44840-42AB-41A4-8837-2D00AB48A8EC" dmnElementRef="_D0B44840-42AB-41A4-8837-2D00AB48A8EC" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="557" y="386" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_DD74D5F4-91BA-4974-88FF-ADCD954C2A4E" dmnElementRef="_DD74D5F4-91BA-4974-88FF-ADCD954C2A4E">
+        <di:waypoint x="176" y="411"/>
+        <di:waypoint x="537" y="75"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_7F85AF4B-2175-4729-8AE5-73939FDF762D" dmnElementRef="_7F85AF4B-2175-4729-8AE5-73939FDF762D">
+        <di:waypoint x="606" y="243"/>
+        <di:waypoint x="537" y="75"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_DAB135D8-798A-4128-9369-9497B7B77FBC" dmnElementRef="_DAB135D8-798A-4128-9369-9497B7B77FBC">
+        <di:waypoint x="176" y="581"/>
+        <di:waypoint x="176" y="411"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_F270DA27-848A-4F86-9516-A7E1E5584A6D" dmnElementRef="_F270DA27-848A-4F86-9516-A7E1E5584A6D">
+        <di:waypoint x="340" y="591"/>
+        <di:waypoint x="176" y="411"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_424FE5A6-2A03-4AED-A13C-967AB91DD05D" dmnElementRef="_424FE5A6-2A03-4AED-A13C-967AB91DD05D">
+        <di:waypoint x="872.5" y="220.68421052631578"/>
+        <di:waypoint x="606" y="243"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_4D99EFDA-A351-47CF-8469-E6B096C83BE4" dmnElementRef="_4D99EFDA-A351-47CF-8469-E6B096C83BE4">
+        <di:waypoint x="862.2990654205607" y="295.3421052631579"/>
+        <di:waypoint x="606" y="243"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_98909890-35FF-4362-B92E-9962964BB383" dmnElementRef="_98909890-35FF-4362-B92E-9962964BB383">
+        <di:waypoint x="607" y="411"/>
+        <di:waypoint x="606" y="243"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_EB08E70A-6E17-40E4-9F79-46A70D8B36B3" dmnElementRef="_EB08E70A-6E17-40E4-9F79-46A70D8B36B3">
+        <di:waypoint x="791" y="591"/>
+        <di:waypoint x="607" y="411"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_1B956A88-4003-485E-8909-C887FD419709" dmnElementRef="_1B956A88-4003-485E-8909-C887FD419709">
+        <di:waypoint x="606" y="632"/>
+        <di:waypoint x="607" y="411"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
 </dmn:definitions>
