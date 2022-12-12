@@ -2,6 +2,16 @@
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:included1="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" id="dmnid_hpa_HielprikAlgemeen" name="hpa_HielprikAlgemeen" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a">
   <dmn:extensionElements/>
   <dmn:import id="_655A6883-D175-4840-BBD7-1B49A885F40F" name="dt" namespace="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" locationURI="dt_datatypes.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:decisionService id="_2FCC92E1-9A68-4851-AE91-752B7316DCE1" name="Hielprik_Algemeen">
+    <dmn:extensionElements/>
+    <dmn:variable id="_F2D56EA4-481D-4BBD-899E-5B0B391B1B82" name="Hielprik_Algemeen" typeRef="Any"/>
+    <dmn:outputDecision href="#d_voldoendeTijdVerstrekenBT"/>
+    <dmn:outputDecision href="#d_status_32BT"/>
+    <dmn:outputDecision href="#d_isTweedeHielprik"/>
+    <dmn:outputDecision href="#d_isPrematuur"/>
+    <dmn:outputDecision href="#d_isTeVroegGeprikt"/>
+    <dmn:inputData href="#_CF058A7E-07A2-43FE-BC0B-990E2F128F70"/>
+  </dmn:decisionService>
   <dmn:decision id="d_voldoendeTijdVerstrekenBT" name="voldoendeTijdVerstrekenBT">
     <dmn:extensionElements/>
     <dmn:variable id="dvar_voldoendeTijdVerstrekenBT" name="voldoendeTijdVerstrekenBT" typeRef="boolean"/>
@@ -646,7 +656,7 @@
     <dmn:informationRequirement id="_9E08C957-6BE0-41F9-B0E1-1F24B10A19E4">
       <dmn:requiredInput href="#_CF058A7E-07A2-43FE-BC0B-990E2F128F70"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_isTeVroegGeprikt" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="isTeVroegGeprikt">
+    <dmn:decisionTable id="ddt_isTeVroegGeprikt" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="isTeVroegGeprikt">
       <dmn:input id="_AA6D0B91-D51E-4E06-9947-7C256FED98B2">
         <dmn:inputExpression id="_A800347F-5582-4C6E-8F13-67B6902A254C" typeRef="boolean">
           <dmn:text>(time(hielprik.afnameMoment) = time(0,0,0)) and (time(hielprik.geboorteMoment) = time(0,0,0))</dmn:text>
@@ -721,16 +731,6 @@
     <dmn:extensionElements/>
     <dmn:variable id="_F0399940-6BB6-4B7A-B541-ABF28236EAF4" name="hielprik" typeRef="dt.Hielprik"/>
   </dmn:inputData>
-  <dmn:decisionService id="_2FCC92E1-9A68-4851-AE91-752B7316DCE1" name="hpa Hielprik Algemeen">
-    <dmn:extensionElements/>
-    <dmn:variable id="_F2D56EA4-481D-4BBD-899E-5B0B391B1B82" name="hpa Hielprik Algemeen" typeRef="Any"/>
-    <dmn:outputDecision href="#d_voldoendeTijdVerstrekenBT"/>
-    <dmn:outputDecision href="#d_status_32BT"/>
-    <dmn:outputDecision href="#d_isTweedeHielprik"/>
-    <dmn:outputDecision href="#d_isPrematuur"/>
-    <dmn:outputDecision href="#d_isTeVroegGeprikt"/>
-    <dmn:inputData href="#_CF058A7E-07A2-43FE-BC0B-990E2F128F70"/>
-  </dmn:decisionService>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_D536626B-8CC8-42B7-B2D9-8F6393822473" name="DRG">
       <di:extension>
@@ -767,13 +767,26 @@
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="ddt_isTeVroegGeprikt">
             <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
+            <kie:width>175</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_2FCC92E1-9A68-4851-AE91-752B7316DCE1" dmnElementRef="_2FCC92E1-9A68-4851-AE91-752B7316DCE1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="190" y="47" width="555" height="457"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="190" y="394"/>
+          <di:waypoint x="745" y="394"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-d_voldoendeTijdVerstrekenBT" dmnElementRef="d_voldoendeTijdVerstrekenBT" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -827,19 +840,6 @@
         </dmndi:DMNStyle>
         <dc:Bounds x="480" y="559" width="100" height="50"/>
         <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_2FCC92E1-9A68-4851-AE91-752B7316DCE1" dmnElementRef="_2FCC92E1-9A68-4851-AE91-752B7316DCE1" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="190" y="47" width="555" height="457"/>
-        <dmndi:DMNLabel/>
-        <dmndi:DMNDecisionServiceDividerLine>
-          <di:waypoint x="190" y="394"/>
-          <di:waypoint x="745" y="394"/>
-        </dmndi:DMNDecisionServiceDividerLine>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_92A7A7EE-BB0E-4DCE-AD33-22EDCA0EAE54" dmnElementRef="_92A7A7EE-BB0E-4DCE-AD33-22EDCA0EAE54">
         <di:waypoint x="530" y="584"/>

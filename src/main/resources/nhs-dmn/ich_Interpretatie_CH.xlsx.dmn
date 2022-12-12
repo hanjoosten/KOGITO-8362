@@ -7,12 +7,18 @@
   <dmn:decision id="d_InterpretatieCH" name="InterpretatieCH">
     <dmn:extensionElements/>
     <dmn:variable id="dvar_InterpretatieCH" name="InterpretatieCH" typeRef="string"/>
-    <dmn:informationRequirement id="_DD74D5F4-91BA-4974-88FF-ADCD954C2A4E">
-      <dmn:requiredDecision href="#_D00DA151-BDBD-4933-9BE9-725B673047EB"/>
+    <dmn:informationRequirement id="_7309AEB0-71C8-4B91-83C4-6FC976F3DEC2">
+      <dmn:requiredDecision href="#_D0B44840-42AB-41A4-8837-2D00AB48A8EC"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement id="_7F85AF4B-2175-4729-8AE5-73939FDF762D">
-      <dmn:requiredDecision href="#_F2A07876-6FBC-424F-B26A-8A1D62F52C8F"/>
+    <dmn:informationRequirement id="_15C50E2F-98D6-44DC-8264-E5F6C1E466A5">
+      <dmn:requiredDecision href="#_EBBAA0F7-78DE-4BAB-96AE-05B4809EFD9F"/>
     </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_4D99EFDA-A351-47CF-8469-E6B096C83BE4">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_34ED4FA6-ED52-4CDD-B961-86871A64DDC5"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_424FE5A6-2A03-4AED-A13C-967AB91DD05D">
+      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE"/>
+    </dmn:knowledgeRequirement>
     <dmn:decisionTable id="ddt_InterpretatieCH" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="InterpretatieCH">
       <dmn:input id="_8F8B769B-BA0E-436B-8377-3CCA9F3C656D">
         <dmn:inputExpression id="_3F09454B-8A93-4140-8601-BA6DDC74AF92" typeRef="boolean">
@@ -26,22 +32,22 @@
       </dmn:input>
       <dmn:input id="_E118C866-15DF-41D3-B00E-71EEAEBF6684">
         <dmn:inputExpression id="_B6BA9BFD-14C6-43FF-A022-416B0A7625CE" typeRef="number">
-          <dmn:text>HPM.waarde("T4")</dmn:text>
+          <dmn:text>hpm.waarde("T4",merkers)</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_AD83F989-7103-40C5-9C5E-E02BBF736E80">
         <dmn:inputExpression id="_96905BFE-ABA7-405C-A147-B1BE152AAAE8" typeRef="number">
-          <dmn:text>HPM.waarde("TBG")</dmn:text>
+          <dmn:text>hpm.waarde("TBG",merkers)</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_03CFAE7A-E098-4EB4-BF36-586C00B127CE">
         <dmn:inputExpression id="_5A99543A-2D44-452D-9B0A-66B5459AD5FC" typeRef="number">
-          <dmn:text>HPM.waarde("TSH")</dmn:text>
+          <dmn:text>hpm.waarde("TSH",merkers)</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_F83D7114-9658-4A12-8F6B-A2818C5A657B">
         <dmn:inputExpression id="_BD8CC168-650C-4E8F-A66C-441F03456907" typeRef="number">
-          <dmn:text>HPM.waarde("T4/TBG")</dmn:text>
+          <dmn:text>hpm.waarde("T4/TBG",merkers)</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_91EACBCB-AFB6-4A9E-8D0B-8F300E2A7F97"/>
@@ -144,7 +150,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_24D2662E-9B33-4504-91DF-0BC3D2E0B2A6">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -482,7 +488,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_E992D45C-3C73-4D5E-B76D-DAE42B8D88F1">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -508,7 +514,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_0BF07277-E7CC-4D99-95BA-F5CD56575ADC">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -534,7 +540,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_A23FDEFE-B2C4-4853-AF37-9EC6ACE095E9">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -560,7 +566,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_D190AEBD-EFE0-491B-BEA0-9A69D5786C9F">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -924,7 +930,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_50F4A4DA-45B2-4E3A-B726-065252989704">
-          <dmn:text>HPM.classificatie("T4/TBG")</dmn:text>
+          <dmn:text>hpm.classificatie("T4/TBG",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -950,7 +956,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_5EC7A248-ADA1-4909-9199-451D927DD396">
-          <dmn:text>HPM.classificatie("T4/TBG")</dmn:text>
+          <dmn:text>hpm.classificatie("T4/TBG",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1080,7 +1086,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_41EF8B8C-8E7A-4B5C-8CB7-D784025B721E">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1106,7 +1112,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_22AEB3EB-3857-491F-ABE3-C2BF04D55E2B">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1132,7 +1138,7 @@
           <dmn:text>&gt; 17</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_528CAE86-DED7-4CFF-9A80-807F9C462B8E">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1158,7 +1164,7 @@
           <dmn:text>null</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_7EE16348-2BEE-4616-90ED-8216B71F9E4E">
-          <dmn:text>HPM.classificatie("T4/TBG")</dmn:text>
+          <dmn:text>hpm.classificatie("T4/TBG",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1288,7 +1294,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_2CD9F522-B8D9-461F-9A79-52F05D295EB8">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1496,7 +1502,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_525FAC1A-8A2A-40D7-A865-7855FF21F308">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1860,7 +1866,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AA0F5E43-5856-4A35-A8FF-7274CE9E9DE4">
-          <dmn:text>HPM.classificatie("TSH")</dmn:text>
+          <dmn:text>hpm.classificatie("TSH",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1886,7 +1892,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_A63570DF-CDFD-4F3F-B7F6-67E447D6AFA9">
-          <dmn:text>HPM.classificatie("T4")</dmn:text>
+          <dmn:text>hpm.classificatie("T4",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1912,7 +1918,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_0A8B9EF9-86C9-4BA1-BFE9-7552B505FBC8">
-          <dmn:text>HPM.classificatie("T4")</dmn:text>
+          <dmn:text>hpm.classificatie("T4",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1938,7 +1944,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_DC4583AD-3288-444C-B5B9-86ABB13EA84A">
-          <dmn:text>HPM.classificatie("T4")</dmn:text>
+          <dmn:text>hpm.classificatie("T4",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -1990,7 +1996,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_C1C9DEFD-D96B-4E1D-B767-22E4FEF6C53D">
-          <dmn:text>HPM.classificatie("T4")</dmn:text>
+          <dmn:text>hpm.classificatie("T4",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2016,7 +2022,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_90F7D79F-71C8-4008-8B71-8B85027DE6C3">
-          <dmn:text>HPM.classificatie("T4")</dmn:text>
+          <dmn:text>hpm.classificatie("T4",merkers)</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -2024,56 +2030,10 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:decision id="_D00DA151-BDBD-4933-9BE9-725B673047EB" name="HPA">
-    <dmn:extensionElements/>
-    <dmn:variable id="_89C50182-83BA-411F-922C-33F68C488B38" name="HPA"/>
-    <dmn:informationRequirement id="_DAB135D8-798A-4128-9369-9497B7B77FBC">
-      <dmn:requiredInput href="#_4A426B2E-600E-4A1B-B46B-E091815D7457"/>
-    </dmn:informationRequirement>
-    <dmn:knowledgeRequirement id="_F270DA27-848A-4F86-9516-A7E1E5584A6D">
-      <dmn:requiredKnowledge href="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a#_2FCC92E1-9A68-4851-AE91-752B7316DCE1"/>
-    </dmn:knowledgeRequirement>
-    <dmn:literalExpression id="_58D3EFAB-2077-4FB8-B046-7C9E0F41F43C">
-      <dmn:text>hpa.hpa Hielprik Algemeen</dmn:text>
-    </dmn:literalExpression>
-  </dmn:decision>
   <dmn:inputData id="_4A426B2E-600E-4A1B-B46B-E091815D7457" name="hielprik">
     <dmn:extensionElements/>
     <dmn:variable id="_75B2C08C-CD2C-466F-AA27-713DC4061A35" name="hielprik" typeRef="dt.Hielprik"/>
   </dmn:inputData>
-  <dmn:decision id="_F2A07876-6FBC-424F-B26A-8A1D62F52C8F" name="HPM">
-    <dmn:extensionElements/>
-    <dmn:variable id="_6F94FBA4-C940-47EB-8A95-664627C8CC5F" name="HPM" typeRef="Any"/>
-    <dmn:informationRequirement id="_98909890-35FF-4362-B92E-9962964BB383">
-      <dmn:requiredDecision href="#_D0B44840-42AB-41A4-8837-2D00AB48A8EC"/>
-    </dmn:informationRequirement>
-    <dmn:knowledgeRequirement id="_424FE5A6-2A03-4AED-A13C-967AB91DD05D">
-      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_D6DF2502-89EA-4BB8-AAB9-211DF2498AFE"/>
-    </dmn:knowledgeRequirement>
-    <dmn:knowledgeRequirement id="_4D99EFDA-A351-47CF-8469-E6B096C83BE4">
-      <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_34ED4FA6-ED52-4CDD-B961-86871A64DDC5"/>
-    </dmn:knowledgeRequirement>
-    <dmn:context id="_38E67D60-A947-48F6-B6DB-E944CA4E42EF">
-      <dmn:contextEntry>
-        <dmn:variable id="_803B38FF-7B75-41BD-91D6-995E3D2224D2" name="waarde" typeRef="number"/>
-        <dmn:functionDefinition id="_CE83AECF-C21B-4AD0-9707-39980D1E76AD" kind="FEEL">
-          <dmn:formalParameter id="_4F6875EA-E886-4A52-9DED-B67273AAB694" name="merkernaam" typeRef="string"/>
-          <dmn:literalExpression id="_9574ADA5-519F-4B49-BB59-365E3A0E5737">
-            <dmn:text>hpm.waarde(merkers,merkernaam)</dmn:text>
-          </dmn:literalExpression>
-        </dmn:functionDefinition>
-      </dmn:contextEntry>
-      <dmn:contextEntry>
-        <dmn:variable id="_80AF5C67-906B-4A3C-96A0-2DDF5F17DAEF" name="classificatie" typeRef="string"/>
-        <dmn:functionDefinition id="_BB6DE6AA-C338-40F1-B7F1-E01A1F4F30B5" kind="FEEL">
-          <dmn:formalParameter id="_38BA08C2-56BC-4A55-A741-EFB8C93344D5" name="merkernaam" typeRef="string"/>
-          <dmn:literalExpression id="_2B30587E-769D-47BA-BCC5-21DF43531D11">
-            <dmn:text>hpm.classificatie(merkers.merkernaam)</dmn:text>
-          </dmn:literalExpression>
-        </dmn:functionDefinition>
-      </dmn:contextEntry>
-    </dmn:context>
-  </dmn:decision>
   <dmn:inputData id="_21C12CAC-F411-48BD-A4FE-8959A96D1A15" name="testresultaten">
     <dmn:extensionElements/>
     <dmn:variable id="_FF757E3F-A534-4713-985D-A9E2BDDEFDBE" name="testresultaten" typeRef="dt.Testresultaten"/>
@@ -2088,7 +2048,20 @@
       <dmn:requiredKnowledge href="https://kiegroup.org/dmn/_006EB91C-8320-4257-A74B-B4E55941F309#_D4F2D08E-A716-4850-88F3-99238F415879"/>
     </dmn:knowledgeRequirement>
     <dmn:literalExpression id="_5B8B266C-EE2C-4941-8106-1B24EC2A522C">
-      <dmn:text>hpm.hpm HielprikMerkers</dmn:text>
+      <dmn:text>hpm.hpm HielprikMerkers(testresultaten)</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_EBBAA0F7-78DE-4BAB-96AE-05B4809EFD9F" name="HPA">
+    <dmn:extensionElements/>
+    <dmn:variable id="_57C3D421-D4D7-437B-8C28-43274CF5785B" name="HPA" typeRef="Any"/>
+    <dmn:informationRequirement id="_9364B130-0634-43FB-B5DD-74657E7D8FA7">
+      <dmn:requiredInput href="#_4A426B2E-600E-4A1B-B46B-E091815D7457"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_31F99BF8-B7CF-4930-8817-AE904E49CA39">
+      <dmn:requiredKnowledge href="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a#_2FCC92E1-9A68-4851-AE91-752B7316DCE1"/>
+    </dmn:knowledgeRequirement>
+    <dmn:literalExpression id="_8AC0C7E0-8AF0-4250-B739-9DAF911FE08D">
+      <dmn:text>hpa.Hielprik_Algemeen(hielprik)</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>
@@ -2097,39 +2070,20 @@
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="ddt_InterpretatieCH">
             <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
+            <kie:width>136</kie:width>
+            <kie:width>162</kie:width>
+            <kie:width>334</kie:width>
             <kie:width>137</kie:width>
             <kie:width>165</kie:width>
             <kie:width>165</kie:width>
-            <kie:width>213</kie:width>
+            <kie:width>279</kie:width>
             <kie:width>100</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_58D3EFAB-2077-4FB8-B046-7C9E0F41F43C">
-            <kie:width>300</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_38E67D60-A947-48F6-B6DB-E944CA4E42EF">
-            <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
-            <kie:width>448</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_CE83AECF-C21B-4AD0-9707-39980D1E76AD">
-            <kie:width>50</kie:width>
-            <kie:width>378</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_9574ADA5-519F-4B49-BB59-365E3A0E5737">
-            <kie:width>378</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_BB6DE6AA-C338-40F1-B7F1-E01A1F4F30B5">
-            <kie:width>50</kie:width>
-            <kie:width>378</kie:width>
-          </kie:ComponentWidths>
-          <kie:ComponentWidths dmnElementRef="_2B30587E-769D-47BA-BCC5-21DF43531D11">
-            <kie:width>378</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_5B8B266C-EE2C-4941-8106-1B24EC2A522C">
-            <kie:width>300</kie:width>
+            <kie:width>453</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_8AC0C7E0-8AF0-4250-B739-9DAF911FE08D">
+            <kie:width>511</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -2139,11 +2093,24 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="240" y="491" width="200" height="200"/>
+        <dc:Bounds x="240" y="506" width="200" height="200"/>
         <dmndi:DMNLabel/>
         <dmndi:DMNDecisionServiceDividerLine>
-          <di:waypoint x="240" y="591"/>
-          <di:waypoint x="440" y="591"/>
+          <di:waypoint x="240" y="606"/>
+          <di:waypoint x="440" y="606"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_D4F2D08E-A716-4850-88F3-99238F415879" dmnElementRef="included3:_D4F2D08E-A716-4850-88F3-99238F415879" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="691" y="506" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="691" y="606"/>
+          <di:waypoint x="891" y="606"/>
         </dmndi:DMNDecisionServiceDividerLine>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-d_InterpretatieCH" dmnElementRef="d_InterpretatieCH" isCollapsed="false">
@@ -2152,7 +2119,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="487" y="50" width="100" height="50"/>
+        <dc:Bounds x="557" y="87" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" dmnElementRef="included3:_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" isCollapsed="false">
@@ -2162,15 +2129,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="812.2990654205607" y="270.3421052631579" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_D00DA151-BDBD-4933-9BE9-725B673047EB" dmnElementRef="_D00DA151-BDBD-4933-9BE9-725B673047EB" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="126" y="386" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_4A426B2E-600E-4A1B-B46B-E091815D7457" dmnElementRef="_4A426B2E-600E-4A1B-B46B-E091815D7457" isCollapsed="false">
@@ -2191,28 +2149,6 @@
         <dc:Bounds x="812" y="195.68421052631578" width="121" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_F2A07876-6FBC-424F-B26A-8A1D62F52C8F" dmnElementRef="_F2A07876-6FBC-424F-B26A-8A1D62F52C8F" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="556" y="218" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-drg-_D4F2D08E-A716-4850-88F3-99238F415879" dmnElementRef="included3:_D4F2D08E-A716-4850-88F3-99238F415879" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="691" y="491" width="200" height="200"/>
-        <dmndi:DMNLabel/>
-        <dmndi:DMNDecisionServiceDividerLine>
-          <di:waypoint x="691" y="591"/>
-          <di:waypoint x="891" y="591"/>
-        </dmndi:DMNDecisionServiceDividerLine>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_21C12CAC-F411-48BD-A4FE-8959A96D1A15" dmnElementRef="_21C12CAC-F411-48BD-A4FE-8959A96D1A15" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -2228,44 +2164,49 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="557" y="386" width="100" height="50"/>
+        <dc:Bounds x="557" y="389" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-drg-_DD74D5F4-91BA-4974-88FF-ADCD954C2A4E" dmnElementRef="_DD74D5F4-91BA-4974-88FF-ADCD954C2A4E">
-        <di:waypoint x="176" y="411"/>
-        <di:waypoint x="537" y="75"/>
+      <dmndi:DMNShape id="dmnshape-drg-_EBBAA0F7-78DE-4BAB-96AE-05B4809EFD9F" dmnElementRef="_EBBAA0F7-78DE-4BAB-96AE-05B4809EFD9F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="101" y="363" width="151" height="56"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_7309AEB0-71C8-4B91-83C4-6FC976F3DEC2" dmnElementRef="_7309AEB0-71C8-4B91-83C4-6FC976F3DEC2">
+        <di:waypoint x="607" y="414"/>
+        <di:waypoint x="607" y="112"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_7F85AF4B-2175-4729-8AE5-73939FDF762D" dmnElementRef="_7F85AF4B-2175-4729-8AE5-73939FDF762D">
-        <di:waypoint x="606" y="243"/>
-        <di:waypoint x="537" y="75"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_DAB135D8-798A-4128-9369-9497B7B77FBC" dmnElementRef="_DAB135D8-798A-4128-9369-9497B7B77FBC">
-        <di:waypoint x="176" y="581"/>
-        <di:waypoint x="176" y="411"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_F270DA27-848A-4F86-9516-A7E1E5584A6D" dmnElementRef="_F270DA27-848A-4F86-9516-A7E1E5584A6D">
-        <di:waypoint x="340" y="591"/>
-        <di:waypoint x="176" y="411"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_424FE5A6-2A03-4AED-A13C-967AB91DD05D" dmnElementRef="_424FE5A6-2A03-4AED-A13C-967AB91DD05D">
-        <di:waypoint x="872.5" y="220.68421052631578"/>
-        <di:waypoint x="606" y="243"/>
+      <dmndi:DMNEdge id="dmnedge-drg-_15C50E2F-98D6-44DC-8264-E5F6C1E466A5" dmnElementRef="_15C50E2F-98D6-44DC-8264-E5F6C1E466A5">
+        <di:waypoint x="176.5" y="391"/>
+        <di:waypoint x="607" y="112"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_4D99EFDA-A351-47CF-8469-E6B096C83BE4" dmnElementRef="_4D99EFDA-A351-47CF-8469-E6B096C83BE4">
         <di:waypoint x="862.2990654205607" y="295.3421052631579"/>
-        <di:waypoint x="606" y="243"/>
+        <di:waypoint x="607" y="112"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_98909890-35FF-4362-B92E-9962964BB383" dmnElementRef="_98909890-35FF-4362-B92E-9962964BB383">
-        <di:waypoint x="607" y="411"/>
-        <di:waypoint x="606" y="243"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-drg-_EB08E70A-6E17-40E4-9F79-46A70D8B36B3" dmnElementRef="_EB08E70A-6E17-40E4-9F79-46A70D8B36B3">
-        <di:waypoint x="791" y="591"/>
-        <di:waypoint x="607" y="411"/>
+      <dmndi:DMNEdge id="dmnedge-drg-_424FE5A6-2A03-4AED-A13C-967AB91DD05D" dmnElementRef="_424FE5A6-2A03-4AED-A13C-967AB91DD05D">
+        <di:waypoint x="872.5" y="220.68421052631578"/>
+        <di:waypoint x="607" y="112"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_1B956A88-4003-485E-8909-C887FD419709" dmnElementRef="_1B956A88-4003-485E-8909-C887FD419709">
         <di:waypoint x="606" y="632"/>
-        <di:waypoint x="607" y="411"/>
+        <di:waypoint x="607" y="414"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_EB08E70A-6E17-40E4-9F79-46A70D8B36B3" dmnElementRef="_EB08E70A-6E17-40E4-9F79-46A70D8B36B3">
+        <di:waypoint x="791" y="606"/>
+        <di:waypoint x="607" y="414"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_9364B130-0634-43FB-B5DD-74657E7D8FA7" dmnElementRef="_9364B130-0634-43FB-B5DD-74657E7D8FA7">
+        <di:waypoint x="176" y="581"/>
+        <di:waypoint x="176.5" y="391"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_31F99BF8-B7CF-4930-8817-AE904E49CA39" dmnElementRef="_31F99BF8-B7CF-4930-8817-AE904E49CA39">
+        <di:waypoint x="340" y="606"/>
+        <di:waypoint x="176.5" y="391"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

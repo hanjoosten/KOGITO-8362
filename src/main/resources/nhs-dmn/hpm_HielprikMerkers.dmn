@@ -87,11 +87,19 @@
                 <dmn:text>testresultaat.status</dmn:text>
               </dmn:inputExpression>
             </dmn:input>
+            <dmn:input id="_4AADE802-9B5A-4513-A16F-D97618AD69BF">
+              <dmn:inputExpression id="_0959DD87-0604-41D5-A672-983F4866EE1A" typeRef="number">
+                <dmn:text>testresultaat.waarde</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
             <dmn:output id="_B38CD143-434C-42E0-AD05-216DB55760F7"/>
             <dmn:annotation name="annotation-1"/>
             <dmn:rule id="_1333A536-9D86-412B-B471-CD03C6A21FB2">
               <dmn:inputEntry id="_93EF8B9A-3F37-4B17-9662-969F31C74928">
                 <dmn:text>[3,4]</dmn:text>
+              </dmn:inputEntry>
+              <dmn:inputEntry id="_F298B07E-F16D-41BB-970B-10B2F167C52D">
+                <dmn:text>-</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_D838F28A-0A6F-4285-B172-5246DD7F2CBB">
                 <dmn:text>"NIET UITGEVOERD"</dmn:text>
@@ -104,6 +112,9 @@
               <dmn:inputEntry id="_D8E46DA1-25D7-4BC9-8138-7D250371BE2D">
                 <dmn:text>[1,2,5,9]</dmn:text>
               </dmn:inputEntry>
+              <dmn:inputEntry id="_0F02EFBA-A689-4D57-A0F0-76ED7736D61B">
+                <dmn:text>-</dmn:text>
+              </dmn:inputEntry>
               <dmn:outputEntry id="_0F9C4BF1-8637-4A0A-8827-6EA189E8B54A">
                 <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
               </dmn:outputEntry>
@@ -111,11 +122,14 @@
                 <dmn:text/>
               </dmn:annotationEntry>
             </dmn:rule>
-            <dmn:rule id="_64A24A45-9718-40BB-97A0-F0D1A981A8A6">
-              <dmn:inputEntry id="_143FCC78-7AA4-4508-92E7-DA219BA79810">
+            <dmn:rule id="_81716AC6-D271-4F75-AFAE-4AC8F77A998F">
+              <dmn:inputEntry id="_0550245E-1048-4651-8A63-765C1456C3B1">
                 <dmn:text>[0]</dmn:text>
               </dmn:inputEntry>
-              <dmn:outputEntry id="_B31101A7-9F3B-489B-BFEA-271EFCD9A906">
+              <dmn:inputEntry id="_9C927397-5C14-41B5-AA7D-72DB492C1CE1">
+                <dmn:text>-</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_6350BEDA-C3EA-469D-B851-4C40AE3C9A87">
                 <dmn:text>"BRUIKBAAR"</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
@@ -125,6 +139,9 @@
             <dmn:rule id="_D7D5B992-FE12-4F9A-BB02-D6EE0171037B">
               <dmn:inputEntry id="_9B894F81-A4DB-40BE-A3E7-7BF43145EEFE">
                 <dmn:text>not([0,1,2,3,4,5,9])</dmn:text>
+              </dmn:inputEntry>
+              <dmn:inputEntry id="_DED6F8EE-44B8-4B0B-AB8C-02493CB6A497">
+                <dmn:text>-</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_E15E0FE1-0850-4FFD-B52A-F854C3237F1B">
                 <dmn:text>null</dmn:text>
@@ -312,43 +329,44 @@
           <kie:ComponentWidths dmnElementRef="_CB28097A-C2EC-4740-A0B9-1F15E0A4AB28">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>706</kie:width>
+            <kie:width>840</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_6834F73C-28FB-4381-A20D-2D397A08FB60">
             <kie:width>50</kie:width>
             <kie:width>149</kie:width>
             <kie:width>186</kie:width>
-            <kie:width>301</kie:width>
+            <kie:width>435</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_2BB0652D-81E8-4547-8D42-0DAEAAF5C968">
             <kie:width>50</kie:width>
-            <kie:width>155</kie:width>
+            <kie:width>189</kie:width>
+            <kie:width>100</kie:width>
             <kie:width>208</kie:width>
             <kie:width>273</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_0D93C30E-54B2-43ED-B2E6-F3C1659C0499">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>536</kie:width>
+            <kie:width>670</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_38880AB9-1B39-43FD-B044-66A7E730A94C">
-            <kie:width>536</kie:width>
+            <kie:width>670</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_E65F3ABE-62D5-4840-A824-44C61DC14634">
-            <kie:width>536</kie:width>
+            <kie:width>670</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_D0435E94-82BD-4264-ABB9-44D05845C280">
-            <kie:width>536</kie:width>
+            <kie:width>670</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_D468288C-DE04-4880-A4D4-17A9641DCAC4">
-            <kie:width>536</kie:width>
+            <kie:width>670</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_CFF7EBE0-9FF9-44BB-AF5D-A984102333B9">
-            <kie:width>706</kie:width>
+            <kie:width>840</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_793D0099-655F-4E5E-AC5B-913833B7E344">
             <kie:width>50</kie:width>
-            <kie:width>876</kie:width>
+            <kie:width>1010</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_1EF8537F-4D7C-4F62-96AA-ACF767B5A162">
             <kie:width>50</kie:width>
@@ -437,7 +455,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="135" y="144" width="100" height="50"/>
+        <dc:Bounds x="135" y="143" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" dmnElementRef="_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" isCollapsed="false">
@@ -463,7 +481,7 @@
         <di:waypoint x="449" y="169"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_D8AF8AFD-7DCA-43F2-A304-89854014EBCF" dmnElementRef="_D8AF8AFD-7DCA-43F2-A304-89854014EBCF">
-        <di:waypoint x="185" y="169"/>
+        <di:waypoint x="185" y="168"/>
         <di:waypoint x="449" y="169"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
