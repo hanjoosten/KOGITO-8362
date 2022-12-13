@@ -5,8 +5,7 @@ import lombok.Value;
 @Value
 public class Testresultaat {
    String merker;
-   Float waarde;
-   String eenheid;
+   Float waardeNum;
+   String waardeSring;
    Integer status;
-
 }

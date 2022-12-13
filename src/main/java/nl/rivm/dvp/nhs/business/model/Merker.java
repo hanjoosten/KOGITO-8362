@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class Merker {
     String naam;
-    Float waardeFloat;
-    String waardeString;
+    Float waardeNum;
+    String waardeSring;
     String classificatie;
 
 }
