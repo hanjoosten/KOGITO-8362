@@ -60,7 +60,7 @@
                 <dmn:text>0</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_9ACBEC2B-F45F-48EA-9CEB-8A2F1527345A">
-                <dmn:text>testresultaat.waarde</dmn:text>
+                <dmn:text>testresultaat.waardeNum</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
                 <dmn:text/>
@@ -80,6 +80,40 @@
           </dmn:decisionTable>
         </dmn:contextEntry>
         <dmn:contextEntry>
+          <dmn:variable id="_A30469B5-EFF7-4A55-934F-0978F5F093D2" name="bruikbareString" typeRef="string"/>
+          <dmn:decisionTable id="_A4E29FC8-B347-4C81-BFA7-94F292988AD6" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+            <dmn:input id="_3D587B8E-DC19-431A-A58F-69E03E35DAE0">
+              <dmn:inputExpression id="_6300FCCB-AF54-49C1-A423-EBF3F2EDA3F1" typeRef="number">
+                <dmn:text>testresultaat.status</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
+            <dmn:output id="_71864AF7-FAE0-4DFF-B162-B09C50078E9D"/>
+            <dmn:annotation name="annotation-1"/>
+            <dmn:rule id="_6D3ADDAF-921A-418F-BF6B-752862D99622">
+              <dmn:inputEntry id="_B5BAFB37-4FAA-4FFB-BB46-61759DBE6980">
+                <dmn:text>0</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_DA9AAA2E-D80D-467B-9546-557DC095BF6F">
+                <dmn:text>testresultaat.waardeString</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+            <dmn:rule id="_96C68B08-B6B0-4062-BA7B-25F543DF7BE3">
+              <dmn:inputEntry id="_EA640F77-98BB-4B89-8874-5D911248508B">
+                <dmn:text>not(0)</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_900E7E73-F144-4BEA-B22C-11644406143C">
+                <dmn:text>null</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+          </dmn:decisionTable>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
           <dmn:variable id="_84A331C4-7F03-447D-8790-8AD6D3F27058" name="classificatie" typeRef="string"/>
           <dmn:decisionTable id="_2BB0652D-81E8-4547-8D42-0DAEAAF5C968" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
             <dmn:input id="_1F6FD07C-4F41-4718-8EC1-A764AA5B122D">
@@ -87,19 +121,11 @@
                 <dmn:text>testresultaat.status</dmn:text>
               </dmn:inputExpression>
             </dmn:input>
-            <dmn:input id="_4AADE802-9B5A-4513-A16F-D97618AD69BF">
-              <dmn:inputExpression id="_0959DD87-0604-41D5-A672-983F4866EE1A" typeRef="number">
-                <dmn:text>testresultaat.waarde</dmn:text>
-              </dmn:inputExpression>
-            </dmn:input>
             <dmn:output id="_B38CD143-434C-42E0-AD05-216DB55760F7"/>
             <dmn:annotation name="annotation-1"/>
             <dmn:rule id="_1333A536-9D86-412B-B471-CD03C6A21FB2">
               <dmn:inputEntry id="_93EF8B9A-3F37-4B17-9662-969F31C74928">
                 <dmn:text>[3,4]</dmn:text>
-              </dmn:inputEntry>
-              <dmn:inputEntry id="_F298B07E-F16D-41BB-970B-10B2F167C52D">
-                <dmn:text>-</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_D838F28A-0A6F-4285-B172-5246DD7F2CBB">
                 <dmn:text>"NIET UITGEVOERD"</dmn:text>
@@ -112,9 +138,6 @@
               <dmn:inputEntry id="_D8E46DA1-25D7-4BC9-8138-7D250371BE2D">
                 <dmn:text>[1,2,5,9]</dmn:text>
               </dmn:inputEntry>
-              <dmn:inputEntry id="_0F02EFBA-A689-4D57-A0F0-76ED7736D61B">
-                <dmn:text>-</dmn:text>
-              </dmn:inputEntry>
               <dmn:outputEntry id="_0F9C4BF1-8637-4A0A-8827-6EA189E8B54A">
                 <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
               </dmn:outputEntry>
@@ -126,9 +149,6 @@
               <dmn:inputEntry id="_0550245E-1048-4651-8A63-765C1456C3B1">
                 <dmn:text>[0]</dmn:text>
               </dmn:inputEntry>
-              <dmn:inputEntry id="_9C927397-5C14-41B5-AA7D-72DB492C1CE1">
-                <dmn:text>-</dmn:text>
-              </dmn:inputEntry>
               <dmn:outputEntry id="_6350BEDA-C3EA-469D-B851-4C40AE3C9A87">
                 <dmn:text>"BRUIKBAAR"</dmn:text>
               </dmn:outputEntry>
@@ -139,9 +159,6 @@
             <dmn:rule id="_D7D5B992-FE12-4F9A-BB02-D6EE0171037B">
               <dmn:inputEntry id="_9B894F81-A4DB-40BE-A3E7-7BF43145EEFE">
                 <dmn:text>not([0,1,2,3,4,5,9])</dmn:text>
-              </dmn:inputEntry>
-              <dmn:inputEntry id="_DED6F8EE-44B8-4B0B-AB8C-02493CB6A497">
-                <dmn:text>-</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_E15E0FE1-0850-4FFD-B52A-F854C3237F1B">
                 <dmn:text>null</dmn:text>
@@ -162,7 +179,7 @@
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
-              <dmn:variable id="_DBB5B7BA-2703-46B2-9765-1190459A8C36" name="waardeFloat" typeRef="number"/>
+              <dmn:variable id="_DBB5B7BA-2703-46B2-9765-1190459A8C36" name="waardeNum" typeRef="number"/>
               <dmn:literalExpression id="_E65F3ABE-62D5-4840-A824-44C61DC14634">
                 <dmn:text>bruikbareNum    </dmn:text>
               </dmn:literalExpression>
@@ -170,7 +187,7 @@
             <dmn:contextEntry>
               <dmn:variable id="_60204426-719A-4E9C-A843-8CA2CEE63A3D" name="waardeString" typeRef="string"/>
               <dmn:literalExpression id="_D0435E94-82BD-4264-ABB9-44D05845C280">
-                <dmn:text>null</dmn:text>
+                <dmn:text>bruikbareString</dmn:text>
               </dmn:literalExpression>
             </dmn:contextEntry>
             <dmn:contextEntry>
@@ -189,9 +206,9 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
-  <dmn:businessKnowledgeModel id="_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" name="waarde">
+  <dmn:businessKnowledgeModel id="_34ED4FA6-ED52-4CDD-B961-86871A64DDC5" name="waardeNum">
     <dmn:extensionElements/>
-    <dmn:variable id="_D90C6B49-9ACF-4E7E-9DC7-4D86EAC19BAD" name="waarde" typeRef="number"/>
+    <dmn:variable id="_D90C6B49-9ACF-4E7E-9DC7-4D86EAC19BAD" name="waardeNum" typeRef="number"/>
     <dmn:encapsulatedLogic id="_9705A98E-DD80-4553-98BC-F4D60850F5B0" kind="FEEL">
       <dmn:formalParameter id="_153FA7B6-111C-407F-B45F-CFC248519F65" name="merkernaam" typeRef="string"/>
       <dmn:formalParameter id="_FFDE7286-163E-4021-92C1-B555D7935644" name="merkers" typeRef="dt.Merkers"/>
@@ -223,7 +240,7 @@
                 <dmn:text>1</dmn:text>
               </dmn:inputEntry>
               <dmn:outputEntry id="_E89B6FC0-814A-4934-B067-9749E10B893A">
-                <dmn:text>deMerker.waardeFloat</dmn:text>
+                <dmn:text>deMerker.waardeNum</dmn:text>
               </dmn:outputEntry>
               <dmn:annotationEntry>
                 <dmn:text/>
@@ -311,6 +328,67 @@
       </dmn:context>
     </dmn:encapsulatedLogic>
   </dmn:businessKnowledgeModel>
+  <dmn:businessKnowledgeModel id="_84A966C8-5143-4809-9DD0-7D0777FD6A32" name="waardeString">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9A175F6E-D54A-4AF6-AD95-E0845CD039EF" name="waardeString" typeRef="string"/>
+    <dmn:encapsulatedLogic id="_03163840-0AE7-4CDC-B4CF-E8918257B677" kind="FEEL">
+      <dmn:formalParameter id="_2BFF2898-4A84-4ACD-B772-4FD4ED2E19C0" name="merkernaam" typeRef="string"/>
+      <dmn:formalParameter id="_76B7D730-5B59-4F14-BA27-E8CF399F2692" name="merkers" typeRef="dt.Merkers"/>
+      <dmn:context id="_6CC33F9F-D376-48DC-BD30-71B8C13E32DD">
+        <dmn:contextEntry>
+          <dmn:variable id="_7A56DED4-86D3-47D5-9432-F8DCB3B2AE7C" name="deMerker" typeRef="dt.Merker"/>
+          <dmn:literalExpression id="_621309E3-3927-4A10-9929-CE90C2397026">
+            <dmn:text>merkers[naam=merkernaam]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_93519287-AABB-49A6-8306-87D9FF264BCE" name="aantalGevonden" typeRef="number"/>
+          <dmn:literalExpression id="_5228F638-8F6F-428F-9A4A-8E3AC410AE76">
+            <dmn:text>count(deMerker)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_ECFC9C2D-DD17-4E96-95D7-C2DEC9044D7A" name="resultaat" typeRef="string"/>
+          <dmn:decisionTable id="_F97BBFF9-8E5B-4737-98E8-86AB8DE2389D" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+            <dmn:input id="_44FF9B39-421C-47DA-8DEA-43947F23B7A6">
+              <dmn:inputExpression id="_66862637-5474-44F4-B280-F74D03C0B4F5" typeRef="number">
+                <dmn:text>aantalGevonden</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
+            <dmn:output id="_93C32566-02D6-453B-9089-92A6A24FDC10"/>
+            <dmn:annotation name="annotation-1"/>
+            <dmn:rule id="_DD5748AF-82DF-4B23-9774-A5E9F03B3AF7">
+              <dmn:inputEntry id="_3E4AE968-D3CA-4473-853E-328BDBD97F01">
+                <dmn:text>1</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_3C529D3D-17E1-45B3-A722-D573FE35E042">
+                <dmn:text>deMerker.waardeString</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+            <dmn:rule id="_A3013CA2-B0BB-4112-BF25-0B9DA292D72E">
+              <dmn:inputEntry id="_D9141A46-915A-40B7-A610-E2EFD7DAE6D0">
+                <dmn:text>not(1)</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_4E70FED2-AE93-4BA3-A312-AF2F6ACF8FE4">
+                <dmn:text>null</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+          </dmn:decisionTable>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_D855ABD0-F7F3-4C27-A25C-735CA91CF670">
+            <dmn:text>resultaat</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_ADBF9B3A-DFF7-445A-B40E-FB8698C60DA9" name="DRG">
       <di:extension>
@@ -329,44 +407,49 @@
           <kie:ComponentWidths dmnElementRef="_CB28097A-C2EC-4740-A0B9-1F15E0A4AB28">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>840</kie:width>
+            <kie:width>945</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_6834F73C-28FB-4381-A20D-2D397A08FB60">
             <kie:width>50</kie:width>
             <kie:width>149</kie:width>
-            <kie:width>186</kie:width>
-            <kie:width>435</kie:width>
+            <kie:width>220</kie:width>
+            <kie:width>506</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A4E29FC8-B347-4C81-BFA7-94F292988AD6">
+            <kie:width>50</kie:width>
+            <kie:width>149</kie:width>
+            <kie:width>222</kie:width>
+            <kie:width>504</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_2BB0652D-81E8-4547-8D42-0DAEAAF5C968">
             <kie:width>50</kie:width>
             <kie:width>189</kie:width>
-            <kie:width>100</kie:width>
             <kie:width>208</kie:width>
-            <kie:width>273</kie:width>
+            <kie:width>478</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_0D93C30E-54B2-43ED-B2E6-F3C1659C0499">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>670</kie:width>
+            <kie:width>775</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_38880AB9-1B39-43FD-B044-66A7E730A94C">
-            <kie:width>670</kie:width>
+            <kie:width>775</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_E65F3ABE-62D5-4840-A824-44C61DC14634">
-            <kie:width>670</kie:width>
+            <kie:width>775</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_D0435E94-82BD-4264-ABB9-44D05845C280">
-            <kie:width>670</kie:width>
+            <kie:width>775</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_D468288C-DE04-4880-A4D4-17A9641DCAC4">
-            <kie:width>670</kie:width>
+            <kie:width>775</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_CFF7EBE0-9FF9-44BB-AF5D-A984102333B9">
-            <kie:width>840</kie:width>
+            <kie:width>945</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_793D0099-655F-4E5E-AC5B-913833B7E344">
             <kie:width>50</kie:width>
-            <kie:width>1010</kie:width>
+            <kie:width>1115</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_1EF8537F-4D7C-4F62-96AA-ACF767B5A162">
             <kie:width>50</kie:width>
@@ -415,6 +498,30 @@
           <kie:ComponentWidths dmnElementRef="_08750B25-3492-4C1D-B8C2-E8F86E36EDE9">
             <kie:width>50</kie:width>
             <kie:width>878</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6CC33F9F-D376-48DC-BD30-71B8C13E32DD">
+            <kie:width>50</kie:width>
+            <kie:width>193</kie:width>
+            <kie:width>659</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_621309E3-3927-4A10-9929-CE90C2397026">
+            <kie:width>659</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5228F638-8F6F-428F-9A4A-8E3AC410AE76">
+            <kie:width>659</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F97BBFF9-8E5B-4737-98E8-86AB8DE2389D">
+            <kie:width>50</kie:width>
+            <kie:width>171</kie:width>
+            <kie:width>302</kie:width>
+            <kie:width>116</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D855ABD0-F7F3-4C27-A25C-735CA91CF670">
+            <kie:width>659</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_03163840-0AE7-4CDC-B4CF-E8918257B677">
+            <kie:width>50</kie:width>
+            <kie:width>922</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -474,6 +581,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="871" y="295" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_84A966C8-5143-4809-9DD0-7D0777FD6A32" dmnElementRef="_84A966C8-5143-4809-9DD0-7D0777FD6A32" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1000" y="151" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_687126FA-04F2-49B7-8C9C-E49D9C5EA9A7" dmnElementRef="_687126FA-04F2-49B7-8C9C-E49D9C5EA9A7">
