@@ -1,0 +1,337 @@
+<?xml version="1.0" ?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_46d7b7ff-8f3f-4a88-a594-059a90529338" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_acc_Actiecode_en_ConclusieEA" name="acc_Actiecode_en_ConclusieEA" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_46d7b7ff-8f3f-4a88-a594-059a90529338" exporter="kie-dmn-xls2dmn">
+  <dmn:inputData id="id_Interpretatie" name="Interpretatie">
+    <dmn:variable id="idvar_Interpretatie" name="Interpretatie" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_HPA_46RelevanteBT" name="HPA.RelevanteBT">
+    <dmn:variable id="idvar_HPA_46RelevanteBT" name="HPA.RelevanteBT" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_HPA_46BTnavraagNodig" name="HPA.BTnavraagNodig">
+    <dmn:variable id="idvar_HPA_46BTnavraagNodig" name="HPA.BTnavraagNodig" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_HPA_46isTeVroegGeprikt" name="HPA.isTeVroegGeprikt">
+    <dmn:variable id="idvar_HPA_46isTeVroegGeprikt" name="HPA.isTeVroegGeprikt" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:inputData id="id_HPA_46isTweedeHielprik" name="HPA.isTweedeHielprik">
+    <dmn:variable id="idvar_HPA_46isTweedeHielprik" name="HPA.isTweedeHielprik" typeRef="Any"></dmn:variable>
+  </dmn:inputData>
+  <dmn:decision id="d_Actiecode" name="Actiecode">
+    <dmn:variable id="dvar_Actiecode" name="Actiecode" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_Interpretatie"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_HPA_46RelevanteBT"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_HPA_46BTnavraagNodig"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_HPA_46isTeVroegGeprikt"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#id_HPA_46isTweedeHielprik"></dmn:requiredInput>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_Actiecode" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="Actiecode">
+      <dmn:input label="Interpretatie">
+        <dmn:inputExpression>
+          <dmn:text>Interpretatie</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="HPA.RelevanteBT">
+        <dmn:inputExpression>
+          <dmn:text>HPA.RelevanteBT</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="HPA.BTnavraagNodig">
+        <dmn:inputExpression>
+          <dmn:text>HPA.BTnavraagNodig</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="HPA.isTeVroegGeprikt">
+        <dmn:inputExpression>
+          <dmn:text>HPA.isTeVroegGeprikt</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input label="HPA.isTweedeHielprik">
+        <dmn:inputExpression>
+          <dmn:text>HPA.isTweedeHielprik</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"Afwijkend"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"AFW"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"Dubieus"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"DUB"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"EHPTVG"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"BTF"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"ACTIENR4"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"ACTIENR7"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"NIET UITGEVOERD"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"GEENACTIE"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>null</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"GEENIRL"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"Negatief"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"THNEG"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"Negatief"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"GEENACTIE"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="d_ConclusieEA" name="ConclusieEA">
+    <dmn:variable id="dvar_ConclusieEA" name="ConclusieEA" typeRef="Any"></dmn:variable>
+    <dmn:informationRequirement>
+      <dmn:requiredDecision href="#d_Actiecode"></dmn:requiredDecision>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="ddt_ConclusieEA" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="ConclusieEA">
+      <dmn:input label="Actiecode">
+        <dmn:inputExpression>
+          <dmn:text>Actiecode</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output></dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"AFW"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Afwijkend"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"DUB"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Dubieus"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"EHPTVG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Te vroeg geprikt"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"BTF"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Onbekend"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"ACTIENR4"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"ACTIENR7"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"GEENACTIE"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"NIET UITGEVOERD"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"GEENIRL"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Onbekend"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"THNEG"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Negatief"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>"GEENACTIE"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Negatief"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+</dmn:definitions>
