@@ -8,5 +8,6 @@ public class Interpretatie {
     String aandoening;
     String actiecode;
     String conclusieEA;
+    String interpretatie;
 
 }

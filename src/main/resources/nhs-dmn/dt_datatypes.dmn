@@ -11,6 +11,9 @@
     <dmn:itemComponent id="_E5A1798B-1589-4936-8F96-69C903212DDB" name="aandoening" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
+    <dmn:itemComponent id="_83B3758E-15B6-46CC-B297-D6EEE6E8586B" name="interpretatie" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_2D2044CF-E4DE-4364-A509-550CA5ACEAA6" name="Testresultaat" isCollection="false">
     <dmn:itemComponent id="_9447AEAB-E4AA-42B6-AB3B-BA735998DCA6" name="waardeNum" isCollection="false">
@@ -77,6 +80,9 @@
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_BC6BBCE5-70E2-4DEE-BB98-CF4486664C47" name="Merkers" isCollection="true">
     <dmn:typeRef>Merker</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_75BC3C9C-DCCC-426D-B271-87EE4865FBAF" name="Aandoeningen" isCollection="true">
+    <dmn:typeRef>string</dmn:typeRef>
   </dmn:itemDefinition>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_0468F90F-C23A-401D-8879-F8C6109DB887" name="DRG">

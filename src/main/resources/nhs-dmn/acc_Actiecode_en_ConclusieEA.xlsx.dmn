@@ -1,337 +1,409 @@
-<?xml version="1.0" ?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_46d7b7ff-8f3f-4a88-a594-059a90529338" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="dmnid_acc_Actiecode_en_ConclusieEA" name="acc_Actiecode_en_ConclusieEA" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_46d7b7ff-8f3f-4a88-a594-059a90529338" exporter="kie-dmn-xls2dmn">
-  <dmn:inputData id="id_Interpretatie" name="Interpretatie">
-    <dmn:variable id="idvar_Interpretatie" name="Interpretatie" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_HPA_46RelevanteBT" name="HPA.RelevanteBT">
-    <dmn:variable id="idvar_HPA_46RelevanteBT" name="HPA.RelevanteBT" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_HPA_46BTnavraagNodig" name="HPA.BTnavraagNodig">
-    <dmn:variable id="idvar_HPA_46BTnavraagNodig" name="HPA.BTnavraagNodig" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_HPA_46isTeVroegGeprikt" name="HPA.isTeVroegGeprikt">
-    <dmn:variable id="idvar_HPA_46isTeVroegGeprikt" name="HPA.isTeVroegGeprikt" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:inputData id="id_HPA_46isTweedeHielprik" name="HPA.isTweedeHielprik">
-    <dmn:variable id="idvar_HPA_46isTweedeHielprik" name="HPA.isTweedeHielprik" typeRef="Any"></dmn:variable>
-  </dmn:inputData>
-  <dmn:decision id="d_Actiecode" name="Actiecode">
-    <dmn:variable id="dvar_Actiecode" name="Actiecode" typeRef="Any"></dmn:variable>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_Interpretatie"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_HPA_46RelevanteBT"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_HPA_46BTnavraagNodig"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_HPA_46isTeVroegGeprikt"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement>
-      <dmn:requiredInput href="#id_HPA_46isTweedeHielprik"></dmn:requiredInput>
-    </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_Actiecode" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="Actiecode">
-      <dmn:input label="Interpretatie">
-        <dmn:inputExpression>
-          <dmn:text>Interpretatie</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input label="HPA.RelevanteBT">
-        <dmn:inputExpression>
-          <dmn:text>HPA.RelevanteBT</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input label="HPA.BTnavraagNodig">
-        <dmn:inputExpression>
-          <dmn:text>HPA.BTnavraagNodig</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input label="HPA.isTeVroegGeprikt">
-        <dmn:inputExpression>
-          <dmn:text>HPA.isTeVroegGeprikt</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input label="HPA.isTweedeHielprik">
-        <dmn:inputExpression>
-          <dmn:text>HPA.isTweedeHielprik</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:output></dmn:output>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"Afwijkend"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"AFW"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"Dubieus"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"DUB"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>true</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"EHPTVG"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>true</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"BTF"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>true</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"ACTIENR4"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"ACTIENR7"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"NIET UITGEVOERD"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"GEENACTIE"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>null</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"GEENIRL"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"Negatief"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>true</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"THNEG"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"Negatief"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry>
-          <dmn:text>false</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"GEENACTIE"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-    </dmn:decisionTable>
-  </dmn:decision>
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="xls2dmn_46d7b7ff-8f3f-4a88-a594-059a90529338" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:included1="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" xmlns:included2="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a" xmlns:included3="xls2dmn_df31aa01-fb3a-461e-a845-759ad0c39c42" xmlns:included4="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75" id="dmnid_acc_Actiecode_en_ConclusieEA" name="acc_Actiecode_en_ConclusieEA" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="xls2dmn_46d7b7ff-8f3f-4a88-a594-059a90529338">
+  <dmn:extensionElements/>
+  <dmn:import id="_82440C6F-C7AD-4375-84ED-5AAC1FD7CA91" name="dt" namespace="https://kiegroup.org/dmn/_60A91D01-E80B-4708-AA8C-45E56914AFD7" locationURI="dt_datatypes.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_F6AD3894-A3D3-42AA-B459-CDAF5A362233" name="hpa" namespace="xls2dmn_92b164ff-760a-48b0-968c-b6bfff43477a" locationURI="hpa_HielprikAlgemeen.xlsx.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_E1717BE2-45D9-481C-ABD0-774ED24F9186" name="icf" namespace="xls2dmn_df31aa01-fb3a-461e-a845-759ad0c39c42" locationURI="icf_Interpretatie_CF.xlsx.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:import id="_675844ED-889C-469A-88C2-0702EEF2D032" name="ich" namespace="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75" locationURI="ich_Interpretatie_CH.xlsx.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
   <dmn:decision id="d_ConclusieEA" name="ConclusieEA">
-    <dmn:variable id="dvar_ConclusieEA" name="ConclusieEA" typeRef="Any"></dmn:variable>
-    <dmn:informationRequirement>
-      <dmn:requiredDecision href="#d_Actiecode"></dmn:requiredDecision>
+    <dmn:extensionElements/>
+    <dmn:variable id="dvar_ConclusieEA" name="ConclusieEA" typeRef="string"/>
+    <dmn:informationRequirement id="_19CBD3B8-2DFD-48A2-A9D7-132006E8D75D">
+      <dmn:requiredInput href="#_15F22F12-1ABB-4B64-9368-CA91E62E05BD"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="ddt_ConclusieEA" hitPolicy="ANY" preferredOrientation="Rule-as-Row" outputLabel="ConclusieEA">
-      <dmn:input label="Actiecode">
-        <dmn:inputExpression>
+    <dmn:decisionTable id="ddt_ConclusieEA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row" outputLabel="ConclusieEA">
+      <dmn:input id="_F467A218-00E0-4649-BF9E-7E54A8DB662E">
+        <dmn:inputExpression id="_76F58463-23F0-4469-9A9E-A0F72AFA6326" typeRef="string">
           <dmn:text>Actiecode</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output></dmn:output>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:output id="_7DAA5605-AAC4-42EE-98FC-AA4A6C16395E"/>
+      <dmn:annotation name=""/>
+      <dmn:rule id="_B6B4978E-8C57-4387-9270-6F44823AB301">
+        <dmn:inputEntry id="_09158AE2-A712-4830-A777-6EC029190528">
           <dmn:text>"AFW"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_2FF7B9C6-B16E-4939-A37E-F68529EEB26E">
           <dmn:text>"Afwijkend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_C886B7E8-2EED-41CF-97E3-142BE848FD92">
+        <dmn:inputEntry id="_088E7CFC-1E6D-4DA9-8358-39CE6F441F04">
           <dmn:text>"DUB"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_98A25389-8DE2-45AC-AE4A-4E4C02D19C2B">
           <dmn:text>"Dubieus"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_F90D749D-6CBE-4DBF-9119-3B7BDD588D2B">
+        <dmn:inputEntry id="_229AA435-7B47-43A9-A2D9-50714B452C67">
           <dmn:text>"EHPTVG"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_7429EFB7-A241-4DAE-960C-BAD415C2C49E">
           <dmn:text>"Te vroeg geprikt"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_B463066E-106B-4A57-AEE5-DFA79EE73CC1">
+        <dmn:inputEntry id="_56B51E89-DB74-4FDF-BD6D-3AF3D8678793">
           <dmn:text>"BTF"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_5E82B615-45E3-4BAF-9942-65CD7AEA658E">
           <dmn:text>"Onbekend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_02BACF89-6E41-45F1-9CBE-600AECA2D0AD">
+        <dmn:inputEntry id="_B9BC971C-0005-434A-8CF3-F42B3BE2ECEC">
           <dmn:text>"ACTIENR4"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_91CF37C5-3100-465D-8F16-DD330FCA7A21">
           <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_1459FA04-0340-44D9-A79B-E63EE601ACDA">
+        <dmn:inputEntry id="_4AB4A1F5-EDB9-42E2-B574-C3529DA01951">
           <dmn:text>"ACTIENR7"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_C574D19C-73F4-4285-A5C8-099E629646BA">
           <dmn:text>"NIET CLASSIFICEERBAAR"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
-          <dmn:text>"GEENACTIE"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry>
-          <dmn:text>"NIET UITGEVOERD"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_F7DF091E-219E-41AA-B020-602330CE3831">
+        <dmn:inputEntry id="_E94494D3-684C-4A70-A711-19BFCF8750A3">
           <dmn:text>"GEENIRL"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_EC50C579-5C9D-4067-A77C-DDA955A5B39A">
           <dmn:text>"Onbekend"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_87512EC0-0239-4B9D-9DE4-15F57D5FCEF5">
+        <dmn:inputEntry id="_B471CA10-6735-4BA2-A135-47576C88DAE3">
           <dmn:text>"THNEG"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_73F640D7-8973-4627-9EAD-422AF5E827C0">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule>
-        <dmn:inputEntry>
+      <dmn:rule id="_EC94E2E1-FAFC-4943-8FF8-8251AE70C132">
+        <dmn:inputEntry id="_D23267B2-B081-477D-B283-EB1476432D7B">
           <dmn:text>"GEENACTIE"</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry>
+        <dmn:outputEntry id="_6A015324-B466-4555-BC4B-1FBE5557200B">
           <dmn:text>"Negatief"</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:inputData id="_A5325D04-ABA8-48A8-A96F-765FFDC28646" name="hielprik">
+    <dmn:extensionElements/>
+    <dmn:variable id="_4D2A2D5D-49D3-4854-807E-7F04247ABC45" name="hielprik" typeRef="dt.Hielprik"/>
+  </dmn:inputData>
+  <dmn:inputData id="_D91239A7-88AF-48B5-8918-52A9F04D9EB2" name="testresultaten">
+    <dmn:extensionElements/>
+    <dmn:variable id="_1FA537AE-EA11-4140-8FDB-8E9E56F8429E" name="testresultaten" typeRef="dt.Testresultaten"/>
+  </dmn:inputData>
+  <dmn:businessKnowledgeModel id="_BBDEA234-9A53-465A-8355-97B4B3779CF2" name="Interpretatie">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B73BE9CA-AFDF-46AC-8259-379C4FAE4A88" name="Interpretatie" typeRef="dt.Interpretatie"/>
+    <dmn:encapsulatedLogic id="_3DCA88BB-2DD9-4255-907A-847BC3F173AB" kind="FEEL">
+      <dmn:formalParameter id="_786ACD6B-18C9-434B-B386-DBAECA9DC982" name="hielprik" typeRef="dt.Hielprik"/>
+      <dmn:formalParameter id="_F954B243-20F6-454D-AAFF-24EE4603BD19" name="testresultaten" typeRef="dt.Testresultaten"/>
+      <dmn:formalParameter id="_F9646BA2-AD70-43C3-BEC5-A7B7074C16DF" name="aandoening" typeRef="string"/>
+      <dmn:context id="_2AE47192-36DE-45B1-AE80-8C3E74BB5578">
+        <dmn:contextEntry>
+          <dmn:variable id="_52327258-6EA8-4066-BA1F-B506D2217795" name="aandoening" typeRef="string"/>
+          <dmn:literalExpression id="_F78BA50C-AB69-4C06-98D2-CAA51505BD5E">
+            <dmn:text>aandoening</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_CDDDA32E-0BB8-4C19-820C-398A1696B70A" name="interpretatie" typeRef="string"/>
+          <dmn:decisionTable id="_CBDA90E3-6336-42AB-86EC-056D5BC4D71D" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+            <dmn:input id="_0A0E4ADC-CC9B-47B1-82F8-CCDFB79C2F4E">
+              <dmn:inputExpression id="_4F694366-5E5A-448F-BE93-F6B4C09B4964" typeRef="string">
+                <dmn:text>aandoening</dmn:text>
+              </dmn:inputExpression>
+            </dmn:input>
+            <dmn:output id="_5B1A1D0E-634F-4B10-9802-11ACE2CFA416"/>
+            <dmn:annotation name="annotation-1"/>
+            <dmn:rule id="_8274A281-5683-4F9F-AD4C-8AAEDCCB22B8">
+              <dmn:inputEntry id="_799E80A3-4693-4CD5-AF7A-D3D65BB5A39F">
+                <dmn:text>"CF"</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_43B2415B-DE18-4EE9-AAA1-83F7BB4C54ED">
+                <dmn:text>icf.Interpretatie(testresultaten)</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+            <dmn:rule id="_195B9188-E643-4176-A1BF-C3FD497018C7">
+              <dmn:inputEntry id="_448AF8C2-D171-49D5-8932-FAF4185D9AC2">
+                <dmn:text>"CH"</dmn:text>
+              </dmn:inputEntry>
+              <dmn:outputEntry id="_3C359FFA-454C-494C-A767-A294AEBF65EA">
+                <dmn:text>ich.Interpretatie(hielprik,testresultaten)</dmn:text>
+              </dmn:outputEntry>
+              <dmn:annotationEntry>
+                <dmn:text/>
+              </dmn:annotationEntry>
+            </dmn:rule>
+          </dmn:decisionTable>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_79AB4899-0191-4838-85AD-80F8E816C47A" name="actiecode" typeRef="string"/>
+          <dmn:literalExpression id="_59A40F17-452F-4DF3-8CFF-CF00BF85F0DC">
+            <dmn:text>"TODO"</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_2D668E26-5306-4B50-9E28-08FB007F696B" name="conclusieEA" typeRef="string"/>
+          <dmn:literalExpression id="_65D86737-4D87-4CF5-9934-A3336DC2E6B5">
+            <dmn:text>"TODO"</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+    <dmn:knowledgeRequirement id="_D2062A63-A039-41F4-972D-4BB74794E1C9">
+      <dmn:requiredKnowledge href="xls2dmn_df31aa01-fb3a-461e-a845-759ad0c39c42#_014DE0DD-E49C-4EAD-89A3-4DDF419C69D0"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_714AD9DF-398B-4425-8B64-EDA264BE44FD">
+      <dmn:requiredKnowledge href="xls2dmn_03f8b8e3-57de-4a38-b5af-a9d996cadc75#_D9563469-CD56-47B1-861F-536968B282A1"/>
+    </dmn:knowledgeRequirement>
+  </dmn:businessKnowledgeModel>
+  <dmn:decision id="_A23834B4-480D-422D-B863-7ECD4B4314E0" name="alleAandoeningen">
+    <dmn:extensionElements/>
+    <dmn:variable id="_12D80B26-426F-4B17-A427-30719B9A2631" name="alleAandoeningen" typeRef="dt.Aandoeningen"/>
+    <dmn:literalExpression id="_02F8FA9A-EF15-4836-A789-E4364FCCD24A">
+      <dmn:text>["CH","CF"]</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_A1A88089-09B5-4F32-B699-8D3CF5A1B380" name="Bepaal Interpretaties">
+    <dmn:extensionElements/>
+    <dmn:variable id="_19939797-CBF9-48B4-9BFF-DDA36EB1937D" name="Bepaal Interpretaties" typeRef="dt.Interpretaties"/>
+    <dmn:informationRequirement id="_24BB2668-D542-409D-9D83-A9BFF6122651">
+      <dmn:requiredInput href="#_D91239A7-88AF-48B5-8918-52A9F04D9EB2"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_D75EA688-DC76-4454-8696-419861DC12E2">
+      <dmn:requiredDecision href="#_A23834B4-480D-422D-B863-7ECD4B4314E0"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_0A9BE1F9-9104-45FA-8189-EF77FF1EA1A5">
+      <dmn:requiredInput href="#_A5325D04-ABA8-48A8-A96F-765FFDC28646"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_52967154-C16C-4D95-8D3A-88B4E43BBA1D">
+      <dmn:requiredKnowledge href="#_BBDEA234-9A53-465A-8355-97B4B3779CF2"/>
+    </dmn:knowledgeRequirement>
+    <dmn:context id="_01AAA55E-2A6C-4F21-A518-912E923F8214">
+      <dmn:contextEntry>
+        <dmn:variable id="_65BF5053-51C0-4214-AA47-F223C7B0F1A4" name="resultaat" typeRef="dt.Interpretaties"/>
+        <dmn:literalExpression id="_123147AA-19E5-4174-B831-A9DCC8DF4D02">
+          <dmn:text>for aandoening in alleAandoeningen return Interpretatie(hielprik,testresultaten,aandoening)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:literalExpression id="_3C0F59C8-524A-4414-9EDB-0F0BE31972B6">
+          <dmn:text>resultaat</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmn:inputData id="_15F22F12-1ABB-4B64-9368-CA91E62E05BD" name="Actiecode">
+    <dmn:extensionElements/>
+    <dmn:variable id="_517EA1CD-CD23-43F8-B1FF-DB201F01973C" name="Actiecode" typeRef="string"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_75AF5702-B0CE-40FB-97C9-94ECA5C7B709" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="ddt_ConclusieEA">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>307</kie:width>
+            <kie:width>413</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2AE47192-36DE-45B1-AE80-8C3E74BB5578">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>1019</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F78BA50C-AB69-4C06-98D2-CAA51505BD5E">
+            <kie:width>1019</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CBDA90E3-6336-42AB-86EC-056D5BC4D71D">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>437</kie:width>
+            <kie:width>412</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_59A40F17-452F-4DF3-8CFF-CF00BF85F0DC">
+            <kie:width>1019</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_65D86737-4D87-4CF5-9934-A3336DC2E6B5">
+            <kie:width>1019</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3DCA88BB-2DD9-4255-907A-847BC3F173AB">
+            <kie:width>50</kie:width>
+            <kie:width>1189</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_02F8FA9A-EF15-4836-A789-E4364FCCD24A">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_01AAA55E-2A6C-4F21-A518-912E923F8214">
+            <kie:width>50</kie:width>
+            <kie:width>185</kie:width>
+            <kie:width>902</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_123147AA-19E5-4174-B831-A9DCC8DF4D02">
+            <kie:width>902</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3C0F59C8-524A-4414-9EDB-0F0BE31972B6">
+            <kie:width>902</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_D9563469-CD56-47B1-861F-536968B282A1" dmnElementRef="included4:_D9563469-CD56-47B1-861F-536968B282A1" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="384" y="469" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="384" y="569"/>
+          <di:waypoint x="584" y="569"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_014DE0DD-E49C-4EAD-89A3-4DDF419C69D0" dmnElementRef="included3:_014DE0DD-E49C-4EAD-89A3-4DDF419C69D0" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="636" y="469" width="200" height="200"/>
+        <dmndi:DMNLabel/>
+        <dmndi:DMNDecisionServiceDividerLine>
+          <di:waypoint x="636" y="569"/>
+          <di:waypoint x="836" y="569"/>
+        </dmndi:DMNDecisionServiceDividerLine>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-d_ConclusieEA" dmnElementRef="d_ConclusieEA" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1063" y="171" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_A5325D04-ABA8-48A8-A96F-765FFDC28646" dmnElementRef="_A5325D04-ABA8-48A8-A96F-765FFDC28646" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="248" y="346.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_D91239A7-88AF-48B5-8918-52A9F04D9EB2" dmnElementRef="_D91239A7-88AF-48B5-8918-52A9F04D9EB2" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="248" y="418" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_BBDEA234-9A53-465A-8355-97B4B3779CF2" dmnElementRef="_BBDEA234-9A53-465A-8355-97B4B3779CF2" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="727" y="274.6842105263158" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_A23834B4-480D-422D-B863-7ECD4B4314E0" dmnElementRef="_A23834B4-480D-422D-B863-7ECD4B4314E0" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="266" y="133" width="153" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_A1A88089-09B5-4F32-B699-8D3CF5A1B380" dmnElementRef="_A1A88089-09B5-4F32-B699-8D3CF5A1B380" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="514" y="276" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_15F22F12-1ABB-4B64-9368-CA91E62E05BD" dmnElementRef="_15F22F12-1ABB-4B64-9368-CA91E62E05BD" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="1063" y="294.3421052631579" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_19CBD3B8-2DFD-48A2-A9D7-132006E8D75D" dmnElementRef="_19CBD3B8-2DFD-48A2-A9D7-132006E8D75D">
+        <di:waypoint x="1113" y="319.3421052631579"/>
+        <di:waypoint x="1113" y="196"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_D2062A63-A039-41F4-972D-4BB74794E1C9" dmnElementRef="_D2062A63-A039-41F4-972D-4BB74794E1C9">
+        <di:waypoint x="736" y="569"/>
+        <di:waypoint x="777" y="299.6842105263158"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_714AD9DF-398B-4425-8B64-EDA264BE44FD" dmnElementRef="_714AD9DF-398B-4425-8B64-EDA264BE44FD">
+        <di:waypoint x="484" y="569"/>
+        <di:waypoint x="777" y="299.6842105263158"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_24BB2668-D542-409D-9D83-A9BFF6122651" dmnElementRef="_24BB2668-D542-409D-9D83-A9BFF6122651">
+        <di:waypoint x="348" y="443"/>
+        <di:waypoint x="564" y="301"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_D75EA688-DC76-4454-8696-419861DC12E2" dmnElementRef="_D75EA688-DC76-4454-8696-419861DC12E2">
+        <di:waypoint x="419" y="158"/>
+        <di:waypoint x="564" y="301"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_0A9BE1F9-9104-45FA-8189-EF77FF1EA1A5" dmnElementRef="_0A9BE1F9-9104-45FA-8189-EF77FF1EA1A5">
+        <di:waypoint x="348" y="371.3421052631579"/>
+        <di:waypoint x="564" y="301"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_52967154-C16C-4D95-8D3A-88B4E43BBA1D" dmnElementRef="_52967154-C16C-4D95-8D3A-88B4E43BBA1D">
+        <di:waypoint x="777" y="299.6842105263158"/>
+        <di:waypoint x="564" y="301"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
 </dmn:definitions>
