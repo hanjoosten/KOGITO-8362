@@ -484,7 +484,7 @@
       <dmn:annotation name=""/>
       <dmn:rule id="_6CA5D5BB-E441-4CEA-BEB3-877DC071CDDE">
         <dmn:inputEntry id="_F58F787C-FF3E-45AD-8BE1-75DA96E4F8BC">
-          <dmn:text>null</dmn:text>
+          <dmn:text>not(["A","O","N"])</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_45E9599A-D9B5-4DB4-8D7A-1794F48500D6">
           <dmn:text>-</dmn:text>
@@ -552,20 +552,6 @@
           <dmn:text/>
         </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule id="_63F5EAA0-ECFC-44C4-A305-6CB6AC733031">
-        <dmn:inputEntry id="_03B562EE-50F0-46D8-AA48-347EFD50DE70">
-          <dmn:text>"N"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_FB0A85AB-D94D-429E-A7CF-E9BB652FC9B0">
-          <dmn:text>null</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_ED25FA04-D6AA-46B1-99FF-E52229F59900">
-          <dmn:text>null</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
       <dmn:rule id="_A1F384ED-94E1-4087-8D02-03977ACB155B">
         <dmn:inputEntry id="_6FDE5F26-F6BD-4F60-ADCD-1000A7379417">
           <dmn:text>"O"</dmn:text>
@@ -622,20 +608,6 @@
           <dmn:text/>
         </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule id="_4939B9FD-83A1-4D24-A9F8-1E8AE906C496">
-        <dmn:inputEntry id="_989E6334-7ABC-4FFE-BD98-FD9BF3E70728">
-          <dmn:text>"O"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_FD6377B8-3F2C-4E31-99DD-7C26C106B750">
-          <dmn:text>null</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_8623F300-1516-4425-846A-00C6BFB16660">
-          <dmn:text>null</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
       <dmn:rule id="_B4712732-AB16-4C67-B208-71B848B4029E">
         <dmn:inputEntry id="_1FB0B85B-3490-4BCE-92ED-2D8EFEC10386">
           <dmn:text>"A"</dmn:text>
@@ -686,34 +658,6 @@
           <dmn:text>not(["A","O","N"])</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_8B03A360-E7A1-447D-B9DB-510F3DB3D3ED">
-          <dmn:text>null</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_307DAA13-B049-490F-AB8B-4C24B9932D6B">
-        <dmn:inputEntry id="_2654D663-0B05-47DE-96AC-FE72AE4FC0D1">
-          <dmn:text>"A"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_47905286-826C-45D4-8878-EC3D7E37783C">
-          <dmn:text>null</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_492B5620-8A34-48FF-BA1C-74CF132D2605">
-          <dmn:text>null</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
-      <dmn:rule id="_EB1A73B7-9AAE-4076-8D97-5664FA07ADDD">
-        <dmn:inputEntry id="_DB2D8F62-A092-4B7F-9FC6-C3EA326C16FE">
-          <dmn:text>not(["A","O","N"])</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_2872D775-EF10-4964-86A8-E82194475216">
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_96F78C62-E92E-43D4-BCBB-3CC21FB5DA6A">
           <dmn:text>null</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
@@ -1935,7 +1879,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="773" y="157" width="185" height="51"/>
+        <dc:Bounds x="773" y="162" width="185" height="51"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-d_InterpretatieCF" dmnElementRef="d_InterpretatieCF" isCollapsed="false">
@@ -1998,10 +1942,10 @@
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_ABD46C89-F349-472E-94A1-84B73961407B" dmnElementRef="_ABD46C89-F349-472E-94A1-84B73961407B">
         <di:waypoint x="582" y="304"/>
-        <di:waypoint x="865.5" y="182.5"/>
+        <di:waypoint x="865.5" y="187.5"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_FF16155A-1BA9-4772-9CE9-0FEF6E4E67FC" dmnElementRef="_FF16155A-1BA9-4772-9CE9-0FEF6E4E67FC">
-        <di:waypoint x="865.5" y="182.5"/>
+        <di:waypoint x="865.5" y="187.5"/>
         <di:waypoint x="582" y="92"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_65FDABE7-BEA0-4166-B4C2-CF499F20569B" dmnElementRef="_65FDABE7-BEA0-4166-B4C2-CF499F20569B">
